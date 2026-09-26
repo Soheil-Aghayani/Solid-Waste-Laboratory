@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'lab-rules-v95';
+const CACHE_VERSION = 'lab-rules-v96';
 const APP_SHELL = [
   './',
   './index.html',
@@ -194,6 +194,14 @@ const APP_SHELL = [
   './asset/gallery/catalog-equipment-hero-240.webp',
   './asset/gallery/lab-interior-mobile-fast.webp',
   './asset/gallery/lab-interior-800.webp',
+  './asset/gallery/lab-entrance-320.webp',
+  './asset/gallery/lab-entrance-480.webp',
+  './asset/gallery/lab-entrance-mobile-fast.webp',
+  './asset/gallery/lab-entrance-800.webp',
+  './asset/gallery/lab-team-320.webp',
+  './asset/gallery/lab-team-480.webp',
+  './asset/gallery/lab-team-mobile-fast.webp',
+  './asset/gallery/lab-team-800.webp',
   './chatbot/chatbot.min.css?v=5.7',
   './chatbot/chatbot.min.js?v=5.7',
   './chatbot/msds/msds-db.min.js?v=5.7',
