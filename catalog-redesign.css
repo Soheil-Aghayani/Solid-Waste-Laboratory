@@ -544,17 +544,17 @@ body[data-page="gallery"] #search-status-banner {
   transition: border-color var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
 }
 
-.equipment-catalog-card:hover,
-.equipment-catalog-card:focus-within {
-  transform: none;
-  border-color: color-mix(in srgb, var(--accent-emerald) 64%, var(--border-color));
-  background: color-mix(in srgb, var(--accent-emerald-glow) 30%, var(--bg-tertiary));
-  box-shadow: 0 8px 22px color-mix(in srgb, var(--accent-emerald) 12%, transparent);
-}
-
 .equipment-catalog-card:focus-within {
   outline: 3px solid color-mix(in srgb, var(--accent-emerald) 42%, transparent);
   outline-offset: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .equipment-catalog-card:hover {
+    border-color: color-mix(in srgb, var(--accent-emerald) 64%, var(--border-color));
+    background: color-mix(in srgb, var(--accent-emerald-glow) 30%, var(--bg-tertiary));
+    box-shadow: 0 8px 22px color-mix(in srgb, var(--accent-emerald) 12%, transparent);
+  }
 }
 
 .equipment-card-link {
@@ -589,10 +589,14 @@ body[data-page="gallery"] #search-status-banner {
   transition: filter var(--transition-speed), opacity var(--transition-speed);
 }
 
-.equipment-catalog-card:hover .equipment-card-image,
 .equipment-catalog-card:focus-within .equipment-card-image {
-  transform: none;
   filter: drop-shadow(0 10px 12px color-mix(in srgb, var(--text-primary) 13%, transparent));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .equipment-catalog-card:hover .equipment-card-image {
+    filter: drop-shadow(0 10px 12px color-mix(in srgb, var(--text-primary) 13%, transparent));
+  }
 }
 
 .equipment-card-body {
@@ -1112,5 +1116,61 @@ body[data-page="gallery"] #search-status-banner {
     grid-column: 1 / -1;
     width: 100%;
     white-space: normal;
+  }
+}
+
+/* Touch devices should keep catalog cards in their resting state until activation. */
+@media (hover: none), (pointer: coarse) {
+  .equipment-catalog-card:hover {
+    transform: none;
+    border-color: var(--border-color);
+    background: var(--bg-tertiary);
+    box-shadow: 0 12px 32px color-mix(in srgb, var(--text-primary) 6%, transparent);
+  }
+
+  .equipment-catalog-card:hover .equipment-card-image {
+    transform: none;
+    filter: drop-shadow(0 8px 10px color-mix(in srgb, var(--text-primary) 9%, transparent));
+  }
+
+  .equipment-catalog-card:hover .equipment-card-cta > .material-symbols-outlined {
+    transform: none;
+  }
+
+  .catalog-filter-rail .equipment-filter-btn:hover:not(.active):not(.is-active) {
+    border-color: var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+  }
+
+  .catalog-header-search-clear:hover:not(:focus-visible) {
+    color: var(--text-muted);
+  }
+
+  .catalog-search-clear:hover:not(:focus-visible),
+  .catalog-dialog-close:hover:not(:focus-visible) {
+    background: transparent;
+    color: var(--text-muted);
+  }
+
+  .catalog-category-button:hover:not(.active):not(.is-active) {
+    border-color: transparent;
+    background: transparent;
+    color: var(--text-muted);
+  }
+
+  .catalog-equipment-guide-link:hover {
+    color: var(--text-muted);
+  }
+
+  .catalog-reset-button:hover:not(:focus-visible) {
+    background: var(--accent-emerald-glow);
+    color: var(--accent-emerald-strong);
+  }
+
+  .equipment-catalog-suggestion .catalog-suggestion-link:hover:not(:focus-visible) {
+    border-color: var(--accent-emerald);
+    background: var(--accent-emerald-glow);
+    color: var(--accent-emerald-strong);
   }
 }

@@ -20,9 +20,11 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.chatbot-fab:hover {
-  transform: scale(1.1) translateY(-2px);
-  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.5);
+@media (hover: hover) and (pointer: fine) {
+  .chatbot-fab:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 12px 30px rgba(16, 185, 129, 0.5);
+  }
 }
 
 .chatbot-fab:active {
