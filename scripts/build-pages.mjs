@@ -283,7 +283,7 @@ const renderHead = page => {
   const elementStyles = page.filename === 'elements.html'
     ? '<link rel="stylesheet" href="./elements.min.css?v=2.0">'
     : '';
-  const assetVersion = asset => asset === 'gallery.min.js' ? '3.4' : '2.2';
+  const assetVersion = asset => asset === 'gallery.min.js' ? '3.5' : '2.2';
   return `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>

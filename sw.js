@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'lab-rules-v104';
+const CACHE_VERSION = 'lab-rules-v105';
 const APP_SHELL = [
   './',
   './index.html',
@@ -19,7 +19,7 @@ const APP_SHELL = [
   './welcome-carousel.min.js?v=2.2',
   './site-navigation.min.js?v=1.1',
   './equipment-data.min.js?v=2.2',
-  './gallery.min.js?v=3.4',
+  './gallery.min.js?v=3.5',
   './elements-data.min.js?v=2.2',
   './elements.min.js?v=2.6',
   './data/elements.json',

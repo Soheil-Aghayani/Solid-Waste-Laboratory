@@ -67,7 +67,7 @@
       <article class="equipment-catalog-card" data-equipment-category="${escapeHtml(family.category)}" data-equipment-search="${escapeHtml(getSearchText(family))}">
         <a class="equipment-card-link" href="./Equipment/${encodeURIComponent(family.slug)}.html" aria-label="مشاهدهٔ صفحهٔ معرفی ${title}">
           <div class="equipment-card-image-wrap">
-            <img class="equipment-card-image" src="${compactImage}" srcset="${compactImage} 240w, ${thumbnailImage} 480w" sizes="(max-width: 680px) 112px, 208px" alt="${title}" loading="${loading}" decoding="async" width="480" height="480"${fetchPriority}>
+            <img class="equipment-card-image" src="${compactImage}" srcset="${compactImage} 240w, ${thumbnailImage} 480w" sizes="(max-width: 680px) 112px, 208px" alt="${title}" loading="${loading}" decoding="async" draggable="false" width="480" height="480"${fetchPriority}>
           </div>
           <div class="equipment-card-body">
             <div class="equipment-card-meta">
