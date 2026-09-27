@@ -25,7 +25,7 @@
   <link rel="preload" href="./asset/vazirmatn-arabic.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
   <link rel="stylesheet" href="./styles.min.css?v=6.5">
   <link rel="stylesheet" href="./site-pages.min.css?v=2.8">
-  <link rel="stylesheet" href="./catalog-redesign.min.css?v=2.0">
+  <link rel="stylesheet" href="./catalog-redesign.min.css?v=2.1">
   <script>
     try {
       const savedTheme = localStorage.getItem('theme');
@@ -38,7 +38,7 @@
 
   <script defer src="./site-runtime.min.js?v=1.7"></script>
   <script defer src="./equipment-data.min.js?v=2.2"></script>
-  <script defer src="./gallery.min.js?v=3.3"></script>
+  <script defer src="./gallery.min.js?v=3.4"></script>
 </head>
 <body data-page="gallery">
   <a class="skip-link" href="#main-content">پرش به محتوای اصلی</a>
@@ -113,14 +113,12 @@
   </header>
 
   <div class="catalog-mobile-filter-bar">
-    <div class="catalog-filter-rail" role="group" aria-label="دسته‌های پرکاربرد کاتالوگ">
-      <button type="button" class="equipment-filter-btn active" data-equipment-filter="all" aria-pressed="true"><span class="material-symbols-outlined" aria-hidden="true">apps</span><span>همه</span></button>
-      <button type="button" class="equipment-filter-btn" data-equipment-filter="glassware" aria-pressed="false"><span class="material-symbols-outlined" aria-hidden="true">science</span><span>شیشه‌آلات</span></button>
-      <button type="button" class="equipment-filter-btn" data-equipment-filter="plasticware" aria-pressed="false"><span class="material-symbols-outlined" aria-hidden="true">water_bottle</span><span>پلاستیک‌آلات</span></button>
-      <button type="button" class="equipment-filter-btn" data-equipment-filter="crucibles" aria-pressed="false"><span class="material-symbols-outlined" aria-hidden="true">local_fire_department</span><span>بوته‌ها</span></button>
-      <button type="button" class="equipment-filter-btn" data-equipment-filter="solutions" aria-pressed="false"><span class="material-symbols-outlined" aria-hidden="true">opacity</span><span>مواد مصرفی</span></button>
-    </div>
-    <button type="button" class="catalog-all-categories-button" id="catalog-all-categories" aria-haspopup="dialog" aria-expanded="false" aria-controls="catalog-category-dialog"><span class="material-symbols-outlined" aria-hidden="true">tune</span><span>همهٔ دسته‌ها</span></button>
+    <button type="button" class="catalog-mobile-filter-trigger" id="catalog-mobile-filter" aria-haspopup="dialog" aria-expanded="false" aria-controls="catalog-category-dialog" aria-label="فیلتر دسته‌بندی؛ انتخاب فعلی: همهٔ تجهیزات">
+      <span class="material-symbols-outlined" aria-hidden="true">filter_list</span>
+      <span class="catalog-mobile-filter-label">فیلتر دسته‌بندی</span>
+      <span class="catalog-mobile-filter-state" id="catalog-mobile-filter-state">همهٔ تجهیزات</span>
+      <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+    </button>
   </div>
 
   <div class="catalog-results-layout">
@@ -159,7 +157,7 @@
 </div>
 
 <dialog class="catalog-category-dialog" id="catalog-category-dialog" aria-labelledby="catalog-category-dialog-title">
-  <div class="catalog-dialog-header"><div><span class="catalog-catalog-kicker">فیلتر کاتالوگ</span><h2 id="catalog-category-dialog-title">همهٔ دسته‌ها</h2></div><button type="button" class="catalog-dialog-close" data-catalog-dialog-close aria-label="بستن فهرست دسته‌ها"><span class="material-symbols-outlined" aria-hidden="true">close</span></button></div>
+  <div class="catalog-dialog-header"><div><span class="catalog-catalog-kicker">فیلتر کاتالوگ</span><h2 id="catalog-category-dialog-title">فیلتر دسته‌بندی</h2></div><button type="button" class="catalog-dialog-close" data-catalog-dialog-close aria-label="بستن فهرست دسته‌ها"><span class="material-symbols-outlined" aria-hidden="true">close</span></button></div>
   <div class="catalog-dialog-list" role="group" aria-label="همهٔ دسته‌های تجهیزات">
     <button type="button" class="catalog-category-button is-active" data-equipment-filter="all" aria-pressed="true"><span>همهٔ تجهیزات</span><span class="catalog-category-count" data-dialog-category-count="all"></span></button>
     <button type="button" class="catalog-category-button" data-equipment-filter="glassware" aria-pressed="false"><span>شیشه‌آلات</span><span class="catalog-category-count" data-dialog-category-count="glassware"></span></button>

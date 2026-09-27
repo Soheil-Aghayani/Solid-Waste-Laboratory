@@ -125,7 +125,8 @@
     const empty = document.getElementById('gallery-equipment-empty');
     const reset = document.getElementById('gallery-equipment-reset');
     const dialog = document.getElementById('catalog-category-dialog');
-    const allCategoriesButton = document.getElementById('catalog-all-categories');
+    const mobileFilterButton = document.getElementById('catalog-mobile-filter');
+    const mobileFilterState = document.getElementById('catalog-mobile-filter-state');
     const closeDialogButtons = Array.from(document.querySelectorAll('[data-catalog-dialog-close]'));
     const filterButtons = Array.from(document.querySelectorAll('[data-equipment-filter]'));
     const categoryCounts = Array.from(document.querySelectorAll('[data-category-count], [data-dialog-category-count]'));
@@ -185,14 +186,15 @@
       if (!dialog) return;
       if (typeof dialog.showModal === 'function') dialog.showModal();
       else dialog.setAttribute('open', '');
-      allCategoriesButton?.setAttribute('aria-expanded', 'true');
+      mobileFilterButton?.setAttribute('aria-expanded', 'true');
       dialog.querySelector('[data-equipment-filter].is-active')?.focus();
     };
-    const closeDialog = () => {
+    const closeDialog = (restoreFocus = true) => {
       if (!dialog) return;
       if (typeof dialog.close === 'function' && dialog.open) dialog.close();
       else dialog.removeAttribute('open');
-      allCategoriesButton?.setAttribute('aria-expanded', 'false');
+      mobileFilterButton?.setAttribute('aria-expanded', 'false');
+      if (restoreFocus) mobileFilterButton?.focus({ preventScroll: true });
     };
 
     function updateCategoryCounts() {
@@ -213,6 +215,9 @@
         button.classList.toggle('is-active', selected);
         button.setAttribute('aria-pressed', String(selected));
       });
+      const selectedLabel = categoryLabels[state.category] || categoryLabels.all;
+      if (mobileFilterState) mobileFilterState.textContent = selectedLabel;
+      mobileFilterButton?.setAttribute('aria-label', `فیلتر دسته‌بندی؛ انتخاب فعلی: ${selectedLabel}`);
     }
 
     function render() {
@@ -268,12 +273,17 @@
       render();
     });
     filterButtons.forEach(button => button.addEventListener('click', () => selectCategory(button.dataset.equipmentFilter || 'all')));
-    allCategoriesButton?.addEventListener('click', openDialog);
+    mobileFilterButton?.addEventListener('click', openDialog);
     closeDialogButtons.forEach(button => button.addEventListener('click', closeDialog));
     dialog?.addEventListener('click', event => {
       if (event.target === dialog) closeDialog();
     });
-    dialog?.addEventListener('close', () => allCategoriesButton?.setAttribute('aria-expanded', 'false'));
+    dialog?.addEventListener('close', () => {
+      mobileFilterButton?.setAttribute('aria-expanded', 'false');
+      if (dialog.contains(document.activeElement) || document.activeElement === document.body) {
+        mobileFilterButton?.focus({ preventScroll: true });
+      }
+    });
     window.addEventListener('popstate', () => {
       state = readUrlState();
       search.value = state.query;

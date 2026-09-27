@@ -209,8 +209,8 @@ body[data-page="gallery"] #search-status-banner {
 .catalog-dialog-close {
   display: inline-grid;
   flex: 0 0 auto;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   place-items: center;
   border: 0;
   border-radius: 10px;
@@ -234,76 +234,47 @@ body[data-page="gallery"] #search-status-banner {
 
 .catalog-mobile-filter-bar {
   display: none;
-  align-items: center;
-  gap: 0.55rem;
+  width: 100%;
   min-width: 0;
 }
 
-.catalog-filter-rail {
+.catalog-mobile-filter-trigger {
   display: flex;
-  min-width: 0;
-  flex: 1;
-  gap: 0.45rem;
-  overflow-x: auto;
-  padding: 0.15rem 0.05rem 0.35rem;
-  scrollbar-width: none;
-}
-
-.catalog-filter-rail::-webkit-scrollbar {
-  display: none;
-}
-
-.catalog-filter-rail .equipment-filter-btn,
-.catalog-all-categories-button {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.3rem;
-  flex: 0 0 auto;
+  justify-content: flex-start;
+  gap: 0.55rem;
+  width: 100%;
   min-height: 44px;
-  padding: 0.45rem 0.7rem;
+  padding: 0.55rem 0.75rem;
   border: 1px solid var(--border-color);
-  border-radius: 999px;
+  border-radius: 13px;
   background: var(--bg-secondary);
   color: var(--text-muted);
   cursor: pointer;
   font: inherit;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 800;
-  white-space: nowrap;
 }
 
-.catalog-filter-rail .equipment-filter-btn .material-symbols-outlined,
-.catalog-all-categories-button .material-symbols-outlined {
+.catalog-mobile-filter-trigger > .material-symbols-outlined {
   font-size: 1rem;
 }
 
-.catalog-filter-rail .equipment-filter-btn:focus-visible,
-.catalog-all-categories-button:focus-visible,
-.catalog-filter-rail .equipment-filter-btn.active,
-.catalog-filter-rail .equipment-filter-btn.is-active {
+.catalog-mobile-filter-trigger:focus-visible,
+.catalog-mobile-filter-trigger[aria-expanded="true"] {
   border-color: var(--accent-emerald);
   background: var(--accent-emerald-glow);
   color: var(--accent-emerald-strong);
 }
 
-.catalog-filter-rail .equipment-filter-btn.active,
-.catalog-filter-rail .equipment-filter-btn.is-active {
-  border-color: var(--accent-emerald-strong);
-  background: var(--accent-emerald-strong);
-  color: #fff;
-  box-shadow: 0 5px 14px var(--accent-emerald-glow);
-}
-
-.catalog-all-categories-button {
-  flex: 0 0 auto;
-  border-color: color-mix(in srgb, var(--accent-amber) 45%, var(--border-color));
-}
-
-.catalog-all-categories-button[aria-expanded="true"] {
-  border-color: var(--accent-amber);
-  background: var(--accent-amber-glow);
-  color: var(--accent-amber-strong);
+.catalog-mobile-filter-state {
+  margin-inline-start: auto;
+  overflow: hidden;
+  color: var(--accent-emerald-strong);
+  font-size: 0.7rem;
+  font-weight: 850;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .catalog-results-layout {
@@ -868,26 +839,50 @@ body[data-page="gallery"] #search-status-banner {
     font-size: 0.67rem;
   }
 
-  .catalog-mobile-filter-bar {
-    gap: 0.35rem;
+  .catalog-category-dialog {
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    max-height: 100dvh;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 
-  .catalog-filter-rail {
-    margin-inline: -0.2rem;
+  .catalog-dialog-header {
+    padding: calc(1rem + env(safe-area-inset-top)) 1rem 1rem;
   }
 
-  .catalog-filter-rail .equipment-filter-btn,
-  .catalog-all-categories-button {
-    min-height: 42px;
-    padding-inline: 0.6rem;
-    font-size: 0.67rem;
+  .catalog-dialog-list {
+    gap: 0.5rem;
+    overflow-y: auto;
+    padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
   }
 
-  .catalog-all-categories-button span:last-child {
-    max-width: 4.3rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  .catalog-dialog-list .catalog-category-button {
+    min-height: 52px;
+    padding: 0.75rem 0.85rem;
+    border-color: var(--border-color);
+    border-radius: 12px;
+    background: var(--bg-tertiary);
+    font-size: 0.84rem;
+  }
+
+  .catalog-dialog-list .catalog-category-button.is-active,
+  .catalog-dialog-list .catalog-category-button.active {
+    border-color: var(--accent-emerald-strong);
+    background: var(--accent-emerald-strong);
+    color: #fff;
+  }
+
+  .catalog-mobile-filter-trigger {
+    min-height: 48px;
+    padding-inline: 0.7rem;
+  }
+
+  .catalog-mobile-filter-state {
+    font-size: 0.68rem;
   }
 
   .catalog-results-panel {
@@ -994,6 +989,10 @@ body[data-page="gallery"] #search-status-banner {
   .catalog-catalog-hero-media {
     width: 92px;
     height: 92px;
+  }
+
+  .catalog-mobile-filter-state {
+    display: none;
   }
 
   .equipment-catalog-grid {

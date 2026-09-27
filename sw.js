@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'lab-rules-v102';
+const CACHE_VERSION = 'lab-rules-v103';
 const APP_SHELL = [
   './',
   './index.html',
@@ -19,7 +19,7 @@ const APP_SHELL = [
   './welcome-carousel.min.js?v=2.2',
   './site-navigation.min.js?v=1.1',
   './equipment-data.min.js?v=2.2',
-  './gallery.min.js?v=3.3',
+  './gallery.min.js?v=3.4',
   './elements-data.min.js?v=2.2',
   './elements.min.js?v=2.6',
   './data/elements.json',
@@ -28,7 +28,7 @@ const APP_SHELL = [
   './data/catalog-index.json',
   './equipment-detail.min.js?v=2.1',
   './equipment-detail.min.css?v=2.0',
-  './catalog-redesign.min.css?v=2.0',
+  './catalog-redesign.min.css?v=2.1',
   './catalog-detail-chrome.min.css?v=1.6',
   './catalog-detail-runtime.min.js?v=1.2',
   './asset/equipment/crucible-generic.svg',
@@ -202,9 +202,9 @@ const APP_SHELL = [
   './asset/gallery/lab-team-480.webp',
   './asset/gallery/lab-team-mobile-fast.webp',
   './asset/gallery/lab-team-800.webp',
-  './chatbot/chatbot.min.css?v=5.7',
-  './chatbot/chatbot.min.js?v=5.7',
-  './chatbot/msds/msds-db.min.js?v=5.7',
+  './chatbot/chatbot.min.css?v=5.8',
+  './chatbot/chatbot.min.js?v=5.8',
+  './chatbot/msds/msds-db.min.js?v=5.8',
   './asset/vazirmatn-arabic.woff2',
   './Waste%20Lab.webp'
 ];
