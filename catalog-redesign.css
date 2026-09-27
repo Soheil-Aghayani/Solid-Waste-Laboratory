@@ -1109,15 +1109,38 @@ body[data-page="gallery"] #search-status-banner {
   }
 }
 
-/* Touch devices should keep card links from adding an extra outline while focused. */
-@media (hover: none), (pointer: coarse) {
+/* Touch/mobile cards should not keep a press/focus treatment after a long tap. */
+@media (max-width: 680px), (hover: none), (pointer: coarse) {
   .equipment-catalog-card:focus-within {
     outline: none;
     outline-offset: 0;
   }
 
+  .equipment-catalog-card:focus-visible {
+    transform: none;
+    border-color: var(--border-color);
+    background: var(--bg-tertiary);
+    box-shadow: none;
+  }
+
+  .equipment-card-link:focus-visible {
+    outline: none;
+  }
+
+  .equipment-card-link:active {
+    outline: none;
+  }
+
+  .equipment-catalog-card:focus-visible .equipment-card-image {
+    transform: none;
+  }
+
   .equipment-catalog-card:focus-within .equipment-card-image {
     filter: drop-shadow(0 8px 10px color-mix(in srgb, var(--text-primary) 9%, transparent));
+  }
+
+  .equipment-catalog-card:focus-visible .equipment-card-cta::after {
+    transform: none;
   }
 
 }

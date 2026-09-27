@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'lab-rules-v103';
+const CACHE_VERSION = 'lab-rules-v104';
 const APP_SHELL = [
   './',
   './index.html',
@@ -28,7 +28,7 @@ const APP_SHELL = [
   './data/catalog-index.json',
   './equipment-detail.min.js?v=2.1',
   './equipment-detail.min.css?v=2.0',
-  './catalog-redesign.min.css?v=2.1',
+  './catalog-redesign.min.css?v=2.2',
   './catalog-detail-chrome.min.css?v=1.6',
   './catalog-detail-runtime.min.js?v=1.2',
   './asset/equipment/crucible-generic.svg',
