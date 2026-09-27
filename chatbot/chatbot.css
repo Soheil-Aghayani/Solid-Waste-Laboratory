@@ -21,7 +21,7 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .chatbot-fab:hover {
+  .chatbot-fab:focus-visible {
     transform: scale(1.1) translateY(-2px);
     box-shadow: 0 12px 30px rgba(16, 185, 129, 0.5);
   }
@@ -129,7 +129,7 @@
   transition: all var(--transition-speed);
 }
 
-.chatbot-close:hover {
+.chatbot-close:focus-visible {
   background-color: var(--bg-tertiary);
   color: var(--text-primary);
 }
@@ -212,7 +212,7 @@
   user-select: none;
 }
 
-.suggestion-chip:hover {
+.suggestion-chip:focus-visible {
   border-color: var(--accent-emerald);
   color: var(--accent-emerald);
   background-color: var(--accent-emerald-glow);
@@ -286,7 +286,7 @@
   transition: all var(--transition-speed) ease;
 }
 
-.chatbot-send:hover {
+.chatbot-send:focus-visible {
   background-color: var(--accent-emerald-glow);
   color: var(--accent-emerald);
   border-color: var(--accent-emerald);
@@ -332,8 +332,8 @@
   transition: opacity 0.2s;
 }
 
-.chat-msg a.switch-eq-link:hover,
-.chat-msg a.switch-tab-link:hover {
+.chat-msg a.switch-eq-link:focus-visible,
+.chat-msg a.switch-tab-link:focus-visible {
   opacity: 0.8;
 }
 
@@ -399,7 +399,7 @@
   direction: rtl;
 }
 
-.autocomplete-item:hover,
+.autocomplete-item:focus-visible,
 .autocomplete-item.highlighted {
   background-color: var(--bg-tertiary);
   color: var(--accent-emerald);
@@ -417,7 +417,7 @@
   display: block;
 }
 
-.autocomplete-item:hover .autocomplete-icon,
+.autocomplete-item:focus-visible .autocomplete-icon,
 .autocomplete-item.highlighted .autocomplete-icon {
   color: var(--accent-emerald);
 }
@@ -442,7 +442,7 @@
   transition: all var(--transition-speed) ease;
 }
 
-.chatbot-voice:hover {
+.chatbot-voice:focus-visible {
   background-color: var(--accent-emerald-glow);
   color: var(--accent-emerald);
   border-color: var(--accent-emerald);
@@ -475,7 +475,7 @@
   margin-left: 0.5rem;
 }
 
-.chatbot-clear:hover {
+.chatbot-clear:focus-visible {
   background-color: var(--accent-red-glow);
   color: var(--accent-red);
 }
@@ -596,7 +596,7 @@
   line-height: 1.2;
 }
 
-.chem-tab-btn:hover {
+.chem-tab-btn:focus-visible {
   border-color: var(--accent-emerald);
   color: var(--text-primary);
 }
@@ -696,7 +696,7 @@
   transition: all 0.2s ease;
 }
 
-.chem-copy-btn:hover {
+.chem-copy-btn:focus-visible {
   background-color: var(--bg-secondary);
   color: var(--accent-emerald);
 }

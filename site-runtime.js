@@ -1,5 +1,5 @@
 (() => {
-      const assetVersion = '5.7';
+      const assetVersion = '5.8';
       const assetCdnBase = '.';
       let msdsDbPromise = null;
       let chatbotPromise = null;

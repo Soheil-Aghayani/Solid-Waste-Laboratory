@@ -37,9 +37,7 @@
   padding: 0.45rem 0.85rem;
 }
 
-.equipment-detail-back:hover,
 .equipment-detail-back:focus-visible,
-.equipment-detail-theme:hover,
 .equipment-detail-theme:focus-visible {
   border-color: var(--accent-emerald);
   color: var(--accent-emerald);
@@ -390,7 +388,7 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .equipment-detail-variant-button:hover {
+  .equipment-detail-variant-button:focus-visible {
     border-color: var(--accent-emerald);
     color: var(--accent-emerald-strong);
   }
@@ -511,7 +509,6 @@
   text-decoration: none;
 }
 
-.equipment-detail-source:hover,
 .equipment-detail-source:focus-visible {
   background: var(--accent-emerald);
   color: #fff;
@@ -647,9 +644,7 @@ body:has(.equipment-detail-page) {
   transition: border-color var(--transition-speed), background-color var(--transition-speed), color var(--transition-speed);
 }
 
-.equipment-detail-back:hover,
 .equipment-detail-back:focus-visible,
-.equipment-detail-theme:hover,
 .equipment-detail-theme:focus-visible {
   background: var(--accent-emerald-glow);
 }
@@ -1136,7 +1131,6 @@ body.equipment-detail-loading .catalog-detail-site-footer {
   transition: border-color var(--transition-speed), background-color var(--transition-speed), box-shadow var(--transition-speed), transform var(--transition-speed);
 }
 
-.crucible-material-card:hover,
 .crucible-material-card:focus-visible {
   border-color: var(--accent-emerald);
   box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-emerald) 12%, transparent);
@@ -1351,7 +1345,6 @@ body.equipment-detail-loading .catalog-detail-site-footer {
   font-weight: 750;
 }
 
-.crucible-guide-model-button:hover,
 .crucible-guide-model-button:focus-visible {
   border-color: var(--accent-emerald);
   color: var(--accent-emerald-strong);

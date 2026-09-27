@@ -278,10 +278,10 @@ const renderHomeShortcuts = () => `
 const renderHead = page => {
   const canonical = `https://soheil-aghyani.github.io/Solid-Waste-Laboratory/${page.canonical}`;
   const pageStyles = page.filename === 'gallery.html'
-    ? '<link rel="stylesheet" href="./catalog-redesign.min.css?v=1.9">'
+    ? '<link rel="stylesheet" href="./catalog-redesign.min.css?v=2.0">'
     : '';
   const elementStyles = page.filename === 'elements.html'
-    ? '<link rel="stylesheet" href="./elements.min.css?v=1.9">'
+    ? '<link rel="stylesheet" href="./elements.min.css?v=2.0">'
     : '';
   const assetVersion = asset => asset === 'gallery.min.js' ? '3.3' : '2.2';
   return `<!DOCTYPE html>
@@ -309,8 +309,8 @@ const renderHead = page => {
   <meta name="twitter:description" content="${page.description}">
   <link rel="icon" type="image/webp" href="Waste%20Lab.webp">
   <link rel="preload" href="./asset/vazirmatn-arabic.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
-  <link rel="stylesheet" href="./styles.min.css?v=6.4">
-  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=2.7">${pageStyles ? `\n  ${pageStyles}` : ''}
+  <link rel="stylesheet" href="./styles.min.css?v=6.5">
+  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=2.8">${pageStyles ? `\n  ${pageStyles}` : ''}
   <script>
     try {
       const savedTheme = localStorage.getItem('theme');
@@ -320,8 +320,8 @@ const renderHead = page => {
   </script>
   <script defer src="./asset/icon-system.min.js?v=1.0"></script>
   <script defer src="./site-navigation.min.js?v=1.1"></script>
-  ${page.filename === 'gallery.html' ? '' : '<script async fetchpriority="low" src="./script.min.js?v=7.3"></script>'}
-  <script defer src="./site-runtime.min.js?v=1.6"></script>${page.filename === 'index.html' ? '\n  <script defer src="./welcome-carousel.min.js?v=2.2"></script>' : ''}
+  ${page.filename === 'gallery.html' ? '' : '<script async fetchpriority="low" src="./script.min.js?v=7.4"></script>'}
+  <script defer src="./site-runtime.min.js?v=1.7"></script>${page.filename === 'index.html' ? '\n  <script defer src="./welcome-carousel.min.js?v=2.2"></script>' : ''}
   ${page.assets.map(asset => `<script defer src="./${asset}?v=${assetVersion(asset)}"></script>`).join('\n  ')}
 </head>`;
 };

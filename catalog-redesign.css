@@ -28,7 +28,6 @@ body[data-page="gallery"] #search-status-banner {
   display: none;
 }
 
-.catalog-header-search-clear:hover,
 .catalog-header-search-clear:focus-visible {
   color: var(--accent-emerald-strong);
 }
@@ -220,9 +219,7 @@ body[data-page="gallery"] #search-status-banner {
   cursor: pointer;
 }
 
-.catalog-search-clear:hover,
 .catalog-search-clear:focus-visible,
-.catalog-dialog-close:hover,
 .catalog-dialog-close:focus-visible {
   background: var(--accent-emerald-glow);
   color: var(--accent-emerald-strong);
@@ -281,9 +278,7 @@ body[data-page="gallery"] #search-status-banner {
   font-size: 1rem;
 }
 
-.catalog-filter-rail .equipment-filter-btn:hover,
 .catalog-filter-rail .equipment-filter-btn:focus-visible,
-.catalog-all-categories-button:hover,
 .catalog-all-categories-button:focus-visible,
 .catalog-filter-rail .equipment-filter-btn.active,
 .catalog-filter-rail .equipment-filter-btn.is-active {
@@ -372,7 +367,6 @@ body[data-page="gallery"] #search-status-banner {
   text-align: right;
 }
 
-.catalog-category-button:hover,
 .catalog-category-button:focus-visible {
   border-color: color-mix(in srgb, var(--accent-emerald) 45%, var(--border-color));
   background: var(--accent-emerald-glow);
@@ -419,7 +413,6 @@ body[data-page="gallery"] #search-status-banner {
   text-decoration: none;
 }
 
-.catalog-equipment-guide-link:hover,
 .catalog-equipment-guide-link:focus-visible {
   color: var(--accent-emerald-strong);
 }
@@ -550,7 +543,7 @@ body[data-page="gallery"] #search-status-banner {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .equipment-catalog-card:hover {
+  .equipment-catalog-card:focus-visible {
     border-color: color-mix(in srgb, var(--accent-emerald) 64%, var(--border-color));
     background: color-mix(in srgb, var(--accent-emerald-glow) 30%, var(--bg-tertiary));
     box-shadow: 0 8px 22px color-mix(in srgb, var(--accent-emerald) 12%, transparent);
@@ -594,7 +587,7 @@ body[data-page="gallery"] #search-status-banner {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .equipment-catalog-card:hover .equipment-card-image {
+  .equipment-catalog-card:focus-visible .equipment-card-image {
     filter: drop-shadow(0 10px 12px color-mix(in srgb, var(--text-primary) 13%, transparent));
   }
 }
@@ -739,7 +732,6 @@ body[data-page="gallery"] #search-status-banner {
   font-weight: 800;
 }
 
-.catalog-reset-button:hover,
 .catalog-reset-button:focus-visible {
   background: var(--accent-emerald);
   color: #fff;
@@ -1005,12 +997,12 @@ body[data-page="gallery"] #search-status-banner {
   }
 
   .equipment-catalog-grid {
-    grid-auto-rows: 154px;
+    grid-auto-rows: 164px;
   }
 
   .equipment-catalog-card {
-    height: 154px;
-    min-height: 154px;
+    height: 164px;
+    min-height: 164px;
   }
 
   .equipment-card-link {
@@ -1019,8 +1011,8 @@ body[data-page="gallery"] #search-status-banner {
 
   .equipment-card-image-wrap {
     width: 100%;
-    height: 152px;
-    min-height: 152px;
+    height: 162px;
+    min-height: 162px;
     max-width: 100%;
     aspect-ratio: auto;
   }
@@ -1098,7 +1090,6 @@ body[data-page="gallery"] #search-status-banner {
   white-space: nowrap;
 }
 
-.equipment-catalog-suggestion .catalog-suggestion-link:hover,
 .equipment-catalog-suggestion .catalog-suggestion-link:focus-visible {
   border-color: var(--accent-emerald-strong);
   background: var(--accent-emerald);
@@ -1119,24 +1110,8 @@ body[data-page="gallery"] #search-status-banner {
   }
 }
 
-/* Touch devices should keep catalog cards in their resting state until activation. */
+/* Touch devices should keep card links from adding an extra outline while focused. */
 @media (hover: none), (pointer: coarse) {
-  .equipment-catalog-card:hover {
-    transform: none;
-    border-color: var(--border-color);
-    background: var(--bg-tertiary);
-    box-shadow: 0 12px 32px color-mix(in srgb, var(--text-primary) 6%, transparent);
-  }
-
-  .equipment-catalog-card:hover .equipment-card-image {
-    transform: none;
-    filter: drop-shadow(0 8px 10px color-mix(in srgb, var(--text-primary) 9%, transparent));
-  }
-
-  .equipment-catalog-card:hover .equipment-card-cta > .material-symbols-outlined {
-    transform: none;
-  }
-
   .equipment-catalog-card:focus-within {
     outline: none;
     outline-offset: 0;
@@ -1146,40 +1121,4 @@ body[data-page="gallery"] #search-status-banner {
     filter: drop-shadow(0 8px 10px color-mix(in srgb, var(--text-primary) 9%, transparent));
   }
 
-  .catalog-filter-rail .equipment-filter-btn:hover:not(.active):not(.is-active) {
-    border-color: var(--border-color);
-    background: var(--bg-secondary);
-    color: var(--text-muted);
-  }
-
-  .catalog-header-search-clear:hover:not(:focus-visible) {
-    color: var(--text-muted);
-  }
-
-  .catalog-search-clear:hover:not(:focus-visible),
-  .catalog-dialog-close:hover:not(:focus-visible) {
-    background: transparent;
-    color: var(--text-muted);
-  }
-
-  .catalog-category-button:hover:not(.active):not(.is-active) {
-    border-color: transparent;
-    background: transparent;
-    color: var(--text-muted);
-  }
-
-  .catalog-equipment-guide-link:hover {
-    color: var(--text-muted);
-  }
-
-  .catalog-reset-button:hover:not(:focus-visible) {
-    background: var(--accent-emerald-glow);
-    color: var(--accent-emerald-strong);
-  }
-
-  .equipment-catalog-suggestion .catalog-suggestion-link:hover:not(:focus-visible) {
-    border-color: var(--accent-emerald);
-    background: var(--accent-emerald-glow);
-    color: var(--accent-emerald-strong);
-  }
 }

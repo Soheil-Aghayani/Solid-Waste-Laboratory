@@ -1972,18 +1972,9 @@ const initLabPortal = () => {
     removeBtn.style.display = 'inline-flex';
     removeBtn.style.alignItems = 'center';
     removeBtn.style.borderRadius = '6px';
-    removeBtn.style.transition = 'background 0.2s';
     removeBtn.title = 'حذف این ماده';
     removeBtn.setAttribute('aria-label', 'حذف این ماده شیمیایی');
     removeBtn.innerHTML = '<span class="material-symbols-outlined" style="font-size: 20px;">delete</span>';
-
-    // Hover effect for remove button
-    removeBtn.addEventListener('mouseenter', () => {
-      removeBtn.style.backgroundColor = 'rgba(239, 68, 68, 0.1)';
-    });
-    removeBtn.addEventListener('mouseleave', () => {
-      removeBtn.style.backgroundColor = 'transparent';
-    });
 
     removeBtn.addEventListener('click', () => {
       row.remove();

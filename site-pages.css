@@ -41,7 +41,7 @@ body {
   transition: opacity .18s ease, box-shadow .18s ease;
 }
 
-.brand-link:hover {
+.brand-link:focus-visible {
   opacity: .9;
 }
 
@@ -81,7 +81,6 @@ body {
   transition: color .18s ease, background-color .18s ease, border-color .18s ease;
 }
 
-.site-nav-link:hover,
 .site-nav-link:focus-visible,
 .site-nav-link.is-active {
   border-color: var(--accent-emerald);
@@ -208,7 +207,6 @@ body {
   text-decoration: none;
 }
 
-.page-context-breadcrumb a:hover,
 .page-context-breadcrumb a:focus-visible {
   text-decoration: underline;
   text-underline-offset: .18em;
@@ -290,7 +288,7 @@ body {
   transition: transform .18s ease, border-color .18s ease, background-color .18s ease;
 }
 
-.home-shortcut:hover,
+.home-shortcut:focus-visible,
 .home-shortcut-safety {
   border-color: var(--accent-emerald);
   background: var(--accent-emerald-glow);
@@ -351,7 +349,6 @@ body {
   transition: color .18s ease, background-color .18s ease, transform .18s ease;
 }
 
-.home-shortcut-link:hover,
 .home-shortcut-link:focus-visible {
   background: var(--accent-emerald-glow);
   color: var(--accent-emerald-strong);
@@ -488,7 +485,6 @@ body {
 }
 
 .element-view-toggle button[aria-pressed="true"],
-.element-view-toggle button:hover,
 .element-view-toggle button:focus-visible {
   border-color: var(--accent-emerald);
   background: var(--bg-secondary);
@@ -518,7 +514,6 @@ body {
   font-weight: 700;
 }
 
-.element-family-legend-item:hover,
 .element-family-legend-item:focus-visible,
 .element-family-legend-item.active,
 .element-family-legend-item.is-active {
@@ -607,7 +602,6 @@ body {
   line-height: 1;
 }
 
-.element-card:hover,
 .element-card:focus-visible {
   border-color: var(--element-family-color, var(--accent-emerald));
   background: color-mix(in srgb, var(--element-family-color, var(--accent-emerald)) 22%, var(--bg-secondary));
@@ -705,7 +699,6 @@ body {
   white-space: normal;
 }
 
-.site-primary-nav .site-primary-nav-link:hover,
 .site-primary-nav .site-primary-nav-link:focus-visible,
 .site-primary-nav .site-primary-nav-link.is-active {
   border-color: var(--accent-emerald);
@@ -835,7 +828,6 @@ body {
   color: var(--accent-emerald-strong);
 }
 
-.welcome-action:hover,
 .welcome-action:focus-visible {
   background: var(--accent-emerald);
   border-color: var(--accent-emerald);
@@ -899,7 +891,6 @@ body {
   box-shadow: none;
 }
 
-.home-shortcut.home-route:hover,
 .home-shortcut.home-route:focus-visible {
   transform: none;
   border-color: var(--accent-emerald);
@@ -2082,7 +2073,6 @@ body {
   transition: color .18s ease, background-color .18s ease, border-color .18s ease;
 }
 
-.site-footer .footer-nav a:hover,
 .site-footer .footer-nav a:focus-visible {
   border-color: color-mix(in srgb, var(--accent-emerald) 40%, var(--border-color));
   background: var(--accent-emerald-glow);
@@ -2115,7 +2105,7 @@ body {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .site-footer .social-icon:hover {
+  .site-footer .social-icon:focus-visible {
     transform: translateY(-2px) scale(1.02);
   }
 }

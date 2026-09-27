@@ -113,10 +113,8 @@ body:has(.equipment-detail-page) {
   white-space: nowrap;
 }
 
-.catalog-detail-header-links a:hover,
 .catalog-detail-header-links a:focus-visible,
 .catalog-detail-header-links a[aria-current="page"],
-.catalog-detail-header-back:hover,
 .catalog-detail-header-back:focus-visible {
   border-color: var(--accent-emerald);
   background: var(--accent-emerald-glow);
@@ -171,7 +169,6 @@ body:has(.equipment-detail-page) {
   white-space: nowrap;
 }
 
-.catalog-detail-dock a:hover,
 .catalog-detail-dock a:focus-visible,
 .catalog-detail-dock a[aria-current="page"] {
   border-color: var(--accent-emerald);
@@ -203,7 +200,6 @@ body:has(.equipment-detail-page) {
   font: inherit;
 }
 
-.catalog-detail-fab:hover,
 .catalog-detail-fab:focus-visible {
   transform: translateY(-2px);
 }
@@ -295,7 +291,6 @@ body:has(.equipment-detail-page) .chatbot-window {
   cursor: pointer;
 }
 
-.catalog-detail-emergency-close:hover,
 .catalog-detail-emergency-close:focus-visible {
   border-color: var(--accent-red);
   color: var(--accent-red);
@@ -328,7 +323,6 @@ body:has(.equipment-detail-page) .chatbot-window {
   text-decoration: none;
 }
 
-.catalog-detail-emergency-contacts a:hover,
 .catalog-detail-emergency-contacts a:focus-visible {
   border-color: var(--accent-red);
   background: var(--accent-red-glow);
@@ -613,7 +607,6 @@ body:has(.equipment-detail-page) .chatbot-window {
   transition: background-color .18s ease, border-color .18s ease, color .18s ease;
 }
 
-.equipment-detail-return a:hover,
 .equipment-detail-return a:focus-visible {
   border-color: var(--accent-emerald);
   background: var(--accent-emerald);

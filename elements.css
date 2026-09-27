@@ -78,9 +78,7 @@
   cursor: pointer;
 }
 
-.welcome-carousel-button:hover,
 .welcome-carousel-button:focus-visible,
-.element-back-button:hover,
 .element-back-button:focus-visible {
   border-color: var(--accent-emerald);
   color: var(--accent-emerald);
@@ -294,7 +292,6 @@
   white-space: nowrap;
 }
 
-.element-filter-btn:hover,
 .element-filter-btn:focus-visible,
 .element-filter-btn.active {
   border-color: var(--accent-emerald);
@@ -336,7 +333,6 @@
   transition: border-color .18s ease, background-color .18s ease, transform .18s ease;
 }
 
-.element-card:hover,
 .element-card:focus-visible {
   z-index: 1;
   border-color: var(--accent-emerald);
@@ -844,7 +840,6 @@
 }
 
 .mobile-dock-item.active,
-.mobile-dock-item:hover,
 .mobile-dock-item:focus-visible {
   background: var(--accent-emerald-glow);
   color: var(--accent-emerald-strong);
