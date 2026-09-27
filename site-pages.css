@@ -1903,32 +1903,8 @@ body {
   display: flex;
   flex: 0 0 44px;
   align-items: center;
-  justify-content: space-between;
-  gap: .75rem;
-  padding-inline: .35rem;
-}
-
-.welcome-carousel-button,
-.welcome-carousel-dot {
-  font: inherit;
-}
-
-.element-icon-reversed {
-  transform: rotate(180deg);
-}
-
-.welcome-carousel-button {
-  display: inline-flex;
-  flex: 0 0 44px;
-  min-width: 44px;
-  min-height: 44px;
-  align-items: center;
   justify-content: center;
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  background: var(--bg-secondary);
-  color: var(--text-primary);
-  cursor: pointer;
+  gap: .75rem;
 }
 
 .welcome-carousel-dots {
@@ -1951,6 +1927,7 @@ body {
   background: transparent;
   color: var(--text-muted);
   cursor: pointer;
+  font: inherit;
 }
 
 .welcome-carousel-dot::before {
@@ -1973,12 +1950,6 @@ body {
   width: 24px;
   border-radius: 999px;
   opacity: 1;
-}
-
-.welcome-carousel-button:hover,
-.welcome-carousel-button:focus-visible {
-  border-color: var(--accent-emerald);
-  color: var(--accent-emerald);
 }
 
 /* A compact, purposeful footer: brand, useful destinations, social links, then one quiet legal row. */

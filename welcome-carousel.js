@@ -5,7 +5,6 @@
 
     const slides = Array.from(root.querySelectorAll('[data-welcome-slide]'));
     const dotsRoot = root.querySelector('[data-welcome-dots]');
-    const actionButtons = root.querySelectorAll('[data-welcome-action]');
     if (!slides.length || !dotsRoot) return;
 
     let activeIndex = Math.max(0, slides.findIndex(slide => !slide.hidden));
@@ -44,13 +43,6 @@
     dotsRoot.addEventListener('click', event => {
       const dot = event.target.closest('[data-welcome-dot]');
       if (dot) update(Number(dot.dataset.welcomeDot), true);
-    });
-
-    actionButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const direction = button.dataset.welcomeAction === 'next' ? 1 : -1;
-        update(activeIndex + direction);
-      });
     });
 
     root.addEventListener('keydown', event => {
