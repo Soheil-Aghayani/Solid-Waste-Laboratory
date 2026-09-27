@@ -1148,11 +1148,15 @@ body {
   .site-header .status-widget {
     flex: 1 1 auto;
     min-width: 0;
+    align-items: flex-start;
   }
 
-  .site-header .status-widget #status-text {
+  .site-header .status-widget #status-text,
+  .site-header .status-widget #status-hours {
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: clip;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .site-primary-nav {

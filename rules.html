@@ -23,8 +23,8 @@
   <meta name="twitter:description" content="قوانین عمومی، پوشش حفاظتی، کار با مواد و مدیریت پسماند در آزمایشگاه پسماند.">
   <link rel="icon" type="image/webp" href="Waste%20Lab.webp">
   <link rel="preload" href="./asset/vazirmatn-arabic.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
-  <link rel="stylesheet" href="./styles.min.css?v=6.3">
-  <link rel="stylesheet" href="./site-pages.min.css?v=2.6">
+  <link rel="stylesheet" href="./styles.min.css?v=6.4">
+  <link rel="stylesheet" href="./site-pages.min.css?v=2.7">
   <script>
     try {
       const savedTheme = localStorage.getItem('theme');
@@ -34,8 +34,8 @@
   </script>
   <script defer src="./asset/icon-system.min.js?v=1.0"></script>
   <script defer src="./site-navigation.min.js?v=1.1"></script>
-  <script async fetchpriority="low" src="./script.min.js?v=7.2"></script>
-  <script defer src="./site-runtime.min.js?v=1.5"></script>
+  <script async fetchpriority="low" src="./script.min.js?v=7.3"></script>
+  <script defer src="./site-runtime.min.js?v=1.6"></script>
 
 </head>
 <body data-page="rules">
@@ -53,9 +53,12 @@
         
         <div class="controls">
           <!-- Live Status -->
-          <div class="status-widget">
-            <span class="status-dot" id="status-dot"></span>
-            <span id="status-text" role="status" aria-live="polite">درحال بررسی وضعیت آزمایشگاه...</span>
+          <div class="status-widget" aria-label="وضعیت و ساعات کاری آزمایشگاه">
+            <span class="status-dot" id="status-dot" aria-hidden="true"></span>
+            <span class="status-copy">
+              <span id="status-text" role="status" aria-live="polite">در حال بررسی وضعیت آزمایشگاه</span>
+              <span id="status-hours">ساعات کاری: ۸ تا ۱۶</span>
+            </span>
           </div>
           
           <!-- Spill Simulator Trigger Button -->

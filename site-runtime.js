@@ -172,6 +172,7 @@
 
         const statusDot = document.getElementById('status-dot');
         const statusText = document.getElementById('status-text');
+        const statusHours = document.getElementById('status-hours');
         const updateCompactStatus = () => {
           if (!statusDot || !statusText) return;
           const now = new Date();
@@ -187,9 +188,13 @@
             day = days[parts.find(part => part.type === 'weekday').value];
             dayName = new Intl.DateTimeFormat('fa-IR', { timeZone: 'Asia/Tehran', weekday: 'long' }).format(now);
           } catch (error) {}
-          const isOpen = [0, 1, 2, 3, 6].includes(day) && hour >= 7 && hour < 16;
+          const isOpen = [0, 1, 2, 3, 6].includes(day) && hour >= 8 && hour < 16;
+          const stateText = isOpen ? 'آزمایشگاه باز است' : 'آزمایشگاه بسته است';
+          const scheduleText = `${dayName}، ساعت ۸ تا ۱۶`;
           statusDot.classList.toggle('active', isOpen);
-          statusText.textContent = `${isOpen ? 'آزمایشگاه باز است' : 'آزمایشگاه بسته است'} · ${dayName} · ۷ تا ۱۶`;
+          statusText.textContent = stateText;
+          if (statusHours) statusHours.textContent = scheduleText;
+          statusText.title = `${stateText} (${scheduleText})`;
         };
         updateCompactStatus();
         window.setInterval(updateCompactStatus, 60000);

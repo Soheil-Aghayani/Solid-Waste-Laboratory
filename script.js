@@ -67,6 +67,7 @@ const initLabPortal = () => {
   function updateLabStatus() {
     const statusDot = document.getElementById('status-dot');
     const statusText = document.getElementById('status-text');
+    const statusHours = document.getElementById('status-hours');
     const now = new Date();
     let currentHour = now.getHours();
     let currentDay = now.getDay();
@@ -88,25 +89,16 @@ const initLabPortal = () => {
     }
 
     const isWorkday = [0, 1, 2, 3, 6].includes(currentDay); // شنبه تا چهارشنبه
-    const isOpen = isWorkday && currentHour >= 7 && currentHour < 16;
-    
-    const fullStatusText = isOpen
-      ? `آزمایشگاه باز است (${dayName}، ساعت کاری: ۷ تا ۱۶)`
-      : `آزمایشگاه در حال حاضر بسته است (${dayName}، ساعات کاری شنبه تا چهارشنبه، ۷ تا ۱۶)`;
-    const compactStatusText = isOpen
-      ? `آزمایشگاه باز است · ${dayName} · ۷ تا ۱۶`
-      : `آزمایشگاه بسته است · ${dayName} · ۷ تا ۱۶`;
+    const isOpen = isWorkday && currentHour >= 8 && currentHour < 16;
+    const stateText = isOpen ? 'آزمایشگاه باز است' : 'آزمایشگاه بسته است';
+    const scheduleText = `${dayName}، ساعت ۸ تا ۱۶`;
 
     if (!statusDot || !statusText) return;
 
-    if (isOpen) {
-      statusDot.classList.add('active');
-      statusText.textContent = compactStatusText;
-    } else {
-      statusDot.classList.remove('active');
-      statusText.textContent = compactStatusText;
-    }
-    statusText.title = fullStatusText;
+    statusDot.classList.toggle('active', isOpen);
+    statusText.textContent = stateText;
+    if (statusHours) statusHours.textContent = scheduleText;
+    statusText.title = `${stateText} (${scheduleText})`;
   }
   updateLabStatus();
   setInterval(updateLabStatus, 60000); // Update every minute
