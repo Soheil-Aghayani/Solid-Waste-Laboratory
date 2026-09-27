@@ -1137,6 +1137,15 @@ body[data-page="gallery"] #search-status-banner {
     transform: none;
   }
 
+  .equipment-catalog-card:focus-within {
+    outline: none;
+    outline-offset: 0;
+  }
+
+  .equipment-catalog-card:focus-within .equipment-card-image {
+    filter: drop-shadow(0 8px 10px color-mix(in srgb, var(--text-primary) 9%, transparent));
+  }
+
   .catalog-filter-rail .equipment-filter-btn:hover:not(.active):not(.is-active) {
     border-color: var(--border-color);
     background: var(--bg-secondary);
