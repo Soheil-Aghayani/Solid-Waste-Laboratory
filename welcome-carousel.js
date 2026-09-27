@@ -5,7 +5,6 @@
 
     const slides = Array.from(root.querySelectorAll('[data-welcome-slide]'));
     const dotsRoot = root.querySelector('[data-welcome-dots]');
-    const status = root.querySelector('[data-welcome-status]');
     const actionButtons = root.querySelectorAll('[data-welcome-action]');
     if (!slides.length || !dotsRoot) return;
 
@@ -38,11 +37,6 @@
       dotsRoot.querySelectorAll('[data-welcome-dot]').forEach((dot, dotIndex) => {
         dot.setAttribute('aria-current', String(dotIndex === activeIndex));
       });
-
-      if (status) {
-        const caption = slides[activeIndex].querySelector('figcaption')?.textContent?.trim() || '';
-        status.textContent = `تصویر ${activeIndex + 1} از ${slides.length}${caption ? `: ${caption}` : ''}`;
-      }
 
       if (focusDot) dotsRoot.querySelector(`[data-welcome-dot="${activeIndex}"]`)?.focus();
     };

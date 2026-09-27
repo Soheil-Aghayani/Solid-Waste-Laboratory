@@ -1899,20 +1899,13 @@ body {
   object-fit: cover;
 }
 
-.welcome-slide figcaption {
-  padding: .75rem .9rem;
-  background: var(--bg-secondary);
-  color: var(--text-muted);
-  font-size: .82rem;
-  line-height: 1.5;
-}
-
 .welcome-carousel-controls {
   display: flex;
   flex: 0 0 44px;
   align-items: center;
   justify-content: space-between;
   gap: .75rem;
+  padding-inline: .35rem;
 }
 
 .welcome-carousel-button,
@@ -1926,6 +1919,7 @@ body {
 
 .welcome-carousel-button {
   display: inline-flex;
+  flex: 0 0 44px;
   min-width: 44px;
   min-height: 44px;
   align-items: center;
@@ -1939,15 +1933,19 @@ body {
 
 .welcome-carousel-dots {
   display: flex;
+  flex: 1 1 auto;
   min-height: 44px;
+  min-width: 0;
   align-items: center;
   justify-content: center;
   gap: .45rem;
 }
 
 .welcome-carousel-dot {
-  width: 44px;
+  flex: 1 1 44px;
+  width: auto;
   height: 44px;
+  min-width: 32px;
   padding: 0;
   border: 0;
   background: transparent;
