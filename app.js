@@ -82,12 +82,12 @@ function draw(phase,rows,peaks,s){
   const x=v=>L+(v-s.min)/(s.max-s.min)*(W-L-R);
   const visible=rows.filter(p=>p.x>=s.min&&p.x<=s.max),max=Math.max(...visible.map(p=>p.y),1),y=v=>base-25-v/max*(base-T-35);
   let svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Entered diffraction data and selected ${phase.name} reference positions"><title>Input and ${phase.name} reference positions</title>`;
-  for(let i=0;i<=7;i++){const v=s.min+(s.max-s.min)*i/7;svg+=`<line x1="${x(v)}" x2="${x(v)}" y1="${T}" y2="${base+20}" stroke="#edf0f2"/><text x="${x(v)}" y="${H-15}" fill="#74818a" font-size="10" text-anchor="middle">${v.toFixed(1)}</text>`;}
-  if(s.scan)svg+=`<polyline points="${visible.map(p=>`${x(p.x)},${y(p.y)}`).join(' ')}" fill="none" stroke="#216450" stroke-width="1.5"/>`;
-  else svg+=peaks.filter(p=>p.x>=s.min&&p.x<=s.max).map(p=>`<line x1="${x(p.x)}" x2="${x(p.x)}" y1="${base-25}" y2="${y(p.y)}" stroke="#216450" stroke-width="2"><title>${f(p.x)}° · intensity ${p.y}</title></line>`).join('');
-  if(s.scan)svg+=peaks.filter(p=>p.x>=s.min&&p.x<=s.max).map(p=>`<circle cx="${x(p.x)}" cy="${y(Math.min(p.y,max))}" r="3" fill="#fff" stroke="#216450"><title>Matching peak ${f(p.x)}°</title></circle>`).join('');
-  svg+=phase.refs.filter(r=>r.x>=s.min&&r.x<=s.max).map(r=>`<line x1="${x(r.x)}" x2="${x(r.x)}" y1="${base+20-Math.max(2,18*(r.intensity??100)/100)}" y2="${base+20}" stroke="#8496b0" stroke-width="2"><title>${phase.name} · ${f(r.x)}° · calculated I ${r.intensity?.toFixed(1)??100}</title></line>`).join('');
-  svg+=`<line x1="${L}" x2="${W-R}" y1="${base-25}" y2="${base-25}" stroke="#d4dce0"/><text x="12" y="100" fill="#74818a" font-size="10" transform="rotate(-90 12 100)">${s.scan?'Intensity (relative)':'Entered peak intensity'}</text><text x="${W-20}" y="${H-1}" text-anchor="end" fill="#74818a" font-size="10">2θ · degrees</text></svg>`;
+  for(let i=0;i<=7;i++){const v=s.min+(s.max-s.min)*i/7;svg+=`<line x1="${x(v)}" x2="${x(v)}" y1="${T}" y2="${base+20}" stroke="var(--line)"/><text x="${x(v)}" y="${H-15}" fill="var(--text-2)" font-size="10" text-anchor="middle">${v.toFixed(1)}</text>`;}
+  if(s.scan)svg+=`<polyline points="${visible.map(p=>`${x(p.x)},${y(p.y)}`).join(' ')}" fill="none" stroke="var(--accent)" stroke-width="1.5"/>`;
+  else svg+=peaks.filter(p=>p.x>=s.min&&p.x<=s.max).map(p=>`<line x1="${x(p.x)}" x2="${x(p.x)}" y1="${base-25}" y2="${y(p.y)}" stroke="var(--accent)" stroke-width="2"><title>${f(p.x)}° · intensity ${p.y}</title></line>`).join('');
+  if(s.scan)svg+=peaks.filter(p=>p.x>=s.min&&p.x<=s.max).map(p=>`<circle cx="${x(p.x)}" cy="${y(Math.min(p.y,max))}" r="3" fill="var(--surface)" stroke="var(--accent)"><title>Matching peak ${f(p.x)}°</title></circle>`).join('');
+  svg+=phase.refs.filter(r=>r.x>=s.min&&r.x<=s.max).map(r=>`<line x1="${x(r.x)}" x2="${x(r.x)}" y1="${base+20-Math.max(2,18*(r.intensity??100)/100)}" y2="${base+20}" stroke="var(--trace-reference)" stroke-width="2"><title>${phase.name} · ${f(r.x)}° · calculated I ${r.intensity?.toFixed(1)??100}</title></line>`).join('');
+  svg+=`<line x1="${L}" x2="${W-R}" y1="${base-25}" y2="${base-25}" stroke="var(--line-strong)"/><text x="12" y="100" fill="var(--text-2)" font-size="10" transform="rotate(-90 12 100)">${s.scan?'Intensity (relative)':'Entered peak intensity'}</text><text x="${W-20}" y="${H-1}" text-anchor="end" fill="var(--text-2)" font-size="10">2θ · degrees</text></svg>`;
   $('chart').innerHTML=svg;
   $('view-range').textContent=`${f(s.min)}–${f(s.max)}°`;
   $('chart').querySelector('svg').addEventListener('pointermove',event=>{
