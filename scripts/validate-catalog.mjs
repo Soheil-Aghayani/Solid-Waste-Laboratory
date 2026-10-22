@@ -1,19 +1,12 @@
 import fs from 'node:fs/promises';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync } from 'node:fs';
 import path from 'node:path';
-import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
 const casPattern = /^\d{2,7}-\d{2}-\d$/;
 
 const readJson = file => fs.readFile(path.join(root, file), 'utf8').then(JSON.parse);
-
-function loadWindowScript(file) {
-  const context = { window: {} };
-  vm.runInNewContext(readFileSync(path.join(root, file), 'utf8'), context, { filename: file });
-  return context.window;
-}
 
 function unique(values) {
   return [...new Set(values.filter(Boolean))];
@@ -25,8 +18,7 @@ async function main() {
     readJson('data/chemical-records.json'),
     readJson('data/catalog-index.json')
   ]);
-  const equipmentWindow = loadWindowScript('equipment-data.js');
-  const equipment = equipmentWindow.LAB_EQUIPMENT_CATALOG || [];
+  const equipment = await readJson('data/source/equipment.json');
   const variants = equipment.flatMap(family => family.variants || []);
 
   const atomicNumbers = elements.map(element => element.atomicNumber);

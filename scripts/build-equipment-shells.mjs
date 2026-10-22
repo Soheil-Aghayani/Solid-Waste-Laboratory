@@ -1,6 +1,5 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
@@ -8,12 +7,7 @@ const projectRoot = path.resolve(scriptDirectory, '..');
 const equipmentDirectory = path.join(projectRoot, 'Equipment');
 const canonicalHome = 'https://soheil-aghayani.github.io/Solid-Waste-Laboratory/index.html';
 const portalSource = fs.readFileSync(path.join(projectRoot, 'index.html'), 'utf8');
-const catalogContext = { window: {} };
-vm.createContext(catalogContext);
-vm.runInContext(fs.readFileSync(path.join(projectRoot, 'equipment-data.js'), 'utf8'), catalogContext);
-const equipmentCatalog = Array.isArray(catalogContext.window.LAB_EQUIPMENT_CATALOG)
-  ? catalogContext.window.LAB_EQUIPMENT_CATALOG
-  : [];
+const equipmentCatalog = JSON.parse(fs.readFileSync(path.join(projectRoot, 'data', 'source', 'equipment.json'), 'utf8'));
 
 const footerStart = portalSource.indexOf('  <footer class="site-footer"');
 const footerEnd = portalSource.indexOf('  </footer>', footerStart) + '  </footer>'.length;

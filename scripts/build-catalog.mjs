@@ -1,7 +1,5 @@
 import fs from 'node:fs/promises';
-import { readFileSync } from 'node:fs';
 import path from 'node:path';
-import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
@@ -44,17 +42,6 @@ async function readJson(filePath) {
 async function writeJson(filePath, value) {
   await fs.mkdir(path.dirname(filePath), { recursive: true });
   await fs.writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`, 'utf8');
-}
-
-function loadWindowScript(filePath) {
-  const source = requireFile(filePath);
-  const context = { window: {} };
-  vm.runInNewContext(source, context, { filename: filePath });
-  return context.window;
-}
-
-function requireFile(filePath) {
-  return readFileSync(filePath, 'utf8');
 }
 
 function extractPeriodicRows(payload) {
@@ -187,8 +174,8 @@ function safetyFromChemical(chemical) {
 }
 
 async function main() {
-  const msdsWindow = loadWindowScript(path.join(root, 'chatbot', 'msds', 'msds-db.js'));
-  const equipmentWindow = loadWindowScript(path.join(root, 'equipment-data.js'));
+  const msdsWindow = { chemicalMsdsDb: await readJson(path.join(root, 'data', 'source', 'chemicals.json')) };
+  const equipmentWindow = { LAB_EQUIPMENT_CATALOG: await readJson(path.join(root, 'data', 'source', 'equipment.json')) };
   const previousElements = await readJson(path.join(root, 'data', 'elements.json')).catch(() => []);
   const previousElementsByNumber = new Map(previousElements.map(record => [record.atomicNumber, record]));
   const msdsRecords = msdsWindow.chemicalMsdsDb || [];
