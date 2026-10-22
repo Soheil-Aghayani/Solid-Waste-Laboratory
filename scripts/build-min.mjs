@@ -15,6 +15,18 @@ function* walk(dir) {
   }
 }
 
+// Inline local @import rules, re-basing relative url() so assets resolve from the importing file.
+function inlineImports(code, fromDir) {
+  return code.replace(/@import\s+['"]([^'"]+)['"];?/g, (_, rel) => {
+    const importPath = path.resolve(fromDir, rel);
+    const base = path.relative(fromDir, path.dirname(importPath)).split(path.sep).join('/');
+    return fs.readFileSync(importPath, 'utf8').replace(
+      /url\((['"]?)(?![a-z]+:|\/|data:)([^'")]+)\1\)/gi,
+      (_m, q, u) => `url(${q}${base}/${u}${q})`,
+    );
+  });
+}
+
 let built = 0;
 for (const file of walk(root)) {
   const match = file.match(/^(.*)\.min\.(js|css)$/);
@@ -22,7 +34,8 @@ for (const file of walk(root)) {
   const [, base, ext] = match;
   const sourcePath = `${base}.${ext}`;
   if (!fs.existsSync(sourcePath)) continue;
-  const { code } = await transform(fs.readFileSync(sourcePath, 'utf8'), {
+  const source = fs.readFileSync(sourcePath, 'utf8');
+  const { code } = await transform(ext === 'css' ? inlineImports(source, path.dirname(sourcePath)) : source, {
     loader: ext,
     minify: true,
     legalComments: 'none',

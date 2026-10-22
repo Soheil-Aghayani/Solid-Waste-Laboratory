@@ -1,4 +1,5 @@
 /* CSS Design System for Laboratory Rules & Equipment Portal */
+@import './asset/tokens.css';
 @font-face {
   font-family: 'Vazirmatn';
   font-style: normal;
@@ -44,52 +45,27 @@
 }
 
 :root {
-  /* Dark Theme Variables (Default) */
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-tertiary: #334155;
-  --border-color: #334155;
-  --text-primary: #f8fafc;
-  --text-muted: #b6c2d1;
-  --accent-emerald: #10b981;
-  --accent-emerald-strong: #047857;
-  --accent-emerald-light: #34d399;
-  --accent-emerald-glow: rgba(16, 185, 129, 0.15);
-  --accent-amber: #f59e0b;
-  --accent-amber-glow: rgba(245, 158, 11, 0.15);
-  --accent-red: #ef4444;
-  --accent-red-strong: #b91c1c;
-  --accent-red-glow: rgba(239, 68, 68, 0.2);
-  --border-hover: #475569;
-  --shadow-lg: 0 18px 45px -18px rgba(0, 0, 0, 0.65);
-  --text-main: var(--text-primary);
-  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
-  --transition-speed: 0.3s;
-  --font-fa: 'Vazirmatn', system-ui, -apple-system, sans-serif;
-  --font-en: system-ui, -apple-system, 'Segoe UI', sans-serif;
-}
-
-[data-theme="light"] {
-  /* Light Theme Variables */
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #f1f5f9;
-  --border-color: #e2e8f0;
-  --text-primary: #0f172a;
-  --text-muted: #475569;
-  --accent-emerald: #047857;
-  --accent-emerald-strong: #065f46;
-  --accent-emerald-light: #10b981;
-  --accent-emerald-glow: rgba(5, 150, 105, 0.1);
-  --accent-amber: #d97706;
-  --accent-amber-glow: rgba(217, 119, 6, 0.1);
-  --accent-red: #b91c1c;
-  --accent-red-strong: #991b1b;
-  --accent-red-glow: rgba(220, 38, 38, 0.1);
-  --border-hover: #94a3b8;
-  --shadow-lg: 0 18px 40px -18px rgba(15, 23, 42, 0.18);
-  --text-main: var(--text-primary);
-  --card-shadow: 0 10px 25px -10px rgba(15, 23, 42, 0.08);
+  /* Legacy portal names, aliased to the shared tokens in asset/tokens.css */
+  --bg-primary: var(--bg);
+  --bg-secondary: var(--surface);
+  --bg-tertiary: var(--surface-2);
+  --border-color: var(--line);
+  --border-hover: var(--line-strong);
+  --text-primary: var(--text);
+  --text-main: var(--text);
+  --text-muted: var(--text-2);
+  --accent-emerald: var(--accent);
+  --accent-emerald-strong: var(--accent-strong);
+  --accent-emerald-light: var(--accent-light);
+  --accent-emerald-glow: var(--accent-glow);
+  --accent-amber: var(--warn);
+  --accent-amber-glow: var(--warn-glow);
+  --accent-red: var(--danger);
+  --accent-red-strong: var(--danger-strong);
+  --accent-red-glow: var(--danger-glow);
+  --card-shadow: var(--shadow-md);
+  --transition-speed: var(--dur);
+  --font-en: var(--font-sans);
 }
 
 /* Base Styles */

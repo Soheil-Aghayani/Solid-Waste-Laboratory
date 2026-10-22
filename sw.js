@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'lab-rules-v105';
+const CACHE_VERSION = 'lab-rules-v106';
 const APP_SHELL = [
   './',
   './index.html',
@@ -9,7 +9,7 @@ const APP_SHELL = [
   './elements.html',
   './offline.html',
   './manifest.webmanifest',
-  './styles.min.css?v=6.5',
+  './styles.min.css?v=6.6',
   './elements.min.css?v=2.0',
   './site-pages.min.css?v=2.8',
   './asset/icon-system.min.js?v=1.0',
@@ -206,6 +206,7 @@ const APP_SHELL = [
   './chatbot/chatbot.min.js?v=5.8',
   './chatbot/msds/msds-db.min.js?v=5.8',
   './asset/vazirmatn-arabic.woff2',
+  './asset/inter-latin-wght.woff2',
   './Waste%20Lab.webp'
 ];
 
