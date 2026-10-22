@@ -276,7 +276,7 @@ const renderHomeShortcuts = () => `
     </section>`;
 
 const renderHead = page => {
-  const canonical = `https://soheil-aghyani.github.io/Solid-Waste-Laboratory/${page.canonical}`;
+  const canonical = `https://soheil-aghayani.github.io/Solid-Waste-Laboratory/${page.canonical}`;
   const pageStyles = page.filename === 'gallery.html'
     ? '<link rel="stylesheet" href="./catalog-redesign.min.css?v=2.2">'
     : '';
@@ -302,7 +302,7 @@ const renderHead = page => {
   <meta property="og:title" content="${page.title}">
   <meta property="og:description" content="${page.description}">
   <meta property="og:url" content="${canonical}">
-  <meta property="og:image" content="https://soheil-aghyani.github.io/Solid-Waste-Laboratory/Waste%20Lab.webp">
+  <meta property="og:image" content="https://soheil-aghayani.github.io/Solid-Waste-Laboratory/Waste%20Lab.webp">
   <meta property="og:image:alt" content="آزمایشگاه پسماند">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="${page.title}">

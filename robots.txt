@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://soheil-aghyani.github.io/Solid-Waste-Laboratory/sitemap.xml
+Sitemap: https://soheil-aghayani.github.io/Solid-Waste-Laboratory/sitemap.xml

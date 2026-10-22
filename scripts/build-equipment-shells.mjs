@@ -110,7 +110,7 @@ files.forEach(file => {
     ? `${defaultImageHref} 360w, ../asset/equipment/detail-600/${encodeURIComponent(defaultImage)} 600w`
     : '';
 
-  const canonical = readCanonical(source) || `https://soheil-aghyani.github.io/Solid-Waste-Laboratory/Equipment/${file}`;
+  const canonical = readCanonical(source) || `https://soheil-aghayani.github.io/Solid-Waste-Laboratory/Equipment/${file}`;
   const description = readMeta(source, 'description') || 'معرفی آموزشی تجهیزات، کاربرد، تفاوت گزینه‌ها و نکات ایمنی در آزمایشگاه پسماند.';
   const html = `<!doctype html>
 <html lang="fa" dir="rtl">
