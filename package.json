@@ -6,7 +6,8 @@
     "data:validate": "node scripts/validate-catalog.mjs",
     "pages:build": "node scripts/build-pages.mjs",
     "check": "npm run data:validate && git diff --check",
-    "build:min": "node scripts/build-min.mjs"
+    "build:min": "node scripts/build-min.mjs",
+    "test:sw": "node scripts/test-sw.mjs"
   },
   "devDependencies": {
     "esbuild": "^0.28.2"
