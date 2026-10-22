@@ -1,0 +1,4250 @@
+{
+  "_about": "PROPOSAL, not applied. \"classes\" = substance classes to keep apart; \"conditions\" = conditions to avoid; \"restrictions\" = handling rules. The text in parentheses of each legacy string is kept as \"note\".",
+  "classes": [
+    {
+      "id": "strong-oxidizer",
+      "fa": "اکسیدکننده‌های قوی",
+      "en": "Strong oxidizers",
+      "kind": "hazard",
+      "mentions": 349,
+      "records": 336
+    },
+    {
+      "id": "strong-acid",
+      "fa": "اسیدهای قوی یا غلیظ",
+      "en": "Strong / concentrated acids",
+      "kind": "hazard",
+      "mentions": 215,
+      "records": 215
+    },
+    {
+      "id": "acid",
+      "fa": "اسیدها (هر اسیدی)",
+      "en": "Acids (any strength)",
+      "kind": "hazard",
+      "mentions": 16,
+      "records": 16
+    },
+    {
+      "id": "strong-base",
+      "fa": "بازهای قوی",
+      "en": "Strong bases",
+      "kind": "hazard",
+      "mentions": 121,
+      "records": 120
+    },
+    {
+      "id": "base",
+      "fa": "بازها (هر بازی)",
+      "en": "Bases (any strength)",
+      "kind": "hazard",
+      "mentions": 12,
+      "records": 12
+    },
+    {
+      "id": "reducing-agent",
+      "fa": "عوامل احیاکننده",
+      "en": "Reducing agents",
+      "kind": "hazard",
+      "mentions": 55,
+      "records": 55
+    },
+    {
+      "id": "reactive-metal",
+      "fa": "فلزات فعال و پودر فلزات",
+      "en": "Reactive metals and metal powders",
+      "kind": "hazard",
+      "mentions": 81,
+      "records": 79
+    },
+    {
+      "id": "water-moisture",
+      "fa": "آب و رطوبت",
+      "en": "Water and moisture",
+      "kind": "hazard",
+      "mentions": 49,
+      "records": 49
+    },
+    {
+      "id": "flammable-material",
+      "fa": "مواد آلی و قابل اشتعال",
+      "en": "Flammable / organic materials and solvents",
+      "kind": "hazard",
+      "mentions": 58,
+      "records": 50
+    },
+    {
+      "id": "halogenated-solvent",
+      "fa": "حلال‌های هالوژنه",
+      "en": "Halogenated solvents",
+      "kind": "hazard",
+      "mentions": 2,
+      "records": 2
+    },
+    {
+      "id": "halogen",
+      "fa": "هالوژن‌ها",
+      "en": "Halogens",
+      "kind": "hazard",
+      "mentions": 13,
+      "records": 12
+    },
+    {
+      "id": "amine",
+      "fa": "آمین‌ها",
+      "en": "Amines",
+      "kind": "hazard",
+      "mentions": 18,
+      "records": 18
+    },
+    {
+      "id": "alcohol",
+      "fa": "الکل‌ها",
+      "en": "Alcohols",
+      "kind": "hazard",
+      "mentions": 17,
+      "records": 17
+    },
+    {
+      "id": "ammonia-ammonium",
+      "fa": "آمونیاک و ترکیبات آمونیوم",
+      "en": "Ammonia and ammonium compounds",
+      "kind": "hazard",
+      "mentions": 8,
+      "records": 8
+    },
+    {
+      "id": "peroxide-initiator",
+      "fa": "پراکسیدها و آغازگرهای رادیکالی",
+      "en": "Peroxides and radical initiators",
+      "kind": "hazard",
+      "mentions": 10,
+      "records": 10
+    },
+    {
+      "id": "acid-halide-anhydride",
+      "fa": "کلریدهای اسیدی و انیدریدها",
+      "en": "Acid halides and anhydrides",
+      "kind": "hazard",
+      "mentions": 4,
+      "records": 4
+    },
+    {
+      "id": "copper-alloy",
+      "fa": "مس و آلیاژهای آن",
+      "en": "Copper and its alloys",
+      "kind": "hazard",
+      "mentions": 8,
+      "records": 8
+    },
+    {
+      "id": "heavy-metal",
+      "fa": "فلزات سنگین و نمک‌های آن‌ها",
+      "en": "Heavy metals and their salts",
+      "kind": "hazard",
+      "mentions": 12,
+      "records": 12
+    },
+    {
+      "id": "glass-silica",
+      "fa": "شیشه و سیلیکا",
+      "en": "Glass and silica",
+      "kind": "hazard",
+      "mentions": 3,
+      "records": 3
+    },
+    {
+      "id": "carbonate",
+      "fa": "کربنات‌ها",
+      "en": "Carbonates",
+      "kind": "hazard",
+      "mentions": 4,
+      "records": 4
+    },
+    {
+      "id": "carbon-dioxide",
+      "fa": "دی‌اکسید کربن",
+      "en": "Carbon dioxide",
+      "kind": "hazard",
+      "mentions": 3,
+      "records": 3
+    },
+    {
+      "id": "nitrite",
+      "fa": "نیتریت‌ها",
+      "en": "Nitrites",
+      "kind": "hazard",
+      "mentions": 2,
+      "records": 2
+    },
+    {
+      "id": "precipitating-salt",
+      "fa": "یون‌های رسوب‌دهنده",
+      "en": "Precipitating ions (a reaction note, not a hazard)",
+      "kind": "note",
+      "mentions": 4,
+      "records": 4
+    },
+    {
+      "id": "other",
+      "fa": "سایر (نیازمند بررسی)",
+      "en": "Other (needs review)",
+      "kind": "note",
+      "mentions": 1,
+      "records": 1
+    }
+  ],
+  "conditions": [
+    {
+      "id": "heat-ignition",
+      "fa": "حرارت، جرقه و منابع اشتعال",
+      "en": "Heat, sparks and ignition sources",
+      "kind": "condition",
+      "mentions": 93,
+      "records": 92
+    },
+    {
+      "id": "light",
+      "fa": "نور",
+      "en": "Light",
+      "kind": "condition",
+      "mentions": 7,
+      "records": 7
+    },
+    {
+      "id": "air-oxygen",
+      "fa": "هوا و اکسیژن",
+      "en": "Air and oxygen",
+      "kind": "condition",
+      "mentions": 20,
+      "records": 20
+    },
+    {
+      "id": "long-storage",
+      "fa": "نگهداری طولانی‌مدت",
+      "en": "Long storage",
+      "kind": "condition",
+      "mentions": 2,
+      "records": 2
+    },
+    {
+      "id": "physical-shock",
+      "fa": "ضربه، فشار و آسیب فیزیکی",
+      "en": "Shock, pressure and physical damage",
+      "kind": "condition",
+      "mentions": 42,
+      "records": 42
+    },
+    {
+      "id": "combustible-dust",
+      "fa": "گرد فلز معلق",
+      "en": "Airborne metal dust",
+      "kind": "condition",
+      "mentions": 40,
+      "records": 40
+    }
+  ],
+  "restrictions": [
+    {
+      "id": "closed-space",
+      "fa": "فضای بسته بدون تهویه",
+      "en": "Closed space without ventilation",
+      "kind": "restriction",
+      "mentions": 7,
+      "records": 7
+    },
+    {
+      "id": "unauthorized-handling",
+      "fa": "دستکاری بدون مجوز",
+      "en": "Handling without authorization",
+      "kind": "restriction",
+      "mentions": 37,
+      "records": 37
+    },
+    {
+      "id": "environment-release",
+      "fa": "تخلیه در فاضلاب، محیط زیست یا مواد غذایی",
+      "en": "Release to drain, environment or food",
+      "kind": "restriction",
+      "mentions": 51,
+      "records": 51
+    }
+  ],
+  "mapping": [
+    {
+      "legacy": "اکسیدکننده‌های قوی",
+      "mentions": 280,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی",
+      "mentions": 52,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی",
+      "mentions": 41,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی (بسته به عنصر)",
+      "mentions": 40,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "بسته به عنصر"
+    },
+    {
+      "legacy": "حرارت و گرد فلز معلق",
+      "mentions": 40,
+      "classes": [],
+      "conditions": [
+        "heat-ignition",
+        "combustible-dust"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "فاضلاب و محیط زیست",
+      "mentions": 37,
+      "classes": [],
+      "conditions": [],
+      "restrictions": [
+        "environment-release"
+      ]
+    },
+    {
+      "legacy": "دستکاری بدون مجوز و تجهیزات حفاظتی",
+      "mentions": 36,
+      "classes": [],
+      "conditions": [],
+      "restrictions": [
+        "unauthorized-handling"
+      ]
+    },
+    {
+      "legacy": "منابع حرارت و آسیب فیزیکی",
+      "mentions": 36,
+      "classes": [],
+      "conditions": [
+        "heat-ignition",
+        "physical-shock"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدها و بازهای قوی",
+      "mentions": 15,
+      "classes": [
+        "strong-acid",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات فعال",
+      "mentions": 13,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فاضلاب و مواد غذایی",
+      "mentions": 13,
+      "classes": [],
+      "conditions": [],
+      "restrictions": [
+        "environment-release"
+      ]
+    },
+    {
+      "legacy": "عوامل احیاکننده",
+      "mentions": 9,
+      "classes": [
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اکسیدکننده‌های بسیار قوی",
+      "mentions": 9,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "عوامل احیاکننده قوی",
+      "mentions": 9,
+      "classes": [
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدها و بازهای بسیار قوی",
+      "mentions": 9,
+      "classes": [
+        "strong-acid",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آب و رطوبت (بسته به عنصر)",
+      "mentions": 8,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "بسته به عنصر"
+    },
+    {
+      "legacy": "اسیدهای غلیظ",
+      "mentions": 7,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "حلال‌های آلی و مواد سوختنی",
+      "mentions": 6,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "منابع حرارت و فشار بالا",
+      "mentions": 6,
+      "classes": [],
+      "conditions": [
+        "heat-ignition",
+        "physical-shock"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "فضاهای بسته بدون تهویه",
+      "mentions": 6,
+      "classes": [],
+      "conditions": [],
+      "restrictions": [
+        "closed-space"
+      ]
+    },
+    {
+      "legacy": "اسیدهای قوی غلیظ",
+      "mentions": 5,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "احیاکننده‌های قوی",
+      "mentions": 5,
+      "classes": [
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "هالوژن‌ها",
+      "mentions": 4,
+      "classes": [
+        "halogen"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "پودر فلزات فعال",
+      "mentions": 4,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "مواد آلی و حلال‌های قابل اشتعال",
+      "mentions": 4,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "ترکیبات آلی و قابل اشتعال",
+      "mentions": 4,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "روغن و گریس",
+      "mentions": 4,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات قلیایی",
+      "mentions": 3,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی و آمین‌ها",
+      "mentions": 3,
+      "classes": [
+        "amine",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی و الکل‌ها",
+      "mentions": 3,
+      "classes": [
+        "alcohol",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "احیاکننده‌ها",
+      "mentions": 3,
+      "classes": [
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدها و بازها",
+      "mentions": 3,
+      "classes": [
+        "acid",
+        "base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "عوامل اکسیدکننده قوی",
+      "mentions": 3,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "ترکیبات آلی قابل اشتعال",
+      "mentions": 3,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اکسیژن در دمای بالا",
+      "mentions": 3,
+      "classes": [],
+      "conditions": [
+        "air-oxygen",
+        "heat-ignition"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدها و بازهای قوی (بسته به عنصر)",
+      "mentions": 3,
+      "classes": [
+        "strong-acid",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "بسته به عنصر"
+    },
+    {
+      "legacy": "حرارت زیاد",
+      "mentions": 3,
+      "classes": [],
+      "conditions": [
+        "heat-ignition"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی و اسیدهای اکسیدکننده غلیظ",
+      "mentions": 2,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "الکل‌ها، آمین‌ها و بازها",
+      "mentions": 2,
+      "classes": [
+        "amine",
+        "alcohol",
+        "base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "حلال‌های آلی قابل اشتعال و مواد سوختنی",
+      "mentions": 2,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی (آزاد شدن گاز آمونیاک NH₃)",
+      "mentions": 2,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد شدن گاز آمونیاک NH₃"
+    },
+    {
+      "legacy": "مواد آلی قابل اشتعال",
+      "mentions": 2,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات فعال و بازهای قوی",
+      "mentions": 2,
+      "classes": [
+        "reactive-metal",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات فعال مانند سدیم و پتاسیم",
+      "mentions": 2,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی غلیظ",
+      "mentions": 2,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "پراکسیدها",
+      "mentions": 2,
+      "classes": [
+        "peroxide-initiator"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "حلال‌های آلی و ترکیبات احیاکننده",
+      "mentions": 2,
+      "classes": [
+        "reducing-agent",
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی و اسیدهای غلیظ",
+      "mentions": 2,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی و هالوژن‌ها",
+      "mentions": 2,
+      "classes": [
+        "strong-oxidizer",
+        "halogen"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "نیتریک اسید غلیظ",
+      "mentions": 2,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات قلیایی فعال",
+      "mentions": 2,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای معدنی قوی",
+      "mentions": 2,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای غلیظ اکسیدکننده",
+      "mentions": 2,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی و فلزات فعال",
+      "mentions": 2,
+      "classes": [
+        "reactive-metal",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات فعال (تولید گاز هیدروژن قابل اشتعال)",
+      "mentions": 2,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید گاز هیدروژن قابل اشتعال"
+    },
+    {
+      "legacy": "فلزاتی مانند آلومینیوم و روی",
+      "mentions": 2,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آب و رطوبت",
+      "mentions": 2,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدها",
+      "mentions": 2,
+      "classes": [
+        "acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "مواد قابل اشتعال آلی",
+      "mentions": 2,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "مواد احیاکننده قوی",
+      "mentions": 2,
+      "classes": [
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "مواد قابل اشتعال و حلال‌های آلی",
+      "mentions": 2,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازها",
+      "mentions": 2,
+      "classes": [
+        "base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "عوامل کاهنده قوی",
+      "mentions": 2,
+      "classes": [
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "حلال‌های آلی",
+      "mentions": 2,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "مواد قابل اشتعال",
+      "mentions": 2,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "هیدروژن",
+      "mentions": 2,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "FLUZ",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [],
+      "restrictions": [],
+      "invalid": true
+    },
+    {
+      "legacy": "اکسیژن هوا و نور (تشکیل پراکسیدها)",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "air-oxygen",
+        "light"
+      ],
+      "restrictions": [],
+      "note": "تشکیل پراکسیدها"
+    },
+    {
+      "legacy": "اسیدها و بازهای قوی (هیدرولیز به آنیلین)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "هیدرولیز به آنیلین"
+    },
+    {
+      "legacy": "نیتریک اسید غلیظ (واکنش به شدت اکسیدکننده و خطر انفجار)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش به شدت اکسیدکننده و خطر انفجار"
+    },
+    {
+      "legacy": "بازهای قوی و کربنات‌ها",
+      "mentions": 1,
+      "classes": [
+        "carbonate",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آب (واکنش شدید و گرمازا که اسید استیک تولید می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید و گرمازا که اسید استیک تولید میکند"
+    },
+    {
+      "legacy": "الکل‌ها و آمین‌ها (واکنش‌های شدید استری شدن و آمیداسیون)",
+      "mentions": 1,
+      "classes": [
+        "amine",
+        "alcohol"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنشهای شدید استری شدن و آمیداسیون"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی و بازهای قوی",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "نیتریک اسید غلیظ (مخلوط منفجره تشکیل می‌دهد)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مخلوط منفجره تشکیل میدهد"
+    },
+    {
+      "legacy": "کلروفرم (در حضور بازهای قوی واکنش به شدت گرمازا ایجاد می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "halogenated-solvent"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "در حضور بازهای قوی واکنش به شدت گرمازا ایجاد میکند"
+    },
+    {
+      "legacy": "پراکسید هیدروژن و سایر اکسیدکننده‌های قوی",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات فعال و ترکیبات کاهنده قوی",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آب و رطوبت هوا (هیدرولیز شدید و گرمازا همراه با تولید گاز اسید کلریدریک)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": [],
+      "note": "هیدرولیز شدید و گرمازا همراه با تولید گاز اسید کلریدریک"
+    },
+    {
+      "legacy": "اسیدها و بازهای قوی (موجب آبکافت)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "موجب آبکافت"
+    },
+    {
+      "legacy": "عوامل اکسیدکننده و احیاکننده قوی",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "گرما و نور خورشید (باعث پلیمریزاسیون ناگهانی و انفجاری می‌شود)",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "heat-ignition",
+        "light"
+      ],
+      "restrictions": [],
+      "note": "باعث پلیمریزاسیون ناگهانی و انفجاری میشود"
+    },
+    {
+      "legacy": "رادیکال‌های آزاد و آغازگرهای پلیمریزاسیون (خطر واکنش پلیمریزاسیون انفجاری)",
+      "mentions": 1,
+      "classes": [
+        "peroxide-initiator"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "خطر واکنش پلیمریزاسیون انفجاری"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی (پرمنگنات پتاسیم، پرکلرات‌ها - خطر واکنش شدید و احتراق)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "پرمنگنات پتاسیم، پرکلراتها - خطر واکنش شدید و احتراق"
+    },
+    {
+      "legacy": "اکسیژن مایع",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای لوئیس و پودر فلزات فعال",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی (مانند اسید کلریدریک و سولفوریک - خنثی‌سازی شدید)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند اسید کلریدریک و سولفوریک - خنثیسازی شدید"
+    },
+    {
+      "legacy": "هالوژن‌ها (خطر تولید کلرامین‌های انفجاری و سمی)",
+      "mentions": 1,
+      "classes": [
+        "halogen"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "خطر تولید کلرامینهای انفجاری و سمی"
+    },
+    {
+      "legacy": "فلز مس، برنج و آلیاژهای آن (خوردگی شدید و تشکیل کمپلکس‌های رنگی)",
+      "mentions": 1,
+      "classes": [
+        "copper-alloy"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "خوردگی شدید و تشکیل کمپلکسهای رنگی"
+    },
+    {
+      "legacy": "اسیدهای قوی (آزاد شدن شدید گاز دی‌اکسید کربن)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد شدن شدید گاز دیاکسید کربن"
+    },
+    {
+      "legacy": "بازهای قوی (آزاد شدن گاز آمونیاک)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد شدن گاز آمونیاک"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش خنثی‌سازی همراه با جوشش گاز CO₂)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش خنثیسازی همراه با جوشش گاز CO₂"
+    },
+    {
+      "legacy": "بازهای قوی (آزاد شدن گاز تند آمونیاک NH₃)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد شدن گاز تند آمونیاک NH₃"
+    },
+    {
+      "legacy": "بازهای قوی (آزاد شدن گاز تند، محرک و خفه‌کننده آمونیاک NH₃)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد شدن گاز تند، محرک و خفهکننده آمونیاک NH₃"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی و نیترات کلسیم",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "مواد آلی، اسیدهای قوی و الکل‌ها",
+      "mentions": 1,
+      "classes": [
+        "alcohol",
+        "flammable-material",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات پودر شده و عوامل احیاکننده",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی (آزادکننده گاز هیدروژن یدید خورنده)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزادکننده گاز هیدروژن یدید خورنده"
+    },
+    {
+      "legacy": "بازهای قوی (آزادکننده گاز آمونیاک)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزادکننده گاز آمونیاک"
+    },
+    {
+      "legacy": "اسیدهای بسیار قوی",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "پودر فلزات فعال (مس، روی، آلومینیوم)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مس، روی، آلومینیوم"
+    },
+    {
+      "legacy": "اسیدهای قوی و ترکیبات احیاکننده",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی (آزاد کردن شدید گاز آمونیاک)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد کردن شدید گاز آمونیاک"
+    },
+    {
+      "legacy": "احیاکننده‌های قوی و اسیدهای غلیظ",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی (تولید گاز سمی HCN)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید گاز سمی HCN"
+    },
+    {
+      "legacy": "بازهای قوی (آزاد کردن گاز آمونیاک)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد کردن گاز آمونیاک"
+    },
+    {
+      "legacy": "ایزوسیانات‌ها و آسیل کلرایدها",
+      "mentions": 1,
+      "classes": [
+        "acid-halide-anhydride"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسید نیتریک غلیظ",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی (تولید گاز به شدت سمی آرسین AsH3)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید گاز به شدت سمی آرسین AsH3"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی (واکنش اکسیداسیون و خنثی‌سازی اثر اکسیدکننده)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش اکسیداسیون و خنثیسازی اثر اکسیدکننده"
+    },
+    {
+      "legacy": "سولفات‌ها (افزودن سدیم سولفات به آن موجب تولید رسوب سفیدرنگ، غیرمحلول و کاملاً بی‌خطر باریم سولفات می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "precipitating-salt"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "افزودن سدیم سولفات به آن موجب تولید رسوب سفیدرنگ، غیرمحلول و کاملاً بیخطر باریم سولفات میشود"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش شدید و گرمازا خنثی‌سازی)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید و گرمازا خنثیسازی"
+    },
+    {
+      "legacy": "دی‌اکسید کربن (واکنش با تشکیل رسوب کربنات باریم)",
+      "mentions": 1,
+      "classes": [
+        "carbon-dioxide"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش با تشکیل رسوب کربنات باریم"
+    },
+    {
+      "legacy": "فلزات فعال و فسفر",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "هوا (به آرامی اکسید می‌شود)",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": [],
+      "note": "به آرامی اکسید میشود"
+    },
+    {
+      "legacy": "هالوژن‌ها (خطر واکنش‌های جانبی شدید)",
+      "mentions": 1,
+      "classes": [
+        "halogen"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "خطر واکنشهای جانبی شدید"
+    },
+    {
+      "legacy": "بازهای قوی (واکنش خنثی‌سازی)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش خنثیسازی"
+    },
+    {
+      "legacy": "آب و رطوبت (واکنش شدید همراه با تولید گاز HCl و بنزوئیک اسید)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید همراه با تولید گاز HCl و بنزوئیک اسید"
+    },
+    {
+      "legacy": "فلزات فعال و عوامل احیاکننده قوی",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدها و بازهای قوی (تحریک تجزیه ناگهانی)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تحریک تجزیه ناگهانی"
+    },
+    {
+      "legacy": "اسیدهای قوی (خطر واکنش پلیمریزاسیون گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "خطر واکنش پلیمریزاسیون گرمازا"
+    },
+    {
+      "legacy": "فلزات فعال (مس، آهن، آلومینیوم - خطر واکنش کاتالیزوری شدید)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مس، آهن، آلومینیوم - خطر واکنش کاتالیزوری شدید"
+    },
+    {
+      "legacy": "آک و رطوبت (تجزیه آهسته)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تجزیه آهسته"
+    },
+    {
+      "legacy": "پتاسیم و فلزات قلیایی فعال",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آب (واکنش شدید هیدرولیز همراه با آزاد شدن اسید هیدروفلوئوریک و دی‌اتیل اتر)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید هیدرولیز همراه با آزاد شدن اسید هیدروفلوئوریک و دیاتیل اتر"
+    },
+    {
+      "legacy": "شیشه (تخریب ساختار شیشه توسط گازهای حاوی فلوئور آزاد شده)",
+      "mentions": 1,
+      "classes": [
+        "glass-silica"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تخریب ساختار شیشه توسط گازهای حاوی فلوئور آزاد شده"
+    },
+    {
+      "legacy": "ترکیبات آلی و حلال‌ها (واکنش بسیار شدید و انفجاری)",
+      "mentions": 1,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش بسیار شدید و انفجاری"
+    },
+    {
+      "legacy": "فلزات فعال و پودر آلومینیوم",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "استون در حضور بازها",
+      "mentions": 1,
+      "classes": [
+        "flammable-material",
+        "base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی (واکنش گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش گرمازا"
+    },
+    {
+      "legacy": "اسیدهای قوی (ترکیب مستقیم با اسیدها موجب غلیان شدید و آزاد شدن دی‌اکسید کربن زیاد می‌گردد)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "ترکیب مستقیم با اسیدها موجب غلیان شدید و آزاد شدن دیاکسید کربن زیاد میگردد"
+    },
+    {
+      "legacy": "آب (موجب تولید گرما هنگام انحلال می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "موجب تولید گرما هنگام انحلال میشود"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش خنثی‌سازی شدید و گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش خنثیسازی شدید و گرمازا"
+    },
+    {
+      "legacy": "آب (واکنش شدیداً گرماده تولید کلسیم هیدروکسید)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدیداً گرماده تولید کلسیم هیدروکسید"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش خنثی‌سازی به شدت گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش خنثیسازی به شدت گرمازا"
+    },
+    {
+      "legacy": "آلومینیوم و اکسیدکننده‌ها",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات قلیایی (مانند سدیم و پتاسیم)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند سدیم و پتاسیم"
+    },
+    {
+      "legacy": "آمین‌های آلی",
+      "mentions": 1,
+      "classes": [
+        "amine"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات فعال مانند سدیم، پتاسیم و پودر منیزیم (واکنش انفجاری)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش انفجاری"
+    },
+    {
+      "legacy": "استون در حضور بازهای قوی (واکنش انفجاری)",
+      "mentions": 1,
+      "classes": [
+        "flammable-material",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش انفجاری"
+    },
+    {
+      "legacy": "فلزات فعال مانند سدیم، پتاسیم و پودر منیزیم",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "حلال‌های آلی (استون، الکل‌ها که واکنش بسیار شدید و اشتعال فوری ایجاد می‌کنند)",
+      "mentions": 1,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "استون، الکلها که واکنش بسیار شدید و اشتعال فوری ایجاد میکنند"
+    },
+    {
+      "legacy": "فلزات فعال و کاغذ",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal",
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی (موجب رسوب هیدروکسید کروم می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "موجب رسوب هیدروکسید کروم میشود"
+    },
+    {
+      "legacy": "بازهای قوی و ترکیبات قلیایی (واکنش خنثی‌سازی همراه با تولید گرما)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش خنثیسازی همراه با تولید گرما"
+    },
+    {
+      "legacy": "ترکیبات احیاکننده",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی (تغییر رنگ به آبی تیره و تخریب رنگینه)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تغییر رنگ به آبی تیره و تخریب رنگینه"
+    },
+    {
+      "legacy": "فلزات فعال مانند آهن و روی (واکنش جایگزینی فلزی)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش جایگزینی فلزی"
+    },
+    {
+      "legacy": "بازهای قوی (تشکیل رسوب ژلاتینی آبی‌رنگ هیدروکسید مس)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تشکیل رسوب ژلاتینی آبیرنگ هیدروکسید مس"
+    },
+    {
+      "legacy": "فلزات فعال (واکنش جابجایی شدید و تولید مس فلزی)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش جابجایی شدید و تولید مس فلزی"
+    },
+    {
+      "legacy": "شتاب‌دهنده‌های فلزی",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "عوامل اسیدی قوی",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات پودر شده و گرما",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [
+        "heat-ignition"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "کلرید اسیدها",
+      "mentions": 1,
+      "classes": [
+        "acid-halide-anhydride"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات قوی و فعال مانند سدیم، منیزیم و لیتیوم",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "مس و برنج",
+      "mentions": 1,
+      "classes": [
+        "copper-alloy"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اکسیژن هوا و نور (در اثر نگهداری طولانی‌مدت پراکسیدهای آلی به شدت منفجره ایجاد می‌کند)",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "air-oxygen",
+        "light"
+      ],
+      "restrictions": [],
+      "note": "در اثر نگهداری طولانیمدت پراکسیدهای آلی به شدت منفجره ایجاد میکند"
+    },
+    {
+      "legacy": "آک و رطوبت (آبکافت به اتیل الکل و اسید)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آبکافت به اتیل الکل و اسید"
+    },
+    {
+      "legacy": "اسیدهای معدنی غلیظ (واکنش خنثی‌سازی شدید همراه با گرما)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش خنثیسازی شدید همراه با گرما"
+    },
+    {
+      "legacy": "مس و آلیاژهای آن (تشکیل کمپلکس‌های مس خورنده)",
+      "mentions": 1,
+      "classes": [
+        "copper-alloy"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تشکیل کمپلکسهای مس خورنده"
+    },
+    {
+      "legacy": "قرار گرفتن در معرض هوا و نور به مدت طولانی",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "air-oxygen",
+        "light",
+        "long-storage"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی و آمونیاک (واکنش به شدت گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "ammonia-ammonium",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش به شدت گرمازا"
+    },
+    {
+      "legacy": "آب (به آرامی تجزیه شده و متانول و اسید سولفوریک تولید می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "به آرامی تجزیه شده و متانول و اسید سولفوریک تولید میکند"
+    },
+    {
+      "legacy": "اسیدهای غلیظ اکسیدکننده (واکنش به شدت گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش به شدت گرمازا"
+    },
+    {
+      "legacy": "فلزات قلیایی خاکی",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آمین‌ها (خطر واکنش پلیمریزاسیون انفجاری)",
+      "mentions": 1,
+      "classes": [
+        "amine"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "خطر واکنش پلیمریزاسیون انفجاری"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی (مانند کرومیک اسید، پرمنگنات پتاسیم)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند کرومیک اسید، پرمنگنات پتاسیم"
+    },
+    {
+      "legacy": "اسیدها و بازهای غلیظ (موجب هیدرولیز شدید به استیک اسید و اتانول می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "موجب هیدرولیز شدید به استیک اسید و اتانول میشود"
+    },
+    {
+      "legacy": "پروکسیدها و بازهای قوی",
+      "mentions": 1,
+      "classes": [
+        "peroxide-initiator",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "نور مستقیم خورشید (پلیمریزاسیون)",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "light"
+      ],
+      "restrictions": [],
+      "note": "پلیمریزاسیون"
+    },
+    {
+      "legacy": "اکسیدکننده‌های بسیار قوی (مانند پرمنگنات پتاسیم)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند پرمنگنات پتاسیم"
+    },
+    {
+      "legacy": "اسیدها، بازها و آمین‌ها",
+      "mentions": 1,
+      "classes": [
+        "amine",
+        "acid",
+        "base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "مس و آلیاژهای آن",
+      "mentions": 1,
+      "classes": [
+        "copper-alloy"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "هالوژن‌ها و مس",
+      "mentions": 1,
+      "classes": [
+        "copper-alloy",
+        "halogen"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزاتی نظیر آلومینیوم و روی (خورندگی شدید و تولید گاز هیدروژن)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "خورندگی شدید و تولید گاز هیدروژن"
+    },
+    {
+      "legacy": "بازهای قوی (رسوب شدید و ناگهانی هیدروکسید آهن)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "رسوب شدید و ناگهانی هیدروکسید آهن"
+    },
+    {
+      "legacy": "رطوبت هوا (به مرور به آهن(III) اکسید می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": [],
+      "note": "به مرور به آهن(III) اکسید میشود"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی (ترکیب مستقیم با اسید نیتریک غلیظ واکنش شدید و انفجاری دارد)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "ترکیب مستقیم با اسید نیتریک غلیظ واکنش شدید و انفجاری دارد"
+    },
+    {
+      "legacy": "اسید سولفوریک غلیظ (موجب تجزیه اسید فرمیک و تولید گاز سمی منوکسید کربن می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "موجب تجزیه اسید فرمیک و تولید گاز سمی منوکسید کربن میشود"
+    },
+    {
+      "legacy": "اسیدها و بازهای قوی (تحریک پلیمریزاسیون گرماده)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تحریک پلیمریزاسیون گرماده"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی (مخلوط کردن پرمنگنات پتاسیم غلیظ با گلیسیرین موجب واکنش خودبه‌خودی و آتش‌سوزی شدید می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مخلوط کردن پرمنگنات پتاسیم غلیظ با گلیسیرین موجب واکنش خودبهخودی و آتشسوزی شدید میشود"
+    },
+    {
+      "legacy": "اسیدهای قوی اکسیدکننده (اسید نیتریک و سولفوریک غلیظ در دمای بالا)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "اسید نیتریک و سولفوریک غلیظ در دمای بالا"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی (مانند کرومیک اسید، پرمنگنات پتاسیم - خطر واکنش شدید در دمای بالا)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند کرومیک اسید، پرمنگنات پتاسیم - خطر واکنش شدید در دمای بالا"
+    },
+    {
+      "legacy": "اکسیدکننده‌های بسیار قوی (مانند کلر مایع، اکسیژن غلیظ)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند کلر مایع، اکسیژن غلیظ"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی (مانند پرمنگنات، اسید نیتریک و پراکسیدها - واکنش انفجاری و آتش‌سوزی فوری)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند پرمنگنات، اسید نیتریک و پراکسیدها - واکنش انفجاری و آتشسوزی فوری"
+    },
+    {
+      "legacy": "فلزات سنگین و اکسیدهای فلزی (تجزیه ناگهانی گاز هیدروژن و نیتروژن)",
+      "mentions": 1,
+      "classes": [
+        "heavy-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تجزیه ناگهانی گاز هیدروژن و نیتروژن"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی (واکنش انفجاری شدید)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش انفجاری شدید"
+    },
+    {
+      "legacy": "فلزات فعال و کاتالیزورهای فلزی (تجزیه ناگهانی گاز)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal",
+        "heavy-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تجزیه ناگهانی گاز"
+    },
+    {
+      "legacy": "بازهای قوی (هیدرازین آزاد با پتانسیل احتراق بالا آزاد می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "هیدرازین آزاد با پتانسیل احتراق بالا آزاد میکند"
+    },
+    {
+      "legacy": "کلرات‌ها و پرکلرات‌ها",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی (واکنش شدید و آزادکننده ید)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید و آزادکننده ید"
+    },
+    {
+      "legacy": "بازهای قوی و آمونیاک غلیظ",
+      "mentions": 1,
+      "classes": [
+        "ammonia-ammonium",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات فعال (آزادکننده گاز هیدروژن قابل اشتعال)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزادکننده گاز هیدروژن قابل اشتعال"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی (آزادکننده گاز برم بسیار سمی)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزادکننده گاز برم بسیار سمی"
+    },
+    {
+      "legacy": "بازهای قوی (واکنش خنثی‌سازی شدید و بسیار گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش خنثیسازی شدید و بسیار گرمازا"
+    },
+    {
+      "legacy": "سدیم هیپوکلریت / وایتکس (مخلوط کردن آن‌ها باعث تولید گاز کشنده و خفه‌کننده کلر می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مخلوط کردن آنها باعث تولید گاز کشنده و خفهکننده کلر میشود"
+    },
+    {
+      "legacy": "شیشه و سیلیکا (اسید شیشه را حل می‌کند و گاز سمی SiF₄ تولید می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "glass-silica"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "اسید شیشه را حل میکند و گاز سمی SiF₄ تولید میکند"
+    },
+    {
+      "legacy": "فلزات فعال (تولید گاز هیدروژن انفجاری)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید گاز هیدروژن انفجاری"
+    },
+    {
+      "legacy": "حلال‌های آلی قابل اشتعال (مانند استون، الکل‌ها - خطر انفجار شدید)",
+      "mentions": 1,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند استون، الکلها - خطر انفجار شدید"
+    },
+    {
+      "legacy": "فلزات سنگین (آهن، مس، منگنز - کاتالیزور تجزیه ناگهانی و انفجاری)",
+      "mentions": 1,
+      "classes": [
+        "heavy-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آهن، مس، منگنز - کاتالیزور تجزیه ناگهانی و انفجاری"
+    },
+    {
+      "legacy": "ترکیبات احیاکننده قوی",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اکسیژن هوا (به آرامی تیره می‌شود)",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": [],
+      "note": "به آرامی تیره میشود"
+    },
+    {
+      "legacy": "فلزات پودر شده",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی (آزاد شدن هیدروکسیل‌آمین ناپایدار)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد شدن هیدروکسیلآمین ناپایدار"
+    },
+    {
+      "legacy": "آمونیاک (ترکیب مستقیم باعث تشکیل رسوب به شدت انفجاری نیتروژن تری‌یدید می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "ammonia-ammonium"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "ترکیب مستقیم باعث تشکیل رسوب به شدت انفجاری نیتروژن ترییدید میشود"
+    },
+    {
+      "legacy": "فلزات فعال (واکنش گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش گرمازا"
+    },
+    {
+      "legacy": "اسید هالیدها",
+      "mentions": 1,
+      "classes": [
+        "acid-halide-anhydride"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "سولفات‌ها و کربنات‌ها (واکنش و تشکیل رسوب‌های غیرمحلول سرب کلرید، سولفات و کربنات)",
+      "mentions": 1,
+      "classes": [
+        "carbonate",
+        "precipitating-salt"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش و تشکیل رسوبهای غیرمحلول سرب کلرید، سولفات و کربنات"
+    },
+    {
+      "legacy": "مواد آلی و قابل اشتعال",
+      "mentions": 1,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آب و رطوبت هوا (به شدت با رطوبت واکنش داده و گاز هیدروژن بسیار قابل اشتعال آزاد می‌کند که فوراً مشتعل می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": [],
+      "note": "به شدت با رطوبت واکنش داده و گاز هیدروژن بسیار قابل اشتعال آزاد میکند که فوراً مشتعل میشود"
+    },
+    {
+      "legacy": "الکل‌ها، اسیدها و اکسیدکننده‌ها",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "alcohol",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "دی‌اکسید کربن (کپسول CO2 برای اطفای آن ممنوع است!)",
+      "mentions": 1,
+      "classes": [
+        "carbon-dioxide"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "کپسول CO2 برای اطفای آن ممنوع است!"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش شدید خنثی‌سازی همراه با تولید گاز CO₂)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید خنثیسازی همراه با تولید گاز CO₂"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش بسیار شدید خنثی‌سازی)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش بسیار شدید خنثیسازی"
+    },
+    {
+      "legacy": "اسیدهای قوی (حل شده و نمک منیزیم تولید می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "حل شده و نمک منیزیم تولید میکند"
+    },
+    {
+      "legacy": "رطوبت و آب (واکنش هیدرولیز شدید)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش هیدرولیز شدید"
+    },
+    {
+      "legacy": "عوامل کاهنده",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "روی و فلزات فعال",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "مواد آلی قابل اشتعال و الکل‌ها (خطر تشکیل فولمینات جیوه انفجاری)",
+      "mentions": 1,
+      "classes": [
+        "alcohol",
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "خطر تشکیل فولمینات جیوه انفجاری"
+    },
+    {
+      "legacy": "ترکیبات فسفردار",
+      "mentions": 1,
+      "classes": [
+        "other"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزاتی مانند آلومینیوم و مس (به سرعت با جیوه واکنش داده و آمالگام فلزی تشکیل می‌دهند)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal",
+        "copper-alloy"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "به سرعت با جیوه واکنش داده و آمالگام فلزی تشکیل میدهند"
+    },
+    {
+      "legacy": "آغازگرهای پلیمریزاسیون و اسیدهای قوی",
+      "mentions": 1,
+      "classes": [
+        "peroxide-initiator",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی (واکنش شدید خنثی‌سازی)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید خنثیسازی"
+    },
+    {
+      "legacy": "فلزات فعال (آزادکننده گاز هیدروژن)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزادکننده گاز هیدروژن"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی و اسیدهای غلیظ اکسیدکننده",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات قلیایی فعال (مانند سدیم، پتاسیم)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند سدیم، پتاسیم"
+    },
+    {
+      "legacy": "پراکسیدها (خطر پلیمریزاسیون انفجاری)",
+      "mentions": 1,
+      "classes": [
+        "peroxide-initiator"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "خطر پلیمریزاسیون انفجاری"
+    },
+    {
+      "legacy": "پروکسیدها و آغازگرهای رادیکالی",
+      "mentions": 1,
+      "classes": [
+        "peroxide-initiator"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی و ترکیبات احیاکننده",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "نیتریت‌ها و اسید نیترو (امکان تشکیل نیتروزآمین‌های سرطان‌زا)",
+      "mentions": 1,
+      "classes": [
+        "nitrite",
+        "acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "امکان تشکیل نیتروزآمینهای سرطانزا"
+    },
+    {
+      "legacy": "اکسیدکننده‌ها و احیاکننده‌ها",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آهن و املاح فلزی",
+      "mentions": 1,
+      "classes": [
+        "heavy-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آب و رطوبت (آزاد شدن تدریجی بروم)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد شدن تدریجی بروم"
+    },
+    {
+      "legacy": "هوا و اکسیژن (آتش‌سوزی آنی)",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": [],
+      "note": "آتشسوزی آنی"
+    },
+    {
+      "legacy": "آب و رطوبت (واکنش شدید تولید گاز بوتان و سدیم/لیتیوم هیدروکسید خورنده)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید تولید گاز بوتان و سدیم/لیتیوم هیدروکسید خورنده"
+    },
+    {
+      "legacy": "حلال‌های کلردار و اکسیدکننده‌ها",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "halogenated-solvent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اکسیدکننده‌ها و احیاکننده‌های قوی",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آب و رطوبت (آزاد شدن گاز کلر)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد شدن گاز کلر"
+    },
+    {
+      "legacy": "املاح آهن",
+      "mentions": 1,
+      "classes": [
+        "heavy-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "گرما و نور خورشید",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "heat-ignition",
+        "light"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "آمین‌ها و آمینواسیدها (واکنش فوری و تولید رنگ بنفش)",
+      "mentions": 1,
+      "classes": [
+        "amine"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش فوری و تولید رنگ بنفش"
+    },
+    {
+      "legacy": "حلال‌های آلی (مانند استون، الکل‌ها) - ترکیب مستقیم موجب انفجار یا آتش‌سوزی شدید می‌شود.",
+      "mentions": 1,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند استون، الکلها) - ترکیب مستقیم موجب انفجار یا آتشسوزی شدید میشود."
+    },
+    {
+      "legacy": "فلزات و ترکیبات احیاکننده",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "نیتریک اسید غلیظ و اکسیدکننده‌های قوی",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی و عوامل احیاکننده",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی و آمین‌ها (نمک‌های حساس به شوک و انفجاری تشکیل می‌دهد)",
+      "mentions": 1,
+      "classes": [
+        "amine",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "نمکهای حساس به شوک و انفجاری تشکیل میدهد"
+    },
+    {
+      "legacy": "اسیدهای قوی و اکسیدکننده‌های قوی",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزاتی چون پودر آلومینیوم و منیزیم",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "عوامل احیاکننده قوی (به سرعت به فلز اسمیوم سیاه تبدیل می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "به سرعت به فلز اسمیوم سیاه تبدیل میشود"
+    },
+    {
+      "legacy": "حلال‌های آلی و ترکیبات غیر اشباع (واکنش نشان می‌دهد)",
+      "mentions": 1,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش نشان میدهد"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی (مانند پرمنگنات و اسید نیتریک)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند پرمنگنات و اسید نیتریک"
+    },
+    {
+      "legacy": "فلزات سنگین (تشکیل اگزالات‌های فلزی نامحلول و حساس به انفجار)",
+      "mentions": 1,
+      "classes": [
+        "heavy-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تشکیل اگزالاتهای فلزی نامحلول و حساس به انفجار"
+    },
+    {
+      "legacy": "آب و رطوبت هوا (واکنش شدید با تولید گاز کشنده منوکسید کربن، دی‌اکسید کربن و هیدروژن کلرید)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": [],
+      "note": "واکنش شدید با تولید گاز کشنده منوکسید کربن، دیاکسید کربن و هیدروژن کلرید"
+    },
+    {
+      "legacy": "ترکیبات آلی، کاغذ، چوب، الکل‌ها و حلال‌ها (ایجاد استرهای پرکلرات به شدت انفجاری و حساس به ضربه)",
+      "mentions": 1,
+      "classes": [
+        "alcohol",
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "ایجاد استرهای پرکلرات به شدت انفجاری و حساس به ضربه"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی (مانند پرمنگنات، کرومات و اسید نیتریک)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند پرمنگنات، کرومات و اسید نیتریک"
+    },
+    {
+      "legacy": "اکسیژن فشرده",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسید نیتریک غلیظ (واکنش شدید)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید"
+    },
+    {
+      "legacy": "آب و رطوبت (هیدرولیز به CO₂ و HCl)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "هیدرولیز به CO₂ و HCl"
+    },
+    {
+      "legacy": "آمین‌ها و الکل‌ها",
+      "mentions": 1,
+      "classes": [
+        "amine",
+        "alcohol"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازها و عوامل احیاکننده",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی (واکنش خنثی‌سازی بسیار شدید و گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش خنثیسازی بسیار شدید و گرمازا"
+    },
+    {
+      "legacy": "فلزات فعال (تولید گاز هیدروژن)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید گاز هیدروژن"
+    },
+    {
+      "legacy": "آب و رطوبت هوا (هیدرولیز شدید)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": [],
+      "note": "هیدرولیز شدید"
+    },
+    {
+      "legacy": "آب و رطوبت هوا",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "الکل‌ها، آمین‌ها و فلزات قلیایی",
+      "mentions": 1,
+      "classes": [
+        "amine",
+        "alcohol",
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آب (واکنش به شدت گرمازا، انفجاری و پرتاب‌کننده همراه با تولید اسید فسفریک غلیظ)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش به شدت گرمازا، انفجاری و پرتابکننده همراه با تولید اسید فسفریک غلیظ"
+    },
+    {
+      "legacy": "الکل‌ها (واکنش شدید)",
+      "mentions": 1,
+      "classes": [
+        "alcohol"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید"
+    },
+    {
+      "legacy": "الکل‌ها و اکسیدکننده‌های قوی",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "alcohol"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آب و رطوبت (هیدرولیز به فتالیک اسید)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "هیدرولیز به فتالیک اسید"
+    },
+    {
+      "legacy": "فلزات سنگین (سرب، روی، مس که نمک‌های پیکرات فلزی به شدت حساس به انفجار تولید می‌کنند)",
+      "mentions": 1,
+      "classes": [
+        "heavy-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "سرب، روی، مس که نمکهای پیکرات فلزی به شدت حساس به انفجار تولید میکنند"
+    },
+    {
+      "legacy": "کربنات‌ها و بازها",
+      "mentions": 1,
+      "classes": [
+        "carbonate",
+        "base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی و پراکسیدها",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "peroxide-initiator"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "دی‌اکسید کربن (واکنش با آمین‌ها)",
+      "mentions": 1,
+      "classes": [
+        "carbon-dioxide"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش با آمینها"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش گرمازا همراه با خروج شدید گاز کربن دی‌اکسید CO₂)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش گرمازا همراه با خروج شدید گاز کربن دیاکسید CO₂"
+    },
+    {
+      "legacy": "فلزات فعال و عوامل اکسیدکننده",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "مواد آلی قابل اشتعال (مانند استون و اتانول که خطر آتش‌سوزی دارند)",
+      "mentions": 1,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند استون و اتانول که خطر آتشسوزی دارند"
+    },
+    {
+      "legacy": "اسیدهای قوی (آزاد شدن گازهای سمی)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد شدن گازهای سمی"
+    },
+    {
+      "legacy": "اسیدها (در تماس با هر نوع اسید حتی ضعیف، گاز شدیداً سمی سیانور هیدروژن HCN آزاد می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "در تماس با هر نوع اسید حتی ضعیف، گاز شدیداً سمی سیانور هیدروژن HCN آزاد میکند"
+    },
+    {
+      "legacy": "آب و رطوبت بالا (به آرامی هیدرولیز شده و گاز سمی تولید می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "به آرامی هیدرولیز شده و گاز سمی تولید میکند"
+    },
+    {
+      "legacy": "حلال‌های آلی و هیدروکربن‌ها (خطر احتراق و انفجار خودبه‌خودی)",
+      "mentions": 1,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "خطر احتراق و انفجار خودبهخودی"
+    },
+    {
+      "legacy": "اسیدهای قوی و غلیظ (آزاد کردن گاز سمی هیدروژن سیانید HCN)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد کردن گاز سمی هیدروژن سیانید HCN"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی و آمونیاک",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "ammonia-ammonium"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی (در حضور اسیدهای داغ و قوی گاز شدیداً سمی سیانور هیدروژن HCN آزاد می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "در حضور اسیدهای داغ و قوی گاز شدیداً سمی سیانور هیدروژن HCN آزاد میکند"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش خنثی‌سازی به شدت گرمازا همراه با پاشش)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش خنثیسازی به شدت گرمازا همراه با پاشش"
+    },
+    {
+      "legacy": "آب (حل شدن پتاس در آب حرارت بسیار شدیدی تولید می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "حل شدن پتاس در آب حرارت بسیار شدیدی تولید میکند"
+    },
+    {
+      "legacy": "فلزات فعال مانند آلومینیوم و روی (تولید گاز هیدروژن)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید گاز هیدروژن"
+    },
+    {
+      "legacy": "عوامل احیاکننده و پودر فلزات",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "نمک‌های فلزات سنگین (رسوب زرد رنگ یدید فلزی تشکیل می‌دهد)",
+      "mentions": 1,
+      "classes": [
+        "heavy-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "رسوب زرد رنگ یدید فلزی تشکیل میدهد"
+    },
+    {
+      "legacy": "مواد احیاکننده قوی، حلال‌های آلی، پودر فلزات فعال",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "reactive-metal",
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "حلال‌های آلی (استون، اتانول، متانول - خطر انفجار شدید)",
+      "mentions": 1,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "استون، اتانول، متانول - خطر انفجار شدید"
+    },
+    {
+      "legacy": "اسید سولفوریک غلیظ (تشکیل ترکیب به شدت انفجاری منگنز هپتوکسید)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تشکیل ترکیب به شدت انفجاری منگنز هپتوکسید"
+    },
+    {
+      "legacy": "بازهای قوی و احیاکننده‌ها",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی و غلیظ (آزاد کردن گازهای سمی)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد کردن گازهای سمی"
+    },
+    {
+      "legacy": "اسیدهای قوی (آزاد شدن گاز دی‌اکسید گوگرد سمی SO₂)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد شدن گاز دیاکسید گوگرد سمی SO₂"
+    },
+    {
+      "legacy": "آمین‌ها و کاتالیزورهای فلزی (خطر پلیمریزاسیون شدید)",
+      "mentions": 1,
+      "classes": [
+        "amine",
+        "heavy-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "خطر پلیمریزاسیون شدید"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش گرمازا تشکیل نمک می‌دهد)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش گرمازا تشکیل نمک میدهد"
+    },
+    {
+      "legacy": "قلیایی‌ها (در حضور بازها سریعاً تیره و اکسید می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "در حضور بازها سریعاً تیره و اکسید میشود"
+    },
+    {
+      "legacy": "کلریدهای اسیدی و انیدریدها",
+      "mentions": 1,
+      "classes": [
+        "acid-halide-anhydride"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آهن و املاح آن (تشکیل کمپلکس رنگی)",
+      "mentions": 1,
+      "classes": [
+        "heavy-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تشکیل کمپلکس رنگی"
+    },
+    {
+      "legacy": "اسید هیدروفلوئوریک HF (سیلیکا را حل کرده و گاز سمی SiF₄ تولید می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "سیلیکا را حل کرده و گاز سمی SiF₄ تولید میکند"
+    },
+    {
+      "legacy": "آمونیاک غلیظ (تشکیل کمپلکس محلول و خطر ایجاد ترکیبات منفجره نقره در صورت خشک شدن)",
+      "mentions": 1,
+      "classes": [
+        "ammonia-ammonium"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تشکیل کمپلکس محلول و خطر ایجاد ترکیبات منفجره نقره در صورت خشک شدن"
+    },
+    {
+      "legacy": "ترکیبات هالوژنه (واکنش و تشکیل رسوب سفید و غیرمحلول نقره کلرید)",
+      "mentions": 1,
+      "classes": [
+        "precipitating-salt"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش و تشکیل رسوب سفید و غیرمحلول نقره کلرید"
+    },
+    {
+      "legacy": "نور مستقیم (تجزیه نوری به نقره فلزی)",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "light"
+      ],
+      "restrictions": [],
+      "note": "تجزیه نوری به نقره فلزی"
+    },
+    {
+      "legacy": "اسیدهای قوی (آزاد شدن بوی اسید استیک/سرکه)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد شدن بوی اسید استیک/سرکه"
+    },
+    {
+      "legacy": "فلزات سنگین مانند مس، سرب و جیوه (آزایدهای فلزی بسیار حساس به انفجار تشکیل می‌دهد)",
+      "mentions": 1,
+      "classes": [
+        "heavy-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزایدهای فلزی بسیار حساس به انفجار تشکیل میدهد"
+    },
+    {
+      "legacy": "اسیدها (گاز به شدت سمی و انفجاری هیدرازوئیک اسید HN3 تولید می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "گاز به شدت سمی و انفجاری هیدرازوئیک اسید HN3 تولید میکند"
+    },
+    {
+      "legacy": "آبگرم و اکسیدکننده‌ها",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی (تشکیل رسوب بنزوئیک اسید)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تشکیل رسوب بنزوئیک اسید"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش شدید خنثی‌سازی همراه با تولید زیاد گاز دی‌اکسید کربن)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید خنثیسازی همراه با تولید زیاد گاز دیاکسید کربن"
+    },
+    {
+      "legacy": "اسیدها (تولید گاز به شدت سمی و خفه‌کننده دی‌اکسید گوگرد SO₂)",
+      "mentions": 1,
+      "classes": [
+        "acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید گاز به شدت سمی و خفهکننده دیاکسید گوگرد SO₂"
+    },
+    {
+      "legacy": "اسیدهای غلیظ (واکنش خنثی‌سازی شدید همراه با غلیان و آزاد شدن حجم زیادی از گاز دی‌اکسید کربن)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش خنثیسازی شدید همراه با غلیان و آزاد شدن حجم زیادی از گاز دیاکسید کربن"
+    },
+    {
+      "legacy": "اسیدهای بسیار غلیظ مانند اسید سولفوریک غلیظ (تولید گاز هیدروژن کلرید)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید گاز هیدروژن کلرید"
+    },
+    {
+      "legacy": "اسیدها (واکنش فوری و تولید گاز به شدت سمی و خفه‌کننده هیدروژن سیانید HCN)",
+      "mentions": 1,
+      "classes": [
+        "acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش فوری و تولید گاز به شدت سمی و خفهکننده هیدروژن سیانید HCN"
+    },
+    {
+      "legacy": "حلال‌های آلی قابل اشتعال",
+      "mentions": 1,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی و ترکیبات احیاکننده (واکنش گرماده شدید)",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش گرماده شدید"
+    },
+    {
+      "legacy": "اسیدهای قوی (تولید فوری گاز کشنده و خورنده هیدروژن فلوئوریک HF)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید فوری گاز کشنده و خورنده هیدروژن فلوئوریک HF"
+    },
+    {
+      "legacy": "شیشه (در صورت رطوبت و اسیدی بودن شیشه را کدر می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "glass-silica"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "در صورت رطوبت و اسیدی بودن شیشه را کدر میکند"
+    },
+    {
+      "legacy": "آب و رطوبت (واکنش شدید همراه با تولید گاز هیدروژن و هیدروکسید سدیم خورنده)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید همراه با تولید گاز هیدروژن و هیدروکسید سدیم خورنده"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی و اسیدها",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آب و رطوبت بالا (گرمای واکنش می‌تواند مواد مجاور را مشتعل کند)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "گرمای واکنش میتواند مواد مجاور را مشتعل کند"
+    },
+    {
+      "legacy": "اسیدهای غلیظ (واکنش خنثی‌سازی شدید و گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش خنثیسازی شدید و گرمازا"
+    },
+    {
+      "legacy": "فلزاتی مانند آلومینیوم، روی و قلع (تولید گاز هیدروژن)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید گاز هیدروژن"
+    },
+    {
+      "legacy": "آب (حل شدن آن در آب بسیار گرمازا است)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "حل شدن آن در آب بسیار گرمازا است"
+    },
+    {
+      "legacy": "اسیدهای قوی (آزاد کردن فوری گاز کلر Cl₂ که بسیار خفه‌کننده و کشنده است)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد کردن فوری گاز کلر Cl₂ که بسیار خفهکننده و کشنده است"
+    },
+    {
+      "legacy": "آمونیاک و ترکیبات آمونیوم (تشکیل کلرامین‌های انفجاری و سمی)",
+      "mentions": 1,
+      "classes": [
+        "ammonia-ammonium"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تشکیل کلرامینهای انفجاری و سمی"
+    },
+    {
+      "legacy": "حلال‌های آلی و مواد قابل اشتعال",
+      "mentions": 1,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی و اسیدهای غلیظ (آزادکننده گاز ید سمی)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزادکننده گاز ید سمی"
+    },
+    {
+      "legacy": "فلزات سنگین و نمک‌های آنها",
+      "mentions": 1,
+      "classes": [
+        "heavy-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی (تولید گاز به شدت خفه‌کننده و تحریک‌کننده دی‌اکسید گوگرد SO₂)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید گاز به شدت خفهکننده و تحریککننده دیاکسید گوگرد SO₂"
+    },
+    {
+      "legacy": "آب و رطوبت (هیدرولیز شدید)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "هیدرولیز شدید"
+    },
+    {
+      "legacy": "اسیدهای غلیظ (واکنش خنثی‌سازی به شدت گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش خنثیسازی به شدت گرمازا"
+    },
+    {
+      "legacy": "مواد احیاکننده قوی و حلال‌های آلی قابل اشتعال",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدها (تولید گاز قهوه‌ای رنگ و بسیار سمی اکسید نیتروژن NOx)",
+      "mentions": 1,
+      "classes": [
+        "acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید گاز قهوهای رنگ و بسیار سمی اکسید نیتروژن NOx"
+    },
+    {
+      "legacy": "عوامل احیاکننده و آمین‌ها",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent",
+        "amine"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی (آزاد شدن گاز هیدروژن سیانید فوق‌العاده سمی HCN)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد شدن گاز هیدروژن سیانید فوقالعاده سمی HCN"
+    },
+    {
+      "legacy": "آب و رطوبت (واکنش شدید گرماده همراه با تولید گاز اکسیژن و سدیم هیدروکسید خورنده)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید گرماده همراه با تولید گاز اکسیژن و سدیم هیدروکسید خورنده"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش انفجاری)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش انفجاری"
+    },
+    {
+      "legacy": "فلزاتی مانند آهن، مس و روی (تجزیه کاتالیزوری)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal",
+        "copper-alloy"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تجزیه کاتالیزوری"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش خنثی‌سازی شدید)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش خنثیسازی شدید"
+    },
+    {
+      "legacy": "اسیدها (رسوب اسید سالیسیلیک)",
+      "mentions": 1,
+      "classes": [
+        "acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "رسوب اسید سالیسیلیک"
+    },
+    {
+      "legacy": "ترکیبات باریم‌دار (ایجاد رسوب سفید باریم سولفات)",
+      "mentions": 1,
+      "classes": [
+        "precipitating-salt"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "ایجاد رسوب سفید باریم سولفات"
+    },
+    {
+      "legacy": "اسیدها (تولید گاز بسیار سمی، بدبو و خفه‌کننده دی‌اکسید گوگرد SO₂)",
+      "mentions": 1,
+      "classes": [
+        "acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید گاز بسیار سمی، بدبو و خفهکننده دیاکسید گوگرد SO₂"
+    },
+    {
+      "legacy": "اسیدهای قوی (ترکیب مستقیم آن با اسیدها موجب تجزیه شده و گاز سمی و تند دی‌اکسید گوگرد و رسوب زرد رنگ گوگرد ایجاد می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "ترکیب مستقیم آن با اسیدها موجب تجزیه شده و گاز سمی و تند دیاکسید گوگرد و رسوب زرد رنگ گوگرد ایجاد میکند"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی (واکنش شدید و گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید و گرمازا"
+    },
+    {
+      "legacy": "فلزات قلیایی فعال و هیدروژن پراکسید",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "کاتالیزورهای اسیدی",
+      "mentions": 1,
+      "classes": [
+        "acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "پروکسیدهای آلی",
+      "mentions": 1,
+      "classes": [
+        "peroxide-initiator"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی و نیتریت‌ها (واکنش شدید آزادکننده گاز نیتروژن و حرارت زیاد)",
+      "mentions": 1,
+      "classes": [
+        "nitrite",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید آزادکننده گاز نیتروژن و حرارت زیاد"
+    },
+    {
+      "legacy": "آب (اضافه کردن مستقیم آب به اسید غلیظ موجب پاشش شدید اسید می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "اضافه کردن مستقیم آب به اسید غلیظ موجب پاشش شدید اسید میشود"
+    },
+    {
+      "legacy": "ترکیبات آلی و حلال‌ها (موجب کربونیزه شدن و گرمای شدید می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "موجب کربونیزه شدن و گرمای شدید میشود"
+    },
+    {
+      "legacy": "فلزات (تولید گاز هیدروژن قابل انفجار می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید گاز هیدروژن قابل انفجار میکند"
+    },
+    {
+      "legacy": "آک و رطوبت",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "آب و اسیدها (واکنش هیدرولیز به آرامی انجام شده و اتانول و سیلیس کلوئیدی تولید می‌کند)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture",
+        "acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش هیدرولیز به آرامی انجام شده و اتانول و سیلیس کلوئیدی تولید میکند"
+    },
+    {
+      "legacy": "اکسیژن هوا (موجب تشکیل پراکسیدهای آلی به شدت انفجاری می‌شود)",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": [],
+      "note": "موجب تشکیل پراکسیدهای آلی به شدت انفجاری میشود"
+    },
+    {
+      "legacy": "اکسیدکننده‌های قوی و اسیدهای قوی",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش گرمازا شدید)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش گرمازا شدید"
+    },
+    {
+      "legacy": "آب (واکنش بسیار شدید همراه با تولید گاز دی‌اکسید گوگرد SO2 و اسید هیدروکلریک HCl)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش بسیار شدید همراه با تولید گاز دیاکسید گوگرد SO2 و اسید هیدروکلریک HCl"
+    },
+    {
+      "legacy": "الکل‌ها و آمین‌ها (واکنش گرمازا شدید)",
+      "mentions": 1,
+      "classes": [
+        "amine",
+        "alcohol"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش گرمازا شدید"
+    },
+    {
+      "legacy": "آب و رطوبت هوا (هیدرولیز بسیار شدید و انفجاری با تولید دی‌اکسید تیتانیم و گاز هیدروژن کلرید HCl)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": [],
+      "note": "هیدرولیز بسیار شدید و انفجاری با تولید دیاکسید تیتانیم و گاز هیدروژن کلرید HCl"
+    },
+    {
+      "legacy": "الکل‌ها و بازها",
+      "mentions": 1,
+      "classes": [
+        "alcohol",
+        "base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اکسیدکننده‌های بسیار قوی (مانند اسید نیتریک غلیظ)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند اسید نیتریک غلیظ"
+    },
+    {
+      "legacy": "هالوژن‌ها (در حضور نور واکنش شدید انجام می‌دهد)",
+      "mentions": 1,
+      "classes": [
+        "halogen"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "در حضور نور واکنش شدید انجام میدهد"
+    },
+    {
+      "legacy": "بازهای قوی (واکنش گرمازای شدید و فوری)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش گرمازای شدید و فوری"
+    },
+    {
+      "legacy": "کربنات‌ها و ترکیبات آمینی",
+      "mentions": 1,
+      "classes": [
+        "amine",
+        "carbonate"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی (تولید استیلن‌های هالوژنه انفجاری و سمی)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "تولید استیلنهای هالوژنه انفجاری و سمی"
+    },
+    {
+      "legacy": "فلزاتی نظیر آلومینیوم و منیزیم در حضور رطوبت",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal",
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات مس و آلیاژهای آن",
+      "mentions": 1,
+      "classes": [
+        "copper-alloy"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی (واکنش به شدت گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش به شدت گرمازا"
+    },
+    {
+      "legacy": "فلزات فعال (آلومینیوم، آهن، روی)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آلومینیوم، آهن، روی"
+    },
+    {
+      "legacy": "آب و رطوبت (واکنش شدید با تولید اسید تری‌فلوئورواستیک خورنده)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش شدید با تولید اسید تریفلوئورواستیک خورنده"
+    },
+    {
+      "legacy": "الکل‌ها، آمین‌ها و بازهای قوی",
+      "mentions": 1,
+      "classes": [
+        "amine",
+        "alcohol",
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "هیپوکلریت‌ها / وایتکس (مخلوط کردن اوره با کلر فعال موجب تشکیل گاز منفجره و سمی نیتروژن تری‌کلرید می‌گردد)",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مخلوط کردن اوره با کلر فعال موجب تشکیل گاز منفجره و سمی نیتروژن تریکلرید میگردد"
+    },
+    {
+      "legacy": "آغازگرهای پلیمریزاسیون",
+      "mentions": 1,
+      "classes": [
+        "peroxide-initiator"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای اکسیدکننده غلیظ",
+      "mentions": 1,
+      "classes": [
+        "strong-oxidizer",
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "بازهای قوی (رسوب ناگهانی هیدروکسید روی)",
+      "mentions": 1,
+      "classes": [
+        "strong-base"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "رسوب ناگهانی هیدروکسید روی"
+    },
+    {
+      "legacy": "آب (حل شدن آن بسیار گرماده است)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "حل شدن آن بسیار گرماده است"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش حل‌شدن شدید و تولید نمک روی)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش حلشدن شدید و تولید نمک روی"
+    },
+    {
+      "legacy": "منیزیم و فلزات قلیایی خاکی فعال",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "فلزات قلیایی (سدیم، پتاسیم، لیتیم - واکنش انفجاری و تولید گاز هیدروژن)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "سدیم، پتاسیم، لیتیم - واکنش انفجاری و تولید گاز هیدروژن"
+    },
+    {
+      "legacy": "پودرهای فلزی پیروفوریک و فعال",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی غلیظ (مانند اسید سولفوریک غلیظ - واکنش شدیداً گرمازا هنگام اضافه کردن آب به اسید)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "مانند اسید سولفوریک غلیظ - واکنش شدیداً گرمازا هنگام اضافه کردن آب به اسید"
+    },
+    {
+      "legacy": "کلسیم اکسید (آهک زنده - هیدرولیز بسیار گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آهک زنده - هیدرولیز بسیار گرمازا"
+    },
+    {
+      "legacy": "هیدریدهای فلزی (سدیم هیدرید، لیتیم آلومینیوم هیدرید - واکنش شدید با تولید هیدروژن)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "سدیم هیدرید، لیتیم آلومینیوم هیدرید - واکنش شدید با تولید هیدروژن"
+    },
+    {
+      "legacy": "اسیدهای قوی (واکنش گرمازا)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش گرمازا"
+    },
+    {
+      "legacy": "هیدروژن فلوئورید / اسید فلوئوریدریک (واکنش با تولید گاز سمی تترافلوئورید سیلیسیم)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش با تولید گاز سمی تترافلوئورید سیلیسیم"
+    },
+    {
+      "legacy": "فلورین",
+      "mentions": 1,
+      "classes": [
+        "halogen"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "تری‌فلوئورید کلر",
+      "mentions": 1,
+      "classes": [
+        "halogen"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اسیدهای قوی (آزاد شدن گازهای بسیار سمی جیوه و ید)",
+      "mentions": 1,
+      "classes": [
+        "strong-acid"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "آزاد شدن گازهای بسیار سمی جیوه و ید"
+    },
+    {
+      "legacy": "آمونیاک و نمک‌های آمونیوم (ایجاد رسوب انفجاری قهوه‌ای نسلر)",
+      "mentions": 1,
+      "classes": [
+        "ammonia-ammonium"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "ایجاد رسوب انفجاری قهوهای نسلر"
+    },
+    {
+      "legacy": "نگهداری طولانی‌مدت (باید بلافاصله پس از آزمایش خنثی شود)",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "long-storage"
+      ],
+      "restrictions": [],
+      "note": "باید بلافاصله پس از آزمایش خنثی شود"
+    },
+    {
+      "legacy": "مواد کاهنده قوی",
+      "mentions": 1,
+      "classes": [
+        "reducing-agent"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "مواد آلی و حلال‌های قابل اشتعال (واکنش بسیار شدید و خطر انفجار)",
+      "mentions": 1,
+      "classes": [
+        "flammable-material"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش بسیار شدید و خطر انفجار"
+    },
+    {
+      "legacy": "فلزات فعال (واکنش گرمازا با تولید هیدروژن)",
+      "mentions": 1,
+      "classes": [
+        "reactive-metal"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "واکنش گرمازا با تولید هیدروژن"
+    },
+    {
+      "legacy": "آب و رطوبت (محلول به شدت با رطوبت واکنش داده و غیرفعال می‌شود)",
+      "mentions": 1,
+      "classes": [
+        "water-moisture"
+      ],
+      "conditions": [],
+      "restrictions": [],
+      "note": "محلول به شدت با رطوبت واکنش داده و غیرفعال میشود"
+    },
+    {
+      "legacy": "آمونیاک و ترکیبات آمونیوم",
+      "mentions": 1,
+      "classes": [
+        "ammonia-ammonium"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "اکسیژن",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "air-oxygen"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "کلر",
+      "mentions": 1,
+      "classes": [
+        "halogen"
+      ],
+      "conditions": [],
+      "restrictions": []
+    },
+    {
+      "legacy": "منابع جرقه و حرارت",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "heat-ignition"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "منابع اشتعال",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [
+        "heat-ignition"
+      ],
+      "restrictions": []
+    },
+    {
+      "legacy": "فاضلاب",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [],
+      "restrictions": [
+        "environment-release"
+      ]
+    },
+    {
+      "legacy": "فضای بسته و بدون پایش",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [],
+      "restrictions": [
+        "closed-space"
+      ]
+    },
+    {
+      "legacy": "دستکاری بدون مجوز",
+      "mentions": 1,
+      "classes": [],
+      "conditions": [],
+      "restrictions": [
+        "unauthorized-handling"
+      ]
+    }
+  ]
+}

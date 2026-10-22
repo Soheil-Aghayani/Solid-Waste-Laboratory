@@ -1,0 +1,2856 @@
+{
+  "_about": "PROPOSAL, not applied. Edit \"stream\" values freely; ids must exist in \"streams\".",
+  "streams": [
+    {
+      "id": "A",
+      "fa": "پسماند آلی غیرهالوژنه",
+      "en": "Non-halogenated organic liquids",
+      "basis": "portal FAQ (Group A)",
+      "color": "emerald (FAQ: green)",
+      "records": 84,
+      "legacyStrings": 31,
+      "currentContainerColors": {
+        "red": 41,
+        "emerald": 30,
+        "yellow": 11,
+        "amber": 2
+      }
+    },
+    {
+      "id": "B",
+      "fa": "پسماند آلی هالوژنه",
+      "en": "Halogenated organic liquids",
+      "basis": "portal FAQ (Group B)",
+      "color": "yellow (FAQ: yellow)",
+      "records": 11,
+      "legacyStrings": 6,
+      "currentContainerColors": {
+        "amber": 5,
+        "red": 6
+      }
+    },
+    {
+      "id": "C1",
+      "fa": "پسماند اسیدی آبی",
+      "en": "Aqueous acids",
+      "basis": "portal FAQ (Group C), split acid/base by me",
+      "color": "blue or red (FAQ: \"blue/red\")",
+      "records": 22,
+      "legacyStrings": 17,
+      "currentContainerColors": {
+        "red": 14,
+        "yellow": 6,
+        "amber": 2
+      }
+    },
+    {
+      "id": "C2",
+      "fa": "پسماند بازی آبی",
+      "en": "Aqueous bases",
+      "basis": "portal FAQ (Group C), split acid/base by me",
+      "color": "blue or red (FAQ: \"blue/red\")",
+      "records": 10,
+      "legacyStrings": 8,
+      "currentContainerColors": {
+        "red": 8,
+        "yellow": 1,
+        "blue": 1
+      }
+    },
+    {
+      "id": "C3",
+      "fa": "محلول نمکی آبی غیرخطرناک",
+      "en": "Aqueous salt solutions, non-hazardous",
+      "basis": "data text calls these \"Group C\"",
+      "color": "not defined",
+      "records": 41,
+      "legacyStrings": 17,
+      "currentContainerColors": {
+        "emerald": 21,
+        "yellow": 7,
+        "blue": 13
+      }
+    },
+    {
+      "id": "D",
+      "fa": "فلزات سنگین و مواد معدنی سمی",
+      "en": "Heavy metals and toxic inorganics",
+      "basis": "data text only (\"Group D\"); not in the portal FAQ",
+      "color": "not defined",
+      "records": 58,
+      "legacyStrings": 39,
+      "currentContainerColors": {
+        "red": 44,
+        "yellow": 12,
+        "amber": 2
+      }
+    },
+    {
+      "id": "OX",
+      "fa": "اکسیدکننده‌های معدنی (جدا از آلی‌ها)",
+      "en": "Inorganic oxidizers (keep away from organics)",
+      "basis": "data text only",
+      "color": "not defined",
+      "records": 19,
+      "legacyStrings": 14,
+      "currentContainerColors": {
+        "yellow": 13,
+        "red": 6
+      }
+    },
+    {
+      "id": "SOLID-ORG",
+      "fa": "پسماند آلی جامد",
+      "en": "Organic solids",
+      "basis": "data text (\"organic solid, Group A\")",
+      "color": "not defined",
+      "records": 24,
+      "legacyStrings": 13,
+      "currentContainerColors": {
+        "yellow": 14,
+        "red": 3,
+        "amber": 7
+      }
+    },
+    {
+      "id": "DYE",
+      "fa": "رنگینه، شناساگر و معرف رنگی",
+      "en": "Dyes, stains and indicators",
+      "basis": "data text only",
+      "color": "not defined",
+      "records": 31,
+      "legacyStrings": 17,
+      "currentContainerColors": {
+        "yellow": 21,
+        "red": 10
+      }
+    },
+    {
+      "id": "SP",
+      "fa": "پسماند ویژه (ظرف جداگانه)",
+      "en": "Special waste (separate container)",
+      "basis": "data text (\"separate container\")",
+      "color": "not defined",
+      "records": 52,
+      "legacyStrings": 47,
+      "currentContainerColors": {
+        "red": 44,
+        "yellow": 5,
+        "amber": 3
+      }
+    },
+    {
+      "id": "NH",
+      "fa": "جامد یا ماده غیرخطرناک",
+      "en": "Non-hazardous solids and materials",
+      "basis": "data text only",
+      "color": "not defined",
+      "records": 30,
+      "legacyStrings": 28,
+      "currentContainerColors": {
+        "emerald": 26,
+        "blue": 4
+      }
+    },
+    {
+      "id": "EL",
+      "fa": "ماده خام عنصری (نه پسماند روزمره)",
+      "en": "Elemental raw material (not routine waste)",
+      "basis": "data text only",
+      "color": "not defined",
+      "records": 58,
+      "legacyStrings": 8,
+      "currentContainerColors": {
+        "emerald": 40,
+        "yellow": 14,
+        "amber": 3,
+        "red": 1
+      }
+    },
+    {
+      "id": "GAS",
+      "fa": "گاز فشرده یا کپسول",
+      "en": "Compressed gas / cylinders",
+      "basis": "data text only",
+      "color": "not defined",
+      "records": 11,
+      "legacyStrings": 6,
+      "currentContainerColors": {
+        "blue": 6,
+        "red": 3,
+        "yellow": 2
+      }
+    },
+    {
+      "id": "RAD",
+      "fa": "ماده پرتوزا (فقط با مجوز)",
+      "en": "Radioactive (licensed handling only)",
+      "basis": "data text only",
+      "color": "not defined",
+      "records": 37,
+      "legacyStrings": 2,
+      "currentContainerColors": {
+        "red": 37
+      }
+    }
+  ],
+  "mapping": [
+    {
+      "legacy": "مواد خام عنصری فلزی",
+      "records": 40,
+      "stream": "EL",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Scandium",
+        "Titanium",
+        "Vanadium"
+      ]
+    },
+    {
+      "legacy": "مواد پرتوزای عنصری، فقط با مجوز و کنترل حفاظت در برابر پرتو",
+      "records": 36,
+      "stream": "RAD",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Technetium",
+        "Promethium",
+        "Polonium"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی غیرهالوژنه (گروه A)",
+      "records": 34,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "1-Butanol",
+        "1-Pentanol",
+        "Amyl Acetate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای نمکی معدنی آبی (گروه C)",
+      "records": 13,
+      "stream": "C3",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Ammonium Carbonate",
+        "Ammonium Oxalate",
+        "Ammonium Sulfate"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی غیرهالوژنه (گالن قرمز/سبز)",
+      "records": 11,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Acetone",
+        "Acetonitrile",
+        "Cyclohexane"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی جامد (گروه A)",
+      "records": 10,
+      "stream": "SOLID-ORG",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Acetanilide",
+        "Acetylsalicylic Acid",
+        "Benzamide"
+      ]
+    },
+    {
+      "legacy": "پسماند عناصر فلزی سمی و فلزات سنگین",
+      "records": 10,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Beryllium",
+        "Cobalt",
+        "Nickel"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی رنگینه‌ها",
+      "records": 8,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Aniline Blue WS",
+        "Janus Green B",
+        "Neutral Red"
+      ]
+    },
+    {
+      "legacy": "مواد خام عنصری فلزی واکنش‌پذیر",
+      "records": 8,
+      "stream": "EL",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Lithium",
+        "Magnesium",
+        "Aluminium"
+      ]
+    },
+    {
+      "legacy": "پسماندهای نمکی غیرسمی عمومی",
+      "records": 7,
+      "stream": "C3",
+      "confidence": "medium",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ammonium Bicarbonate",
+        "Calcium Gluconate",
+        "Calcium Lactate"
+      ]
+    },
+    {
+      "legacy": "گازهای فشرده خنثی عنصری",
+      "records": 6,
+      "stream": "GAS",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Nitrogen",
+        "Helium",
+        "Neon"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی معرف‌ها و نشانگرها (رنگینه)",
+      "records": 5,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Bromocresol Green",
+        "Bromothymol Blue",
+        "Methyl Red"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی معرف‌ها و رنگینه‌ها",
+      "records": 4,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Alizarin Red S",
+        "Eosin Y",
+        "Hematoxylin"
+      ]
+    },
+    {
+      "legacy": "گروه B - حلال‌های آلی هالوژنه (گالن زرد)",
+      "records": 4,
+      "stream": "B",
+      "confidence": "high",
+      "dataGroupLetter": "B",
+      "examples": [
+        "Bromoform",
+        "Chloroform",
+        "Dichloromethane"
+      ]
+    },
+    {
+      "legacy": "پسماندهای معدنی واکنش‌پذیر و خورنده",
+      "records": 4,
+      "stream": "SP",
+      "confidence": "medium",
+      "note": "Water-reactive inorganic halides",
+      "dataGroupLetter": null,
+      "examples": [
+        "Phosphorus Oxychloride",
+        "Phosphorus Pentachloride",
+        "Phosphorus Trichloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی سمی و قابل اشتعال",
+      "records": 3,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Allyl Alcohol",
+        "Ethyl Acrylate",
+        "Methyl Acrylate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اکسیدکننده معدنی (جدا از حلال‌های آلی نگه دارید)",
+      "records": 3,
+      "stream": "OX",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Aluminium Nitrate",
+        "Magnesium Nitrate",
+        "Strontium Nitrate"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای نمکی معدنی آبی",
+      "records": 3,
+      "stream": "C3",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Ammonium Chloride",
+        "Ammonium Iodide",
+        "Sodium Iodide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین سمی و اکسیدکننده (گروه D)",
+      "records": 3,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": "D",
+      "examples": [
+        "Ammonium Dichromate",
+        "Potassium Cobaltinitrite",
+        "Sodium Cobaltinitrite"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین سمی ویژه (وانادیم)",
+      "records": 3,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ammonium Metavanadate",
+        "Potassium Metavanadate",
+        "Sodium Metavanadate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فسفاته غیرخطرناک آبی",
+      "records": 3,
+      "stream": "C3",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ammonium Phosphate",
+        "Disodium Hydrogen Phosphate",
+        "Sodium Dihydrogen Phosphate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین سمی (گروه D)",
+      "records": 3,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": "D",
+      "examples": [
+        "Cupric Acetate",
+        "Cuprous Chloride",
+        "Zinc Sulfate"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای اسیدی آبی (جدا از حلال‌های آلی نگهداری شود)",
+      "records": 3,
+      "stream": "C1",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Hydriodic Acid",
+        "Hydrobromic Acid",
+        "Phosphoric Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی سمی و خورنده",
+      "records": 3,
+      "stream": "A",
+      "confidence": "low",
+      "note": "Physical form unknown (the reagents are solids); no \"solid\" in the text",
+      "dataGroupLetter": null,
+      "examples": [
+        "N-Bromosuccinimide",
+        "N-Chlorosuccinimide",
+        "Resorcinol"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای اسیدی و بازی آبی (گالن آبی/قرمز)",
+      "records": 3,
+      "stream": "C2",
+      "confidence": "medium",
+      "note": "Text says \"acidic and basic\"; examples are strong bases",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Potassium Hydroxide",
+        "Sodium Hydroxide",
+        "Sulfuric Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اکسیدکننده معدنی",
+      "records": 3,
+      "stream": "OX",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Iodate",
+        "Sodium Bismuthate",
+        "Sodium Iodate"
+      ]
+    },
+    {
+      "legacy": "مواد خام عنصری شبه‌فلزی",
+      "records": 3,
+      "stream": "EL",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Boron",
+        "Silicon",
+        "Germanium"
+      ]
+    },
+    {
+      "legacy": "مواد خام عنصری اکسیدکننده",
+      "records": 3,
+      "stream": "EL",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Fluorine",
+        "Bromine",
+        "Iodine"
+      ]
+    },
+    {
+      "legacy": "پسماند عناصر شبه‌فلزی سمی",
+      "records": 3,
+      "stream": "D",
+      "confidence": "medium",
+      "note": "Toxic metalloid; \"toxic inorganic\" family",
+      "dataGroupLetter": null,
+      "examples": [
+        "Arsenic",
+        "Antimony",
+        "Tellurium"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی خورنده و پلیمریزه شونده",
+      "records": 2,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Acrylic Acid",
+        "Methacrylic Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی جامد غیرخطرناک",
+      "records": 2,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Adipic Acid",
+        "Sodium Salicylate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی هالوژنه سمی (گروه B)",
+      "records": 2,
+      "stream": "B",
+      "confidence": "high",
+      "dataGroupLetter": "B",
+      "examples": [
+        "Allyl Chloride",
+        "Epichlorohydrin"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اکسیدکننده معدنی (جدا از حلال‌های آلی و بازها نگهداری شود)",
+      "records": 2,
+      "stream": "OX",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ammonium Persulfate",
+        "Potassium Persulfate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی غیرخطرناک (بی‌ضرر)",
+      "records": 2,
+      "stream": "NH",
+      "confidence": "medium",
+      "note": "Glycerol is a liquid; \"non-hazardous organic\"",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ascorbic Acid",
+        "Glycerol"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین سمی و اکسیدکننده (کروم ۶)",
+      "records": 2,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Chromium Trioxide",
+        "Potassium Chromate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین سمی (کبالت)",
+      "records": 2,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Cobalt Chloride",
+        "Cobalt Sulfate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی سمی و تراتوژن",
+      "records": 2,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Dibutyl Phthalate",
+        "Formamide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی بازی (گروه C)",
+      "records": 2,
+      "stream": "A",
+      "confidence": "low",
+      "note": "The data itself says \"Group C\", but these are organic liquids; the other organic bases are labelled Group A",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Diethanolamine",
+        "Triethanolamine"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی سمی و سرطان‌زا",
+      "records": 2,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Dioctyl Phthalate",
+        "Phenylhydrazine"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی فوق‌العاده سمی و جهش‌زا",
+      "records": 2,
+      "stream": "SP",
+      "confidence": "medium",
+      "note": "Alkylating mutagens",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ethyl Methanesulfonate",
+        "Methyl Methanesulfonate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی اسیدی (گروه C)",
+      "records": 2,
+      "stream": "C1",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Lactic Acid",
+        "Propionic Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای هیدریدی و واکنش‌دهنده با آب ویژه",
+      "records": 2,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Lithium Aluminium Hydride",
+        "Sodium Hydride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای نمکی غیرخطرناک آبی",
+      "records": 2,
+      "stream": "C3",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Magnesium Chloride",
+        "Sodium Bromide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی جامد واکنش‌پذیر",
+      "records": 2,
+      "stream": "SOLID-ORG",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Maleic Anhydride",
+        "Phthalic Anhydride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی جامد سمی",
+      "records": 2,
+      "stream": "SOLID-ORG",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Melamine (Melane)",
+        "N,N'-Methylenebisacrylamide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی غیرهالوژنه (پلیمریزه شونده)",
+      "records": 2,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Methyl Methacrylate",
+        "Vinyl Acetate"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی غیرهالوژنه بازی",
+      "records": 2,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Morpholine",
+        "Pyrrolidine"
+      ]
+    },
+    {
+      "legacy": "گروه C - اسیدهای آلی جامد (ظرف مخصوص پسماندهای سمی آلی یا گالن اسید)",
+      "records": 2,
+      "stream": "C1",
+      "confidence": "medium",
+      "note": "Solid organic acids; the data says \"Group C\"",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Oxalic Acid",
+        "p-Toluenesulfonic Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اسیدی معدنی آبی (گروه C)",
+      "records": 2,
+      "stream": "C1",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Phosphotungstic Acid",
+        "Silicotungstic Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای نمکی معدنی غیرسمی",
+      "records": 2,
+      "stream": "C3",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Bisulfite",
+        "Potassium Metabisulfite"
+      ]
+    },
+    {
+      "legacy": "گروه B - اسیدهای قوی آلی هالوژنه (گالن زرد یا ظرف اسیدهای هالوژنه مخصوص)",
+      "records": 2,
+      "stream": "B",
+      "confidence": "high",
+      "dataGroupLetter": "B",
+      "examples": [
+        "Trichloroacetic Acid",
+        "Trifluoroacetic Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی غیرهالوژنه (سرطان‌زای احتمالی)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "1,4-Dioxane"
+      ]
+    },
+    {
+      "legacy": "گروه A یا C - پسماندهای اسیدی آلی (در گالن آبی/قرمز دفع شود)",
+      "records": 1,
+      "stream": "C1",
+      "confidence": "low",
+      "note": "The data says \"Group A or C\"",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Acetic Acid"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای اسیدی آلی خورنده (گالن اسیدهای آلی)",
+      "records": 1,
+      "stream": "C1",
+      "confidence": "medium",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Acetic Anhydride"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی غیرهالوژنه",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Acetophenone"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی بسیار واکنش‌پذیر و خورنده",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "medium",
+      "note": "Violently water-reactive",
+      "dataGroupLetter": null,
+      "examples": [
+        "Acetyl Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی رنگینه‌ها (جهش‌زای احتمالی)",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Acridine Orange"
+      ]
+    },
+    {
+      "legacy": "پسماندهای پلیمری و مونومرهای سمی (گروه آلی جامد)",
+      "records": 1,
+      "stream": "SOLID-ORG",
+      "confidence": "medium",
+      "dataGroupLetter": null,
+      "examples": [
+        "Acrylamide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد غیرخطرناک جاذب (پسماند فیلترها و پودر جاذب)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Activated Carbon"
+      ]
+    },
+    {
+      "legacy": "پسماندهای نمکی معدنی آبی اسیدی (منعقدکننده تصفیه آب)",
+      "records": 1,
+      "stream": "C3",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Aluminium Sulfate"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای بازی آبی (گالن آبی/قرمز)",
+      "records": 1,
+      "stream": "C2",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Ammonia Solution"
+      ]
+    },
+    {
+      "legacy": "پسماندهای حاوی مولیبدن (فلزات سنگین سمی - در گالن جداگانه دفع شود)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ammonium Molybdate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اکسیدکننده جامد (باید از حلال‌های آلی و اسیدها کاملاً جدا نگهداری شود)",
+      "records": 1,
+      "stream": "OX",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ammonium Nitrate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای ویژه معدنی حاوی تیوسیانات (هرگز با اسیدهای غلیظ یا بازها مخلوط نشود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "low",
+      "note": "Releases toxic gas with strong acids; it could also stay in C3",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ammonium Thiocyanate"
+      ]
+    },
+    {
+      "legacy": "گروه A - پسماندهای آلی غیرهالوژنه (گالن قرمز)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Aniline"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد آلی خطرناک (هیدروکربن‌های آروماتیک چندحلقه‌ای PAH)",
+      "records": 1,
+      "stream": "SOLID-ORG",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Anthracene"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آرسنیکی به شدت سمی ویژه (ظرف مجزا)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "medium",
+      "note": "Very toxic; \"separate container\"",
+      "dataGroupLetter": null,
+      "examples": [
+        "Arsenic Trioxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی رنگینه‌ها (سرطان‌زای قطعی یا احتمالی)",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Auramine O"
+      ]
+    },
+    {
+      "legacy": "پسماندهای حاوی فلزات سنگین سمی (در گالن جداگانه جمع‌آوری شود)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Barium Chloride"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای بازی غیرآلی (حاوی فلز سنگین باریم)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "medium",
+      "note": "The data says \"Group C base\"; contains barium",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Barium Hydroxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین سمی (باریم)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Barium Nitrate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد معدنی غیرخطرناک (بسیار غیرمحلول و بی‌خطر برخلاف نمک‌های محلول باریم)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Barium Sulfate"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی غیرهالوژنه (مایعات آلی سبک)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Benzaldehyde"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی غیرهالوژنه (پسماند بسیار سمی و سرطان‌زا)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Benzene"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی جامد (ظروف سمی جامد آلی)",
+      "records": 1,
+      "stream": "SOLID-ORG",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Benzophenone"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی سمی، خورنده و واکنش‌پذیر با آب",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "medium",
+      "dataGroupLetter": null,
+      "examples": [
+        "Benzoyl Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی اکسیدکننده و پراکسیدهای ویژه (بسیار ناپایدار و حساس به دما و ضربه)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Benzoyl Peroxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی هالوژنه سمی و اشک‌آور (گروه B)",
+      "records": 1,
+      "stream": "B",
+      "confidence": "high",
+      "dataGroupLetter": "B",
+      "examples": [
+        "Benzyl Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد اسیدی ضعیف (در ظروف مجزای سمی دفع شود)",
+      "records": 1,
+      "stream": "C1",
+      "confidence": "low",
+      "note": "Weak solid acid; the text asks for a separate toxic container",
+      "dataGroupLetter": null,
+      "examples": [
+        "Boric Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای واکنش‌دهنده ویژه خورنده و آتش‌گیر (در ظروف مجزای غیرشیشه‌ای)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Boron Trifluoride Etherate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای بسیار خورنده و سمی ویژه (ظرف شیشه‌ای ضخیم مجزا)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Bromine"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی اسیدی با بوی زننده",
+      "records": 1,
+      "stream": "C1",
+      "confidence": "low",
+      "note": "Organic acid liquid",
+      "dataGroupLetter": null,
+      "examples": [
+        "Butyric Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین ویژه سمی (کادمیوم - سرطان‌زای قطعی گروه ۱)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Cadmium Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد غیرخطرناک (به عنوان عامل خنثی‌سازی اسیدها استفاده می‌شود)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Calcium Carbonate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد غیرخطرناک (به عنوان عامل خشک‌کننده فیزیکی حلال‌ها استفاده می‌شود)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Calcium Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای بازی غیرآلی (جهت خنثی‌سازی اسیدها و رسوب‌دهی فلزات استفاده می‌شود)",
+      "records": 1,
+      "stream": "C2",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Calcium Hydroxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد بازی غیرآلی (باید قبل از دفع در پسماند آبی به آرامی هیدرولیز و خنثی شود)",
+      "records": 1,
+      "stream": "C2",
+      "confidence": "medium",
+      "note": "Solid; hydrolyses to a base",
+      "dataGroupLetter": null,
+      "examples": [
+        "Calcium Oxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد معدنی بی‌خطر (گچ آزمایشگاهی)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Calcium Sulfate"
+      ]
+    },
+    {
+      "legacy": "گروه A - پسماندهای آلی فرار به شدت قابل اشتعال (گالن قرمز)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Carbon Disulfide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد ویژه نانومواد فوق‌العاده خطرناک برای ریه (ظرف نانوپسماند مهر و موم شده)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Carbon Nanotubes"
+      ]
+    },
+    {
+      "legacy": "گروه B - حلال‌های آلی هالوژنه (سمیت شدید کبدی)",
+      "records": 1,
+      "stream": "B",
+      "confidence": "high",
+      "dataGroupLetter": "B",
+      "examples": [
+        "Carbon Tetrachloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین حاوی کروم سه ظرفیتی اکسیدکننده (جدا از پسماندهای آلی نگه دارید)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Chromium(III) Nitrate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی غیرخطرناک (به عنوان پودر خنثی‌ساز بازها استفاده می‌شود)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Citric Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین حاوی کبالت اکسیدکننده (جدا از حلال‌های آلی نگه دارید)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Cobalt(II) Nitrate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی ویژه سمی (رنگینه آزو - جهش‌زا و سرطان‌زا)",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Congo Red"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی رنگینه‌ها (معرف الکتروفورز پروتئین)",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Coomassie Brilliant Blue"
+      ]
+    },
+    {
+      "legacy": "پسماندهای حاوی فلزات سنگین سمی (در گالن فلزات سنگین دفع شود)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Copper Sulfate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین حاوی مس (بسیار سمی برای آبزیان)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Copper(II) Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی معرف‌ها و رنگینه‌های ویژه سمی",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Crystal Violet"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی پروکسید واکنش‌پذیر و خورنده",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Cumene Hydroperoxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی پروکسید واکنش‌پذیر",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Di-tert-butyl Peroxide"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی غیرهالوژنه (پراکسیدساز شدید - خطر انفجار)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Diethyl Ether"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی فوق‌العاده سمی و سرطان‌زا",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "medium",
+      "note": "Alkylating carcinogen",
+      "dataGroupLetter": null,
+      "examples": [
+        "Diethyl Sulfate"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی غیرهالوژنه بازی (گالن قرمز)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Diethylamine"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی تشکیل‌دهنده پراکسید خطرناک (گالن قرمز)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Diisopropyl Ether"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی ویژه بسیار سمی و سرطان‌زا (گالن زرد)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "medium",
+      "note": "Alkylating carcinogen",
+      "dataGroupLetter": null,
+      "examples": [
+        "Dimethyl Sulfate"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی غیرهالوژنه (نفوذپذیری پوستی فوق‌العاده بالا)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Dimethyl Sulfoxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی سمی و فرار",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Dimethylformamide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی غیرخطرناک جامد (عامل کمپلکس‌دهنده)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "EDTA Disodium Salt"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی رنگینه‌ای ویژه (به عنوان معرف کمپلکسومتری استفاده می‌شود)",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Eriochrome Black T"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جهش‌زای قوی ژنتیکی ویژه (ظرف جداگانه لیبل‌دار)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "medium",
+      "note": "Mutagen; labelled separate container",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ethidium Bromide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای گازهای سمی و آلی",
+      "records": 1,
+      "stream": "GAS",
+      "confidence": "medium",
+      "note": "Toxic gas",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ethylene Oxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی بازی و خورنده",
+      "records": 1,
+      "stream": "A",
+      "confidence": "medium",
+      "note": "Organic base liquid",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ethylenediamine"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اسیدی حاوی فلزات سنگین (گالن فلزات سنگین اسیدی - بسیار خورنده)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ferric Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد معدنی کاهنده (یا پسماند فلزات سبک آبی)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "medium",
+      "note": "Reducing solid, low hazard",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ferrous Sulfate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی معرف‌ها و رنگینه‌ها (رنگ فلورسنت بسیار قوی)",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Fluorescein Sodium"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی ویژه سمی (در گالن جداگانه جمع‌آوری شود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "medium",
+      "note": "Aldehydes in a separate container",
+      "dataGroupLetter": null,
+      "examples": [
+        "Formaldehyde"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای اسیدی آلی (گالن آبی/قرمز)",
+      "records": 1,
+      "stream": "C1",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Formic Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی جامد غیرخطرناک (بسیار کم‌خطر)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Fumaric Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی رنگینه‌ها (حاوی متانول در فرمول محلول)",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Giemsa Stain"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد غیرخطرناک کاملاً بی‌خطر (شکر)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Glucose"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی سمی محلول در آب (گروه C یا ظرف آلدئیدها)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "low",
+      "note": "The text says \"Group C or aldehyde container\"",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Glutaraldehyde"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد ویژه نانومواد (ظرف مخصوص پسماند نانوذرات)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Graphene"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد معدنی غیرخطرناک (پودر جاذب یا روان‌کننده)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Graphite"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد نانومواد و کاتالیست‌های نوین (ظرف ویژه پسماندهای نانو)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Graphitic Carbon Nitride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی فوق‌العاده خطرناک، سمی و خورنده (در ظروف مهر و موم شده فلزی یا تفلون مجزا نگهداری شود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Hydrazine"
+      ]
+    },
+    {
+      "legacy": "پسماندهای واکنش‌دهنده و بسیار سمی ویژه (ظرف مجزا)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Hydrazine Monohydrate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد سمی ویژه",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Hydrazine Sulfate"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای اسیدی آبی (گالن آبی/قرمز)",
+      "records": 1,
+      "stream": "C1",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Hydrochloric Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اسیدی بسیار سمی و ویژه (باید در ظروف پلاستیکی تفلون یا پلی‌اتیلن نگهداری شود. هرگز در ظروف شیشه‌ای نگهداری نشود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Hydrofluoric Acid"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای اسیدی آبی (قبل از دفع رقیق شود)",
+      "records": 1,
+      "stream": "OX",
+      "confidence": "low",
+      "note": "CONFLICT: the data says \"Group C acidic aqueous\"; hydrogen peroxide is an oxidizer",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Hydrogen Peroxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی جامد سمی (گروه حلال‌های غیرهالوژنه)",
+      "records": 1,
+      "stream": "SOLID-ORG",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Hydroquinone"
+      ]
+    },
+    {
+      "legacy": "پسماندهای معدنی سمی و ناپایدار",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "medium",
+      "dataGroupLetter": null,
+      "examples": [
+        "Hydroxylamine"
+      ]
+    },
+    {
+      "legacy": "پسماندهای سمی غیرآلی (قبل از تخلیه با سدیم تیوسولفات کاملاً بی‌رنگ و خنثی شود)",
+      "records": 1,
+      "stream": "OX",
+      "confidence": "low",
+      "note": "The data says \"toxic inorganic\"; iodine is an oxidizing halogen",
+      "dataGroupLetter": null,
+      "examples": [
+        "Iodine"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین ویژه سمی (سرب - بسیار خطرناک برای سلامتی)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Lead Acetate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای حاوی سرب (فلزات سنگین سمی - در گالن سرب دفع شود)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Lead Nitrate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای بازی غیرآلی (لیتیوم - بافر بازی)",
+      "records": 1,
+      "stream": "C2",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Lithium Carbonate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای نمکی معدنی آبی (لیتیوم)",
+      "records": 1,
+      "stream": "C3",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Lithium Chloride"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای بازی غیرآلی (گالن بازی خنثی شود)",
+      "records": 1,
+      "stream": "C2",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Lithium Hydroxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد معدنی غیرخطرناک",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Magnesium Oxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد غیرخطرناک (به عنوان خشک‌کننده فیزیکی حلال‌ها کاربرد دارد)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Magnesium Sulfate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی معرف‌ها و رنگینه‌های سمی",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Malachite Green"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی اسیدی جامد",
+      "records": 1,
+      "stream": "C1",
+      "confidence": "low",
+      "note": "Solid organic acid",
+      "dataGroupLetter": null,
+      "examples": [
+        "Maleic Acid"
+      ]
+    },
+    {
+      "legacy": "گروه C - اسیدهای آلی جامد ضعیف",
+      "records": 1,
+      "stream": "C1",
+      "confidence": "medium",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Malonic Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین حاوی منگنز",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Manganese(II) Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای حاوی منگنز (فلزات سنگین - ظرف مخصوص دفع فلزات سنگین)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Manganese(II) Sulfate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جیوه و فلزات سنگین ویژه (ظرف مجزا)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Mercuric Nitrate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای ویژه جیوه فوق‌العاده خطرناک (در ظرف شیشه‌ای ضخیم در بسته جمع‌آوری و سریعاً تحویل شود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Mercury(II) Chloride"
+      ]
+    },
+    {
+      "legacy": "گروه C - اسیدهای آلی خورنده (گالن اسیدهای غیرهالوژنه)",
+      "records": 1,
+      "stream": "C1",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Methanesulfonic Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی ویژه سمی (آزو-رنگینه)",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Methyl Orange"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آتش‌گیر ویژه (پیروفوریک - فقط در ظروف کاملاً آب‌بندی شده تحت گاز آرگون یا نیتروژن)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "n-Butyllithium"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد آلی خطرناک (ظرف مخصوص پسماندهای جامد سمی)",
+      "records": 1,
+      "stream": "SOLID-ORG",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Naphthalene"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اکسیدکننده و فلزات سنگین سمی (نیکل)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Nickel Nitrate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین سمی (نیکل)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Nickel Sulfate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین حاوی نیکل سمی",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Nickel(II) Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی سمی جامد (معرف شناسایی آمینو اسیدها)",
+      "records": 1,
+      "stream": "SOLID-ORG",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Ninhydrin"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای اسیدی آبی (جدا از پسماندهای آلی نگه دارید)",
+      "records": 1,
+      "stream": "C1",
+      "confidence": "medium",
+      "note": "Strong oxidizing acid; keep it separate from organics",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Nitric Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی ویژه بسیار سمی (گالن مجزا به رنگ قرمز/زرد)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "medium",
+      "note": "The text asks for a separate gallon",
+      "dataGroupLetter": null,
+      "examples": [
+        "Nitrobenzene"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی ویژه خطرناک (گروه A - جدا از بازهای قوی نگه دارید)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Nitromethane"
+      ]
+    },
+    {
+      "legacy": "پسماندهای بسیار سمی ویژه فلزات سنگین (ظرف پلاستیکی مجزا)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "medium",
+      "dataGroupLetter": null,
+      "examples": [
+        "Osmium Tetroxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای به شدت واکنش‌دهنده و سمی ویژه (ظرف شیشه‌ای یا تفلون مجزا زیر هود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Oxalyl Chloride"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای اسیدی قوی اکسیدکننده (نباید با مواد آلی مخلوط شود)",
+      "records": 1,
+      "stream": "C1",
+      "confidence": "low",
+      "note": "Strong oxidizing acid; could be SP",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Perchloric Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی سمی ویژه (در ظرف جداگانه نگهداری و تحویل شود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "medium",
+      "note": "Text: \"separate container\"",
+      "dataGroupLetter": null,
+      "examples": [
+        "Phenol"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی ویژه (مظنون به سرطان‌زایی - در گالن پسماند آلی حلال‌ها مخلوط نشود)",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "medium",
+      "note": "Indicator; the text says \"do not mix with solvents\"",
+      "dataGroupLetter": null,
+      "examples": [
+        "Phenolphthalein"
+      ]
+    },
+    {
+      "legacy": "پسماندهای گازهای سمی ویژه",
+      "records": 1,
+      "stream": "GAS",
+      "confidence": "medium",
+      "note": "Toxic gas",
+      "dataGroupLetter": null,
+      "examples": [
+        "Phosgene"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اسیدی معدنی و اکسیدکننده",
+      "records": 1,
+      "stream": "C1",
+      "confidence": "low",
+      "note": "Inorganic acid containing molybdenum",
+      "dataGroupLetter": null,
+      "examples": [
+        "Phosphomolybdic Acid"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اسیدی جامد و غیرآلی ویژه (ظرف مجزا)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "medium",
+      "note": "Violently water-reactive",
+      "dataGroupLetter": null,
+      "examples": [
+        "Phosphorus Pentoxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای منفجره و سمی ویژه (تحت هیچ شرایطی خشک نگهداری نشود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Picric Acid"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی غیرهالوژنه بازی (تحت کنترل ویژه)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Piperidine"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین سمی (آنتیموان)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Antimonyl Tartrate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اکسیدکننده معدنی سمی (سرطان‌زای احتمالی)",
+      "records": 1,
+      "stream": "OX",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Bromate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای نمکی غیرخطرناک جامد (به عنوان حامل آنالیز FT-IR استفاده می‌شود)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Bromide"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای بازی غیرآلی (محلول آبی در گالن پسماند بازی خنثی شود)",
+      "records": 1,
+      "stream": "C2",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Potassium Carbonate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای نمکی غیرخطرناک آبی (محلول الکترود pH متر رومیزی)",
+      "records": 1,
+      "stream": "C3",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای سیانیدی سمی ویژه (ظرف جداگانه لیبل‌دار)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Cyanide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای کروم شش‌ظرفیتی بسیار سمی (باید قبل از دفع به کروم سه‌ظرفیتی سبز غیرسمی کاهش یابد)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Dichromate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای ویژه فلزات سنگین حاوی فروسیانید (هرگز با اسیدهای غلیظ مخلوط نشود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "low",
+      "note": "Releases HCN with strong acids; could be D",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Ferricyanide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اگزالات فلزی سمی (حساس به نور خورشید و لامپ)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "low",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Ferrioxalate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای نمک‌های فلزی پایدار (کم‌خطر)",
+      "records": 1,
+      "stream": "C3",
+      "confidence": "low",
+      "note": "Stable cyanide complex",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Ferrocyanide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی جامد ضعیف (استاندارد اولیه تیتراسیون)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Hydrogen Phthalate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای محلول هالوژنه آبی یا معدنی خاص",
+      "records": 1,
+      "stream": "C3",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Iodide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد اکسیدکننده (هرگز با مواد آلی و حلال‌ها مخلوط نشود)",
+      "records": 1,
+      "stream": "OX",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Nitrate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی سمی جامد (اگزالات - سمی برای کلیه)",
+      "records": 1,
+      "stream": "SOLID-ORG",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Oxalate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد اکسیدکننده (هرگز با پسماندهای آلی مخلوط نشود)",
+      "records": 1,
+      "stream": "OX",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Permanganate (KMnO4)"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فسفاته غیرخطرناک (بافر مونوپتاسیم فسفات)",
+      "records": 1,
+      "stream": "C3",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Phosphate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای ویژه فلزات سنگین حاوی تیوسیانات (هرگز با اسیدهای غلیظ مخلوط نشود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "low",
+      "note": "Same as ammonium thiocyanate",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Thiocyanate"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی غیرهالوژنه (گالن قرمز/سبز - سمیت بسیار کم)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Propylene Glycol"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی سمی و بسیار فرار",
+      "records": 1,
+      "stream": "A",
+      "confidence": "medium",
+      "note": "Volatile toxic liquid",
+      "dataGroupLetter": null,
+      "examples": [
+        "Propylene Oxide"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی غیرهالوژنه نیتروژن‌دار (گالن قرمز)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Pyridine"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی جامد سمی عمومی",
+      "records": 1,
+      "stream": "SOLID-ORG",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Pyrogallol"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی رنگینه‌ها (محرک و سرطان‌زا)",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Rhodamine B"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی معرف‌ها و رنگینه‌های زیستی",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Safranin O"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد فیزیکی جاذب رطوبت (غیرخطرناک)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Silica Gel"
+      ]
+    },
+    {
+      "legacy": "پسماندهای حاوی نقره (فلزات گرانبها - بازیافت نقره یا در گالن فلزات سنگین دفع شود)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Silver Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای حاوی فلزات سنگین (در گالن جداگانه جهت بازیافت جمع‌آوری شود)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Silver Nitrate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین و گرانبها",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Silver Sulfate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی غیرخطرناک آبی (بافر استات)",
+      "records": 1,
+      "stream": "C3",
+      "confidence": "medium",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Acetate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای سمی و انفجاری ویژه (ظرف مجزا)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Azide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد غیرخطرناک (عامل خنثی‌کننده و بی‌خطر)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Bicarbonate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای معدنی کاهنده (باید از اسیدها کاملاً جدا باشد)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "medium",
+      "note": "Reducing solid",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Bisulfite"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اکسیدکننده معدنی سمی",
+      "records": 1,
+      "stream": "OX",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Bromate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد غیر خطرناک (به عنوان پودر خنثی‌ساز استفاده می‌شود)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Carbonate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد یا آبی غیرخطرناک (کاملاً بی‌ضرر)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای سیانیدی به شدت سمی (باید در محیط کاملاً قلیایی pH>10 نگهداری شود. هرگز با اسیدها مخلوط نشود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Cyanide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد حاوی کروم شش‌ظرفیتی (فلزات سنگین بسیار سمی و سرطان‌زا)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Dichromate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای سمی معدنی فلورایدی (در ظروف پلاستیکی درپوش‌دار سمی دفع شود - هرگز با اسید مخلوط نشود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "low",
+      "note": "Toxic fluoride; could be D",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Fluoride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای واکنش‌دهنده و احیاکننده ویژه (ظرف مجزا)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "low",
+      "note": "Reducing agent, self-heating",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Hydrosulfite"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای بازی اکسیدکننده (هرگز با اسیدها یا آمونیاک مخلوط نشود)",
+      "records": 1,
+      "stream": "OX",
+      "confidence": "low",
+      "note": "CONFLICT: the data says \"Group C basic oxidizing\"",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Sodium Hypochlorite"
+      ]
+    },
+    {
+      "legacy": "پسماندهای معدنی کاهنده ویژه (جهت احیای پسماندهای سمی کروم شش‌ظرفیتی در آزمایشگاه استفاده می‌شود)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "medium",
+      "note": "Reducing solid",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Metabisulfite"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد بازی واکنش‌دهنده ویژه (جدا از اسیدها و آب نگهداری شود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Methoxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد اکسیدکننده (هرگز با حلال‌های آلی مخلوط نشود)",
+      "records": 1,
+      "stream": "OX",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Nitrate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اکسیدکننده معدنی سمی (جدا از ترکیبات آلی و آمین‌ها نگه دارید)",
+      "records": 1,
+      "stream": "OX",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Nitrite"
+      ]
+    },
+    {
+      "legacy": "پسماندهای نمکی سمی معدنی حاوی سیانید (گروه C)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Sodium Nitroprusside"
+      ]
+    },
+    {
+      "legacy": "پسماندهای معدنی اکسیدکننده ویژه (واکنش شدید با آب)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Peroxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اکسیدکننده معدنی (گروه C یا ظرف مخصوص اکسیدکننده‌ها)",
+      "records": 1,
+      "stream": "OX",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Sodium Persulfate"
+      ]
+    },
+    {
+      "legacy": "گروه C - پسماندهای بازی آبی خنثی شده",
+      "records": 1,
+      "stream": "C2",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Sodium Phosphate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد غیرخطرناک (به عنوان خشک‌کننده آب از حلال‌های آلی کاربرد دارد)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Sulfate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد معدنی کاهنده (باید از اسیدها کاملاً جدا باشد)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "medium",
+      "note": "Reducing solid",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Sulfite"
+      ]
+    },
+    {
+      "legacy": "پسماندهای غیرخطرناک آبی (به عنوان عامل احیاکننده و خنثی‌ساز کلر استفاده می‌شود)",
+      "records": 1,
+      "stream": "C3",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Thiosulfate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای حاوی قلع (فلزات سنگین - گالن فلزات سنگین اسیدی)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Stannous Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد غیرخطرناک کاملاً ایمن (به عنوان شناساگر ید استفاده می‌شود)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Starch"
+      ]
+    },
+    {
+      "legacy": "پسماندهای نمکی معدنی آبی (استرانسیوم)",
+      "records": 1,
+      "stream": "C3",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Strontium Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی رنگینه‌ها (معرف رنگ‌آمیزی چربی)",
+      "records": 1,
+      "stream": "DYE",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sudan III"
+      ]
+    },
+    {
+      "legacy": "گروه C - اسیدهای معدنی جامد (پسماند اسیدهای جامد)",
+      "records": 1,
+      "stream": "C1",
+      "confidence": "high",
+      "dataGroupLetter": "C",
+      "examples": [
+        "Sulfamic Acid"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی غیرهالوژنه (رهاسازی اتانول در اثر هیدرولیز)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Tetraethyl Orthosilicate"
+      ]
+    },
+    {
+      "legacy": "گروه A - حلال‌های آلی غیرهالوژنه (پراکسیدساز - خطر انفجار در ذخیره طولانی)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Tetrahydrofuran"
+      ]
+    },
+    {
+      "legacy": "پسماندهای بازهای آلی بسیار سمی ویژه (ظرف مجزا)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "medium",
+      "dataGroupLetter": null,
+      "examples": [
+        "Tetramethylammonium Hydroxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اسیدی فرار ویژه (گالون پلاستیکی مجزا زیر هود)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Thionyl Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای معدنی به شدت واکنش‌دهنده و خورنده ویژه (در ظروف تفلون خشک مجزا)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Titanium Tetrachloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی غیرهالوژنه بازی",
+      "records": 1,
+      "stream": "A",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Triethylamine"
+      ]
+    },
+    {
+      "legacy": "گروه B - پسماندهای واکنش‌دهنده هالوژنه ویژه (ظرف تفلون مجزا)",
+      "records": 1,
+      "stream": "B",
+      "confidence": "high",
+      "dataGroupLetter": "B",
+      "examples": [
+        "Trifluoroacetic Anhydride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی غیرخطرناک آبی",
+      "records": 1,
+      "stream": "C3",
+      "confidence": "medium",
+      "dataGroupLetter": null,
+      "examples": [
+        "Urea"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اسیدی فلزات سنگین (بسیار خورنده پوست و کشنده برای محیط زیست)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Zinc Chloride"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات سنگین سمی و اکسیدکننده",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Zinc Nitrate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد حاوی فلزات سنگین (در ظرف مخصوص فلزات سنگین دفع شود - نباید وارد محیط زیست شود)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Zinc Oxide"
+      ]
+    },
+    {
+      "legacy": "پسماندهای غیرخطرناک آبی (شستشو و خنثی‌سازی شده)",
+      "records": 1,
+      "stream": "C3",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Water (Distilled Water)"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی جامد سمی (گروه A)",
+      "records": 1,
+      "stream": "SOLID-ORG",
+      "confidence": "high",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Quinhydrone"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد آلی سمی (حاوی اگزالات)",
+      "records": 1,
+      "stream": "SOLID-ORG",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Potassium Tetraoxalate"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد معدنی غیرسمی",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium Tetraborate (Borax)"
+      ]
+    },
+    {
+      "legacy": "پسماندهای جامد معدنی غیرخطرناک (جاذب خنثی)",
+      "records": 1,
+      "stream": "NH",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Silicon Dioxide (Diatomaceous Earth / Sand)"
+      ]
+    },
+    {
+      "legacy": "پسماندهای سمی حاوی فلزات سنگین (جیوه - گروه ویژه)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Nessler's Reagent"
+      ]
+    },
+    {
+      "legacy": "پسماندهای فلزات گرانبها / سمی (نقره)",
+      "records": 1,
+      "stream": "D",
+      "confidence": "medium",
+      "note": "Silver reagent",
+      "dataGroupLetter": null,
+      "examples": [
+        "Tollens' Reagent"
+      ]
+    },
+    {
+      "legacy": "پسماندهای اسیدی غلیظ فلزدار (گروه ویژه)",
+      "records": 1,
+      "stream": "SP",
+      "confidence": "medium",
+      "dataGroupLetter": null,
+      "examples": [
+        "Aqua Regia"
+      ]
+    },
+    {
+      "legacy": "پسماندهای آلی سمی حاوی حلال‌های غیرهالوژنه (گروه A)",
+      "records": 1,
+      "stream": "A",
+      "confidence": "medium",
+      "dataGroupLetter": "A",
+      "examples": [
+        "Karl Fischer Reagent"
+      ]
+    },
+    {
+      "legacy": "مواد خام عنصری واکنش‌پذیر و فلزی",
+      "records": 1,
+      "stream": "EL",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sodium"
+      ]
+    },
+    {
+      "legacy": "گازهای فشرده اکسیدکننده عنصری",
+      "records": 1,
+      "stream": "GAS",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Oxygen"
+      ]
+    },
+    {
+      "legacy": "گازهای سمی و اکسیدکننده عنصری",
+      "records": 1,
+      "stream": "GAS",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Chlorine"
+      ]
+    },
+    {
+      "legacy": "گازهای فشرده قابل اشتعال عنصری",
+      "records": 1,
+      "stream": "GAS",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Hydrogen"
+      ]
+    },
+    {
+      "legacy": "مواد خام عنصری جامد",
+      "records": 1,
+      "stream": "EL",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Carbon"
+      ]
+    },
+    {
+      "legacy": "مواد خام عنصری جامد واکنش‌پذیر",
+      "records": 1,
+      "stream": "EL",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Sulfur"
+      ]
+    },
+    {
+      "legacy": "مواد خام عنصری جامد قابل اشتعال",
+      "records": 1,
+      "stream": "EL",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Phosphorus"
+      ]
+    },
+    {
+      "legacy": "پسماند عناصر نافلزی سمی",
+      "records": 1,
+      "stream": "D",
+      "confidence": "medium",
+      "note": "Toxic nonmetal",
+      "dataGroupLetter": null,
+      "examples": [
+        "Selenium"
+      ]
+    },
+    {
+      "legacy": "گاز پرتوزای عنصری، فقط در تأسیسات مجاز",
+      "records": 1,
+      "stream": "RAD",
+      "confidence": "high",
+      "dataGroupLetter": null,
+      "examples": [
+        "Radon"
+      ]
+    }
+  ]
+}
