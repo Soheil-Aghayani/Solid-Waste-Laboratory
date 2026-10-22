@@ -321,7 +321,7 @@ const renderHead = page => {
   <script defer src="./asset/icon-system.min.js?v=1.0"></script>
   <script defer src="./site-navigation.min.js?v=1.1"></script>
   ${page.filename === 'gallery.html' ? '' : '<script async fetchpriority="low" src="./script.min.js?v=7.4"></script>'}
-  <script defer src="./site-runtime.min.js?v=1.8"></script>${page.filename === 'index.html' ? '\n  <script defer src="./welcome-carousel.min.js?v=2.2"></script>' : ''}
+  <script defer src="./site-runtime.min.js?v=1.9"></script>${page.filename === 'index.html' ? '\n  <script defer src="./welcome-carousel.min.js?v=2.2"></script>' : ''}
   ${page.assets.map(asset => `<script defer src="./${asset}?v=${assetVersion(asset)}"></script>`).join('\n  ')}
 </head>`;
 };

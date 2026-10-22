@@ -128,7 +128,7 @@ ${defaultImageHref ? `  <link rel="preload" href="${defaultImageHref}" imagesrcs
   <script defer src="../asset/icon-system.min.js?v=1.0"></script>
   <script defer src="../site-navigation.min.js?v=1.1"></script>
   <script defer src="../equipment-data.min.js?v=2.2"></script>
-  <script defer src="../catalog-detail-runtime.min.js?v=1.3"></script>
+  <script defer src="../catalog-detail-runtime.min.js?v=1.4"></script>
   <script defer src="../equipment-detail.min.js?v=2.1"></script>
 </head>
 <body data-page="equipment-detail" class="equipment-detail-loading">

@@ -896,6 +896,7 @@ const startLaboratoryChatbot = () => {
           if (chem) {
             const hazardsList = chem.hazards.map(h => h.label).join(' - ');
             const incompatList = chem.incompatible.join('، ');
+            const firstAid = chem.firstAid || {};
             const copyText = `برگه ایمنی (MSDS) اختصاصی آزمایشگاه پسماند
 نام ماده: ${chem.nameFa} (${chem.nameEn})
 فرمول شیمیایی: ${chem.formula} | CAS: ${chem.cas}
@@ -903,9 +904,9 @@ const startLaboratoryChatbot = () => {
 خطرات ایمنی: ${hazardsList}
 مواد ناسازگار: ${incompatList}
 کمک‌های اولیه:
-- پوست: ${chem.firstAid.skin}
-- چشم: ${chem.firstAid.eyes}
-${chem.firstAid.inhalation ? `- استنشاق: ${chem.firstAid.inhalation}\n` : ''}اقدام اضطراری نشت: ${chem.spillAction}
+- پوست: ${firstAid.skin || 'ثبت نشده؛ به برگهٔ ایمنی (SDS) رسمی مراجعه کنید.'}
+- چشم: ${firstAid.eyes || 'ثبت نشده؛ به برگهٔ ایمنی (SDS) رسمی مراجعه کنید.'}
+${firstAid.inhalation ? `- استنشاق: ${firstAid.inhalation}\n` : ''}اقدام اضطراری نشت: ${chem.spillAction}
 توجه: اطلاعات ایمنی این ماده هنوز بازبینی نشده و فقط راهنمای اولیه است. پیش از کار با ماده یا دفع پسماند، برگهٔ ایمنی (SDS) رسمی همان محصول را بررسی کنید.`;
             
             navigator.clipboard.writeText(copyText).then(() => {
@@ -1486,6 +1487,7 @@ ${chem.firstAid.inhalation ? `- استنشاق: ${chem.firstAid.inhalation}\n` :
       ).join('');
 
       const incompatibleHtml = bestChem.incompatible.map(inc => `<li>${inc}</li>`).join('');
+      const firstAid = bestChem.firstAid || {};
 
       return `
         <div class="chem-card-container">
@@ -1523,9 +1525,9 @@ ${chem.firstAid.inhalation ? `- استنشاق: ${chem.firstAid.inhalation}\n` :
             </div>
             <div class="chem-tab-panel" data-panel="firstaid">
               <ul class="first-aid-list">
-                <li><strong>پوست:</strong> ${bestChem.firstAid.skin}</li>
-                <li><strong>چشم:</strong> ${bestChem.firstAid.eyes}</li>
-                ${bestChem.firstAid.inhalation ? `<li><strong>استنشاق:</strong> ${bestChem.firstAid.inhalation}</li>` : ''}
+                <li><strong>پوست:</strong> ${firstAid.skin || 'ثبت نشده؛ به برگهٔ ایمنی (SDS) رسمی مراجعه کنید.'}</li>
+                <li><strong>چشم:</strong> ${firstAid.eyes || 'ثبت نشده؛ به برگهٔ ایمنی (SDS) رسمی مراجعه کنید.'}</li>
+                ${firstAid.inhalation ? `<li><strong>استنشاق:</strong> ${firstAid.inhalation}</li>` : ''}
               </ul>
             </div>
             <div class="chem-tab-panel" data-panel="spill">
