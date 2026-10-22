@@ -3240,6 +3240,24 @@ footer {
   min-width: 0;
 }
 
+.review-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  margin: var(--sp-3) 0;
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-sm);
+  background: var(--warn-glow);
+  color: var(--warn);
+  font-size: var(--fs-subhead);
+  line-height: 1.7;
+}
+
+.review-notice .material-symbols-outlined {
+  font-size: 1.25rem;
+  margin-top: 0.1rem;
+}
+
 .msds-header {
   display: flex;
   justify-content: space-between;

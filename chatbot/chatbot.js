@@ -905,7 +905,8 @@ const startLaboratoryChatbot = () => {
 کمک‌های اولیه:
 - پوست: ${chem.firstAid.skin}
 - چشم: ${chem.firstAid.eyes}
-${chem.firstAid.inhalation ? `- استنشاق: ${chem.firstAid.inhalation}\n` : ''}اقدام اضطراری نشت: ${chem.spillAction}`;
+${chem.firstAid.inhalation ? `- استنشاق: ${chem.firstAid.inhalation}\n` : ''}اقدام اضطراری نشت: ${chem.spillAction}
+توجه: اطلاعات ایمنی این ماده هنوز بازبینی نشده و فقط راهنمای اولیه است. پیش از کار با ماده یا دفع پسماند، برگهٔ ایمنی (SDS) رسمی همان محصول را بررسی کنید.`;
             
             navigator.clipboard.writeText(copyText).then(() => {
               const labelSpan = copyBtn.querySelector('span:not(.material-symbols-outlined)');
@@ -1498,6 +1499,11 @@ ${chem.firstAid.inhalation ? `- استنشاق: ${chem.firstAid.inhalation}\n` :
               <span>CAS: <code>${bestChem.cas}</code></span>
             </div>
           </div>
+
+          <p class="review-notice" role="note">
+            <span class="material-symbols-outlined" aria-hidden="true">info</span>
+            <span>اطلاعات ایمنی این ماده هنوز بازبینی نشده و فقط راهنمای اولیه است. پیش از کار با ماده یا دفع پسماند، برگهٔ ایمنی (SDS) رسمی همان محصول را بررسی کنید.</span>
+          </p>
 
           <div class="chem-card-waste">
             <span class="waste-badge color-${bestChem.containerColor || 'emerald'}">${bestChem.wasteGroup}</span>

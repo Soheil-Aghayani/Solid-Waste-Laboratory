@@ -309,7 +309,7 @@ const renderHead = page => {
   <meta name="twitter:description" content="${page.description}">
   <link rel="icon" type="image/webp" href="Waste%20Lab.webp">
   <link rel="preload" href="./asset/vazirmatn-arabic.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
-  <link rel="stylesheet" href="./styles.min.css?v=6.6">
+  <link rel="stylesheet" href="./styles.min.css?v=6.7">
   ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=2.8">${pageStyles ? `\n  ${pageStyles}` : ''}
   <script>
     try {
@@ -321,7 +321,7 @@ const renderHead = page => {
   <script defer src="./asset/icon-system.min.js?v=1.0"></script>
   <script defer src="./site-navigation.min.js?v=1.1"></script>
   ${page.filename === 'gallery.html' ? '' : '<script async fetchpriority="low" src="./script.min.js?v=7.4"></script>'}
-  <script defer src="./site-runtime.min.js?v=1.7"></script>${page.filename === 'index.html' ? '\n  <script defer src="./welcome-carousel.min.js?v=2.2"></script>' : ''}
+  <script defer src="./site-runtime.min.js?v=1.8"></script>${page.filename === 'index.html' ? '\n  <script defer src="./welcome-carousel.min.js?v=2.2"></script>' : ''}
   ${page.assets.map(asset => `<script defer src="./${asset}?v=${assetVersion(asset)}"></script>`).join('\n  ')}
 </head>`;
 };

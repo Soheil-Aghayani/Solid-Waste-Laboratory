@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'lab-rules-v107';
+const CACHE_VERSION = 'lab-rules-v108';
 const APP_SHELL = [
   './',
   './index.html',
@@ -9,13 +9,13 @@ const APP_SHELL = [
   './elements.html',
   './offline.html',
   './manifest.webmanifest',
-  './styles.min.css?v=6.6',
+  './styles.min.css?v=6.7',
   './elements.min.css?v=2.0',
   './site-pages.min.css?v=2.8',
   './asset/icon-system.min.js?v=1.0',
   './asset/icons.svg',
   './script.min.js?v=7.4',
-  './site-runtime.min.js?v=1.7',
+  './site-runtime.min.js?v=1.8',
   './welcome-carousel.min.js?v=2.2',
   './site-navigation.min.js?v=1.1',
   './equipment-data.min.js?v=2.2',
@@ -26,7 +26,7 @@ const APP_SHELL = [
   './equipment-detail.min.css?v=2.0',
   './catalog-redesign.min.css?v=2.2',
   './catalog-detail-chrome.min.css?v=1.6',
-  './catalog-detail-runtime.min.js?v=1.2',
+  './catalog-detail-runtime.min.js?v=1.3',
   './asset/equipment/crucible-generic.svg',
   './Equipment/volumetric-flasks.html',
   './Equipment/reagent-bottles.html',
@@ -68,9 +68,9 @@ const APP_SHELL = [
   './asset/gallery/lab-team-480.webp',
   './asset/gallery/lab-team-mobile-fast.webp',
   './asset/gallery/lab-team-800.webp',
-  './chatbot/chatbot.min.css?v=5.8',
-  './chatbot/chatbot.min.js?v=5.8',
-  './chatbot/msds/msds-db.min.js?v=5.8',
+  './chatbot/chatbot.min.css?v=5.9',
+  './chatbot/chatbot.min.js?v=5.9',
+  './chatbot/msds/msds-db.min.js?v=5.9',
   './asset/vazirmatn-arabic.woff2',
   './asset/inter-latin-wght.woff2',
   './Waste%20Lab.webp'

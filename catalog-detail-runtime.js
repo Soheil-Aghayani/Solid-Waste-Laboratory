@@ -139,9 +139,9 @@
     chatbotButton.disabled = true;
     chatbotButton.setAttribute('aria-busy', 'true');
     chatbotLoading = Promise.all([
-      loadStyle('../chatbot/chatbot.min.css?v=5.7'),
-      loadScript('../chatbot/msds/msds-db.min.js?v=5.7')
-    ]).then(() => loadScript('../chatbot/chatbot.min.js?v=5.7'))
+      loadStyle('../chatbot/chatbot.min.css?v=5.9'),
+      loadScript('../chatbot/msds/msds-db.min.js?v=5.9')
+    ]).then(() => loadScript('../chatbot/chatbot.min.js?v=5.9'))
       .then(() => {
         const chatbotFab = document.getElementById('chatbot-fab');
         chatbotButton.remove();
