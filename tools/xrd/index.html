@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="موقعیت پیک‌های پراش پرتو ایکس را بررسی کنید، با موقعیت‌های مرجع گزیدهٔ COD مقایسه کنید و شواهد پشت هر فاز کاندید را ببینید. پویش‌ها فقط در مرورگر شما پردازش می‌شوند.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#047857">
+<title>XRD — میزکار پراش پرتو ایکس</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preload" href="assets/estedad-arabic-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<a class="brand" href="./">
+<img src="favicon.svg" alt="" width="32" height="32"><bdi dir="ltr">XRD</bdi><span>میزکار پراش پرتو ایکس</span>
+</a>
+<div class="header-actions">
+<span class="local">پویش‌ها فقط در مرورگر شما می‌مانند</span>
+</div>
+</header>
+<main>
+<div class="intro">
+<div>
+<h1>الگوی خود را معنا کنید.</h1>
+<p>موقعیت پیک‌ها را با مرجع‌های بلوری مقایسه کنید. شواهد پشت هر کاندید را بررسی کنید.</p>
+</div>
+</div>
+<section class="panel sources">
+<h2>کتابخانهٔ مرجع</h2>
+<p>ساختارهای گزیدهٔ COD با الگوی محاسبه‌شدهٔ کامل در بازهٔ ذخیره‌شدهٔ ۰ تا ۱۷۹ درجه برای <bdi dir="ltr">Cu Kα₁</bdi>. برای هر فاز یک ساختار؛ چندریختی‌ها (پلی‌مورف‌ها) مدخل جداگانه دارند.</p>
+<div class="pair">
+<div>
+<label for="library-query">نام، فرمول یا شناسهٔ COD</label>
+<input id="library-query" type="search" placeholder="مثلاً کلسیت، CaCO3، 9000095">
+</div>
+<div>
+<label for="library-elements">عنصرهای الزامی</label>
+<input id="library-elements" dir="ltr" placeholder="مثلاً Ca O" spellcheck="false">
+</div>
+</div>
+<p id="library-count" class="hint" role="status">
+</p>
+<details>
+<summary>مرور ساختارها و منابع</summary>
+<div id="provenance">
+</div>
+</details>
+<details>
+<summary>روش محاسبه و تطبیق</summary>
+<p>تطبیق: انتساب یک‌به‌یک حریصانه، با کوچک‌ترین خطای زاویه‌ای ابتدا. امتیاز = پوشش مرجع × (۱ − ۰٫۵ × میانگین خطای مطلق ÷ تلرانس) × ۱۰۰. فقط بازتاب‌های داخل بازهٔ پویش انتخابی ارزیابی می‌شوند. پیک‌های توضیح‌داده‌نشده برای هر کاندید جداگانه محاسبه می‌شوند.</p>
+<p>الگوها با <bdi dir="ltr">pymatgen</bdi> از فایل‌های CIF سنجاق‌شدهٔ COD با مجوز <bdi dir="ltr">CC0</bdi> محاسبه شده‌اند. هر مدخل چکیدهٔ (<bdi dir="ltr">hash</bdi>) فایل، بازنگری (در صورت وجود)، نسخهٔ ابزارهای محاسبه، منبع علمی و هشدارهای تجزیه را ثبت می‌کند. شدت‌های محاسبه‌شده استاندارد تجربی نیستند. این کتابخانهٔ گزیده کامل نیست؛ شرایط منبع ممکن است ثبت نشده باشد. بازتاب‌های کمتر از آستانهٔ عددی ابزار محاسبه حذف شده‌اند. هیچ پویش نمونه‌ای همراه برنامه نیست.</p>
+</details>
+</section>
+<div class="workspace">
+<section class="panel input">
+<div class="section-heading">
+<h2>۰۱ <span>الگوی شما</span>
+</h2>
+</div>
+<label for="mode">نوع ورودی</label>
+<select id="mode">
+<option value="peaks">فهرست پیک</option>
+<option value="scan">پویش شدت</option>
+</select>
+<div class="pair">
+<div>
+<label for="unit">واحد موقعیت</label>
+<select id="unit">
+<option value="angle">2θ · درجه</option>
+<option value="d">فاصلهٔ d · Å</option>
+</select>
+</div>
+<div>
+<label for="wavelength">طول موج · Å</label>
+<input id="wavelength" dir="ltr" inputmode="decimal" autocomplete="off" value="1.5406">
+</div>
+</div>
+<p class="hint"><bdi dir="ltr">1.5406 Å</bdi> نمونه‌ای از <bdi dir="ltr">Cu Kα₁</bdi> است. تابش دستگاه خود را تأیید کنید؛ این ابزار فقط یک طول موج را به کار می‌برد.</p>
+<label for="data">موقعیت پیک‌ها / داده‌های پویش</label>
+<textarea id="data" dir="ltr" placeholder="32.284&#10;37.450&#10;54.001" spellcheck="false"></textarea>
+<p class="hint" id="format">در هر سطر یک موقعیت. ستون دوم اختیاری: شدت.</p>
+<label class="file-button">وارد کردن XLSX، CSV، TXT یا ASC<input id="file" type="file" accept=".xlsx,.csv,.txt,.asc,.xy"></label>
+<span id="filename" class="hint">
+</span>
+<div id="workbook-import" hidden>
+<label for="worksheet">برگه</label>
+<select id="worksheet">
+</select>
+<div class="pair">
+<div>
+<label for="position-column">ستون موقعیت</label>
+<select id="position-column">
+</select>
+</div>
+<div>
+<label for="intensity-column">ستون شدت</label>
+<select id="intensity-column">
+</select>
+</div>
+</div>
+<label for="first-row">اولین سطر داده</label>
+<input id="first-row" dir="ltr" inputmode="numeric" autocomplete="off" value="2">
+<p class="hint">سلول‌های انتخاب‌شده را پیش‌نمایش کنید. واحد موقعیت و طول موج بالا را تأیید کنید.</p>
+<table>
+<tbody id="workbook-preview">
+</tbody>
+</table>
+<div class="import-actions">
+<button id="apply-workbook" class="secondary" type="button">استفاده از برگه</button>
+<button id="cancel-workbook" class="secondary" type="button">
+<img src="assets/icons/close-circle-linear.svg" alt="" width="18" height="18">انصراف</button>
+</div>
+</div>
+<details>
+<summary>تنظیمات تطبیق و پیک</summary>
+<div class="pair">
+<div>
+<label for="tolerance">تلرانس · °2θ</label>
+<input id="tolerance" dir="ltr" inputmode="decimal" autocomplete="off" value="0.2">
+</div>
+<div>
+<label for="offset">جابه‌جایی مرجع · °</label>
+<input id="offset" dir="ltr" inputmode="decimal" autocomplete="off" value="0">
+</div>
+</div>
+<div class="pair">
+<div>
+<label for="min">آغاز پویش · °2θ</label>
+<input id="min" dir="ltr" inputmode="decimal" autocomplete="off" value="10">
+</div>
+<div>
+<label for="max">پایان پویش · °2θ</label>
+<input id="max" dir="ltr" inputmode="decimal" autocomplete="off" value="80">
+</div>
+</div>
+<label for="reference-threshold">حداقل شدت مرجع محاسبه‌شده · %</label>
+<input id="reference-threshold" dir="ltr" inputmode="decimal" autocomplete="off" value="5">
+<p class="hint">بازتاب‌های شبیه‌سازی‌شدهٔ ضعیف را برای تطبیق فیلتر می‌کند. برای احتساب همهٔ بازتاب‌های ذخیره‌شده، ۰ بگذارید. شدت‌ها در <bdi dir="ltr">1.5406 Å</bdi> محاسبه شده‌اند؛ موقعیت‌ها از طول موج شما استفاده می‌کنند.</p>
+<label for="threshold">آستانهٔ ارتفاع پیک پویش · % از بیشینه</label>
+<input id="threshold" dir="ltr" inputmode="decimal" autocomplete="off" value="10">
+<p class="hint">بیشینه‌های محلی ساده، با فاصلهٔ ≥ ۰٫۲°. بدون تصحیح پس‌زمینه. پیک‌های استخراج‌شده را پیش از تفسیر تطبیق‌ها بازبینی کنید. جابه‌جایی را کاربر تعیین می‌کند و کالیبراسیون نیست.</p>
+</details>
+<button id="search" class="primary">مقایسهٔ مرجع‌ها</button>
+<p id="error" role="alert">
+</p>
+</section>
+<div class="analysis">
+<section class="panel">
+<div class="section-heading">
+<h2>۰۲ <span>نمای الگو</span>
+</h2>
+<span id="point-count" class="hint">
+</span>
+</div>
+<div class="legend">
+<span class="observed">مشاهده‌شده / واردشده</span>
+<span class="reference">مرجع محاسبه‌شده</span>
+</div>
+<div id="chart" class="chart">
+<div class="empty">
+<strong>الگوی پراش شما، در بستر خودش.</strong>
+<p>پیک‌ها را وارد کنید یا یک پویش وارد کنید تا موقعیت‌ها مقایسه شوند.</p>
+</div>
+</div>
+<div id="plot-controls" class="plot-controls" hidden>
+<div>
+<button id="plot-in" class="secondary" type="button">بزرگ‌نمایی</button>
+<button id="plot-out" class="secondary" type="button">کوچک‌نمایی</button>
+<button id="plot-left" class="secondary" type="button" aria-label="جابه‌جایی به سمت زاویه‌های کمتر">جابه‌جایی به چپ</button>
+<button id="plot-right" class="secondary" type="button" aria-label="جابه‌جایی به سمت زاویه‌های بیشتر">جابه‌جایی به راست</button>
+<button id="plot-reset" class="secondary" type="button">بازنشانی نما</button>
+</div>
+<span id="view-range" class="hint">
+</span>
+</div>
+<p id="plot-readout" class="hint">برای دیدن موقعیت پیک‌ها، نشانگر را روی نمودار حرکت دهید.</p>
+<details id="peak-editor" hidden>
+<summary>بازبینی و ویرایش پیک‌ها</summary>
+<label for="reviewed-peaks">موقعیت پیک‌ها · درجهٔ 2θ</label>
+<textarea id="reviewed-peaks" dir="ltr" spellcheck="false"></textarea>
+<p class="hint">در هر سطر یک پیک، با شدت اختیاری. پیک‌های جاافتاده را اضافه کنید، موقعیت‌ها را اصلاح کنید یا نویز را حذف کنید. ویرایش‌ها بر تطبیق اثر می‌گذارند، نه بر پویش اصلی.</p>
+<div class="import-actions">
+<button id="apply-peaks" class="secondary" type="button">اعمال پیک‌های بازبینی‌شده</button>
+<button id="reset-peaks" class="secondary" type="button">بازگرداندن پیک‌های اصلی</button>
+</div>
+<p id="peak-review-status" class="hint">
+</p>
+<p id="peak-review-error" class="error" role="alert">
+</p>
+</details>
+<p id="chart-note" class="hint">ارتفاع خط‌های مرجع، شدت نسبی محاسبه‌شده در <bdi dir="ltr">1.5406 Å</bdi> است و مقیاس آن مستقل از داده‌های شما تعیین می‌شود.</p>
+</section>
+<section class="panel">
+<div class="section-heading">
+<h2>۰۳ <span>فازهای کاندید</span>
+</h2>
+</div>
+<p class="hint">ساختارهای انتخاب‌شده در کتابخانهٔ مرجع بالا را جست‌وجو می‌کند.</p>
+<p id="match-summary" class="hint">
+</p>
+<div id="results" aria-live="polite">
+<p class="empty-small">کاندیدها و شواهد تطبیق اینجا نمایش داده می‌شوند.</p>
+</div>
+</section>
+<aside class="notice">
+<strong>شواهد، نه شناسایی قطعی.</strong>
+<p>هم‌پوشانی پیک‌ها، مخلوط‌ها، جهت‌گیری ترجیحی و انحراف‌های دستگاهی می‌توانند تطبیق را تغییر دهند. امتیازها ابزار رتبه‌بندی‌اند، نه احتمال یا کسر فازی. نبودنِ تطبیق ثابت نمی‌کند که فازی وجود ندارد.</p>
+</aside>
+</div>
+</div>
+<footer>
+<span><bdi dir="ltr">XRD Workbench</bdi> · نمونهٔ پژوهشی</span>
+<a href="https://www.figma.com/community/file/1166831539721848736" target="_blank" rel="noreferrer">آیکون‌های Solar از <bdi dir="ltr">480 Design</bdi> · <bdi dir="ltr">CC BY 4.0</bdi></a>
+<div class="export-actions">
+<button id="export-csv" class="secondary" disabled>خروجی CSV تطبیق‌ها</button>
+<button id="export" disabled class="secondary">خروجی JSON تحلیل</button>
+</div>
+</footer>
+</main>
+<script type="module" src="app.js">
+</script>
+</body>
+</html>
