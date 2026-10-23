@@ -69,10 +69,22 @@ Flat page URLs (`ftir.html`, `xrd.html`) match every other portal page. Code liv
 | # | Question | Recommended default | Alternative |
 |---|---|---|---|
 | 1 | **History.** Keep each tool's git history? | Import with `git subtree add`, so blame and history survive inside the portal repo. | Plain file copy (clean tree, no history; the old repos stay as the record). |
-| 2 | **Old repos.** What happens to `FT-IR` and `XRD` afterwards? | Leave them untouched as archives, with a README line pointing to the portal. | Delete later, once you are happy. |
+| 2 | **Old repos.** What happens to `FT-IR` and `XRD` afterwards? | **Decided: you delete both repositories (GitHub and local) once I tell you it is safe.** Until then they stay untouched. See section 6b. | Keep them as archives. |
 | 3 | **Nav shape.** Primary nav goes from 6 to 8 links. | Add two links; I check it at 1280 px and on phones, and fall back to a single "ابزارها" group if it wraps. | One grouped link from the start. |
 | 4 | **Excel offline.** Precache SheetJS (+254 KB gzipped on first visit)? | No: lazy and runtime-cached. CSV and text import work offline from the start. | Yes: Excel import works offline from the first visit. |
 | 5 | **Standalone mode.** Keep a way to run each tool alone? | No. One build, one place. | Keep a tiny dev server per tool. |
+
+### 6b. When it is safe to delete `FT-IR` and `XRD`
+
+I will tell you when **all** of these are true, not before:
+
+1. The portal contains both tools with their git history (decision 1), and the acceptance tests in section 8 pass.
+2. The portal's commits are **pushed and deployed**. Today the portal is 19 commits ahead of GitHub, so none of this session's work is online yet.
+3. The portal's tool pages work on the live site (checked by you or by me on the deployed URL).
+4. Anything that still links to the old standalone sites is updated. `XRD` has a GitHub Pages workflow, so it may be published at its own address; deleting its repository takes that address down. `FT-IR` and `XRD` each have commits that are not pushed (6 and 7), so their GitHub copies are already out of date, and the local folders hold the newest code until the history import (step 1) copies it into the portal.
+5. You have a copy you trust (the portal repository, pushed) before the originals go.
+
+Deleting a GitHub repository cannot be undone from my side, and I will not do it; you do it in GitHub settings, and delete the local folders yourself.
 
 ## 7. Build order (each step is verified before the next)
 
