@@ -879,8 +879,16 @@ body {
 }
 
 .home-shortcut-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: .65rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+}
+
+.home-tile-art {
+  display: block;
+  width: 96px;
+  height: 96px;
+  border-radius: var(--r-lg, 18px);
+  object-fit: cover;
 }
 
 .home-shortcut.home-route {

@@ -24,7 +24,7 @@
   <link rel="icon" type="image/webp" href="Waste%20Lab.webp">
   <link rel="preload" href="./asset/estedad-arabic-wght.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
   <link rel="stylesheet" href="./styles.min.css?v=6.9">
-  <link rel="stylesheet" href="./site-pages.min.css?v=2.9">
+  <link rel="stylesheet" href="./site-pages.min.css?v=3.0">
   <script>
     try {
       const savedTheme = localStorage.getItem('theme');
@@ -140,21 +140,35 @@
         <div><span class="page-kicker">شروع سریع</span><h2 id="home-shortcuts-title">یک کار را انتخاب کنید</h2><p>برای رفتن به بخش درست، یکی از مسیرهای زیر را انتخاب کنید.</p></div>
       </div>
       <div class="home-shortcut-grid">
-        <a class="home-shortcut home-route" href="./rules.html">
-          <span class="home-shortcut-heading"><span class="material-symbols-outlined" aria-hidden="true">health_and_safety</span><strong>قوانین و ایمنی</strong></span>
+        <a class="home-shortcut home-route home-tile" href="./rules.html">
+          <img class="home-tile-art" src="./asset/tiles/tile-rules-256.webp" srcset="./asset/tiles/tile-rules-256.webp 1x, ./asset/tiles/tile-rules-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
+          <span class="home-shortcut-heading"><strong>قوانین و ایمنی</strong></span>
           <span class="home-route-copy">پیش از ورود، ضوابط کار، پوشش و دفع پسماند را مرور کنید.</span><span class="home-route-action">مشاهدهٔ قوانین <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
         </a>
-        <a class="home-shortcut home-route" href="./quiz.html">
-          <span class="home-shortcut-heading"><span class="material-symbols-outlined" aria-hidden="true">clipboard-check</span><strong>آزمون و تعهدنامه ورود</strong></span>
+        <a class="home-shortcut home-route home-tile" href="./quiz.html">
+          <img class="home-tile-art" src="./asset/tiles/tile-quiz-256.webp" srcset="./asset/tiles/tile-quiz-256.webp 1x, ./asset/tiles/tile-quiz-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
+          <span class="home-shortcut-heading"><strong>آزمون و تعهدنامه ورود</strong></span>
           <span class="home-route-copy">آمادگی خود را بسنجید و ورود مسئولانه را ثبت کنید.</span><span class="home-route-action">شروع آزمون <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
         </a>
-        <a class="home-shortcut home-route" href="./gallery.html">
-          <span class="home-shortcut-heading"><span class="material-symbols-outlined" aria-hidden="true">inventory_2</span><strong>کاتالوگ تجهیزات</strong></span>
+        <a class="home-shortcut home-route home-tile" href="./gallery.html">
+          <img class="home-tile-art" src="./asset/tiles/tile-catalog-256.webp" srcset="./asset/tiles/tile-catalog-256.webp 1x, ./asset/tiles/tile-catalog-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
+          <span class="home-shortcut-heading"><strong>کاتالوگ تجهیزات</strong></span>
           <span class="home-route-copy">تجهیزات را بر اساس تصویر، کاربرد و خانواده پیدا کنید.</span><span class="home-route-action">ورود به کاتالوگ <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
         </a>
-        <a class="home-shortcut home-route" href="./elements.html">
-          <span class="home-shortcut-heading"><span class="material-symbols-outlined" aria-hidden="true">science</span><strong>عناصر و مواد</strong></span>
+        <a class="home-shortcut home-route home-tile" href="./elements.html">
+          <img class="home-tile-art" src="./asset/tiles/tile-elements-256.webp" srcset="./asset/tiles/tile-elements-256.webp 1x, ./asset/tiles/tile-elements-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
+          <span class="home-shortcut-heading"><strong>عناصر و مواد</strong></span>
           <span class="home-route-copy">عنصر، خواص پایه و اطلاعات ایمنی ماده را بررسی کنید.</span><span class="home-route-action">مشاهدهٔ عناصر <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+        </a>
+        <a class="home-shortcut home-route home-tile" href="./ftir.html">
+          <img class="home-tile-art" src="./asset/tiles/tile-ftir-256.webp" srcset="./asset/tiles/tile-ftir-256.webp 1x, ./asset/tiles/tile-ftir-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
+          <span class="home-shortcut-heading"><strong>طیف‌سنجی فروسرخ (FT-IR)</strong></span>
+          <span class="home-route-copy">باندهای طیف خود را به گروه‌های عاملی احتمالی نسبت دهید.</span><span class="home-route-action">باز کردن ابزار <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+        </a>
+        <a class="home-shortcut home-route home-tile" href="./xrd.html">
+          <img class="home-tile-art" src="./asset/tiles/tile-xrd-256.webp" srcset="./asset/tiles/tile-xrd-256.webp 1x, ./asset/tiles/tile-xrd-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
+          <span class="home-shortcut-heading"><strong>پراش پرتو ایکس (XRD)</strong></span>
+          <span class="home-route-copy">پیک‌های الگوی پراش را با مرجع‌های بلوری مقایسه کنید.</span><span class="home-route-action">باز کردن ابزار <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
         </a>
       </div>
     </section>

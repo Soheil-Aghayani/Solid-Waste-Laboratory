@@ -241,28 +241,28 @@ const renderMobileDock = currentPage => {
 
 const renderDesktopDock = () => '';
 
+const HOME_TILES = [
+  { href: 'rules.html', tile: 'rules', title: 'قوانین و ایمنی', copy: 'پیش از ورود، ضوابط کار، پوشش و دفع پسماند را مرور کنید.', action: 'مشاهدهٔ قوانین' },
+  { href: 'quiz.html', tile: 'quiz', title: 'آزمون و تعهدنامه ورود', copy: 'آمادگی خود را بسنجید و ورود مسئولانه را ثبت کنید.', action: 'شروع آزمون' },
+  { href: 'gallery.html', tile: 'catalog', title: 'کاتالوگ تجهیزات', copy: 'تجهیزات را بر اساس تصویر، کاربرد و خانواده پیدا کنید.', action: 'ورود به کاتالوگ' },
+  { href: 'elements.html', tile: 'elements', title: 'عناصر و مواد', copy: 'عنصر، خواص پایه و اطلاعات ایمنی ماده را بررسی کنید.', action: 'مشاهدهٔ عناصر' },
+  { href: 'ftir.html', tile: 'ftir', title: 'طیف‌سنجی فروسرخ (FT-IR)', copy: 'باندهای طیف خود را به گروه‌های عاملی احتمالی نسبت دهید.', action: 'باز کردن ابزار' },
+  { href: 'xrd.html', tile: 'xrd', title: 'پراش پرتو ایکس (XRD)', copy: 'پیک‌های الگوی پراش را با مرجع‌های بلوری مقایسه کنید.', action: 'باز کردن ابزار' },
+];
+
+const renderHomeTile = ({ href, tile, title, copy, action }) => `
+        <a class="home-shortcut home-route home-tile" href="./${href}">
+          <img class="home-tile-art" src="./asset/tiles/tile-${tile}-256.webp" srcset="./asset/tiles/tile-${tile}-256.webp 1x, ./asset/tiles/tile-${tile}-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
+          <span class="home-shortcut-heading"><strong>${title}</strong></span>
+          <span class="home-route-copy">${copy}</span><span class="home-route-action">${action} <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+        </a>`;
+
 const renderHomeShortcuts = () => `
     <section class="home-shortcuts" aria-labelledby="home-shortcuts-title">
       <div class="section-heading-row">
         <div><span class="page-kicker">شروع سریع</span><h2 id="home-shortcuts-title">یک کار را انتخاب کنید</h2><p>برای رفتن به بخش درست، یکی از مسیرهای زیر را انتخاب کنید.</p></div>
       </div>
-      <div class="home-shortcut-grid">
-        <a class="home-shortcut home-route" href="./rules.html">
-          <span class="home-shortcut-heading"><span class="material-symbols-outlined" aria-hidden="true">health_and_safety</span><strong>قوانین و ایمنی</strong></span>
-          <span class="home-route-copy">پیش از ورود، ضوابط کار، پوشش و دفع پسماند را مرور کنید.</span><span class="home-route-action">مشاهدهٔ قوانین <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
-        </a>
-        <a class="home-shortcut home-route" href="./quiz.html">
-          <span class="home-shortcut-heading"><span class="material-symbols-outlined" aria-hidden="true">clipboard-check</span><strong>آزمون و تعهدنامه ورود</strong></span>
-          <span class="home-route-copy">آمادگی خود را بسنجید و ورود مسئولانه را ثبت کنید.</span><span class="home-route-action">شروع آزمون <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
-        </a>
-        <a class="home-shortcut home-route" href="./gallery.html">
-          <span class="home-shortcut-heading"><span class="material-symbols-outlined" aria-hidden="true">inventory_2</span><strong>کاتالوگ تجهیزات</strong></span>
-          <span class="home-route-copy">تجهیزات را بر اساس تصویر، کاربرد و خانواده پیدا کنید.</span><span class="home-route-action">ورود به کاتالوگ <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
-        </a>
-        <a class="home-shortcut home-route" href="./elements.html">
-          <span class="home-shortcut-heading"><span class="material-symbols-outlined" aria-hidden="true">science</span><strong>عناصر و مواد</strong></span>
-          <span class="home-route-copy">عنصر، خواص پایه و اطلاعات ایمنی ماده را بررسی کنید.</span><span class="home-route-action">مشاهدهٔ عناصر <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
-        </a>
+      <div class="home-shortcut-grid">${HOME_TILES.map(renderHomeTile).join('')}
       </div>
     </section>`;
 
@@ -301,7 +301,7 @@ const renderHead = page => {
   <link rel="icon" type="image/webp" href="Waste%20Lab.webp">
   <link rel="preload" href="./asset/estedad-arabic-wght.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
   <link rel="stylesheet" href="./styles.min.css?v=6.9">
-  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=2.9">${pageStyles ? `\n  ${pageStyles}` : ''}${(page.styles ?? []).map(href => `\n  <link rel="stylesheet" href="./${href}">`).join('')}
+  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=3.0">${pageStyles ? `\n  ${pageStyles}` : ''}${(page.styles ?? []).map(href => `\n  <link rel="stylesheet" href="./${href}">`).join('')}
   <script>
     try {
       const savedTheme = localStorage.getItem('theme');
