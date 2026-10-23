@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { PRIMARY_NAV } from './site-nav.mjs';
 import { fileURLToPath } from 'node:url';
 
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
@@ -31,14 +32,8 @@ const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character =>
 }[character]));
 
 const renderDetailPrimaryNav = () => {
-  const items = [
-    [canonicalHome, 'خانه', 'home'],
-    ['../rules.html', 'قوانین و ایمنی', 'health_and_safety'],
-    ['../quiz.html', 'آزمون ورود', 'clipboard-check'],
-    ['../gallery.html', 'کاتالوگ تجهیزات', 'inventory_2', true],
-    ['../equipment.html', 'راهنمای تجهیزات', 'test-tube'],
-    ['../elements.html', 'عناصر و مواد', 'science'],
-  ];
+  // On equipment detail pages the catalog link is the current one; links are relative to /Equipment/.
+  const items = PRIMARY_NAV.map(({ page, href, label, icon }) => [page === 'home' ? canonicalHome : `../${href}`, label, icon, page === 'gallery']);
   const links = items.map(([href, label, icon, current]) => `<a class="site-nav-link site-primary-nav-link${current ? ' is-active' : ''}" href="${href}"${current ? ' aria-current="page"' : ''}><span class="material-symbols-outlined" aria-hidden="true">${icon}</span><span>${label}</span></a>`).join('');
   const mobileLinks = links.replaceAll('site-primary-nav-link', 'site-primary-nav-mobile-link');
   return `<nav class="site-primary-nav" aria-label="منوی اصلی سایت"><div class="site-primary-nav-links">${links}</div><details class="site-primary-nav-mobile"><summary><span class="material-symbols-outlined" aria-hidden="true">menu</span><span>باز کردن منوی سایت</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary><div class="site-primary-nav-mobile-links">${mobileLinks}</div></details></nav>`;

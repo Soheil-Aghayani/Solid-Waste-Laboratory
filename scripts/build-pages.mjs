@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { PRIMARY_NAV, SECTION_NAV, DOCK_NAV, pageGroup } from './site-nav.mjs';
 import { fileURLToPath } from 'node:url';
 
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
@@ -169,12 +170,6 @@ const fragments = {
   quiz: quizTab,
 };
 
-const pageGroup = page => {
-  if (page === 'rules' || page === 'quiz') return 'safety';
-  if (page === 'equipment' || page === 'elements' || page === 'gallery') return 'catalog';
-  return page;
-};
-
 const pageLink = (href, label, iconName, current, extraClass = '') => {
   const currentAttr = current ? ' aria-current="page"' : '';
   const isIconOnly = extraClass.split(/\s+/).includes('site-nav-home');
@@ -185,14 +180,7 @@ const pageLink = (href, label, iconName, current, extraClass = '') => {
 };
 
 const renderPrimaryNav = currentPage => {
-  const items = [
-    ['index.html', 'خانه', 'home', currentPage === 'home'],
-    ['rules.html', 'قوانین و ایمنی', 'health_and_safety', currentPage === 'rules'],
-    ['quiz.html', 'آزمون ورود', 'clipboard-check', currentPage === 'quiz'],
-    ['gallery.html', 'کاتالوگ تجهیزات', 'inventory_2', currentPage === 'gallery'],
-    ['equipment.html', 'راهنمای تجهیزات', 'test-tube', currentPage === 'equipment'],
-    ['elements.html', 'عناصر و مواد', 'science', currentPage === 'elements'],
-  ];
+  const items = PRIMARY_NAV.map(({ page, href, label, icon }) => [href, label, icon, currentPage === page]);
   const links = items.map(([href, label, iconName, current]) => pageLink(href, label, iconName, current, 'site-primary-nav-link')).join('');
   return `
       <nav class="site-primary-nav" aria-label="منوی اصلی سایت">
@@ -207,26 +195,8 @@ const renderPrimaryNav = currentPage => {
 const renderMobileSectionNav = currentPage => {
   if (currentPage === 'gallery') return '';
   const group = pageGroup(currentPage);
-  const sections = group === 'safety'
-    ? {
-      label: 'ایمنی',
-      icon: 'health_and_safety',
-      links: [
-        ['rules.html', 'قوانین عمومی و ایمنی', 'book-bookmark', currentPage === 'rules'],
-        ['quiz.html', 'آزمون و تعهدنامه ورود', 'clipboard-check', currentPage === 'quiz'],
-      ],
-    }
-    : group === 'catalog'
-      ? {
-        label: 'کاتالوگ آزمایشگاه',
-        icon: 'inventory_2',
-        links: [
-          ['gallery.html', 'گالری تجهیزات', 'gallery', currentPage === 'gallery'],
-          ['equipment.html', 'راهنمای تجهیزات', 'test-tube', currentPage === 'equipment'],
-          ['elements.html', 'عناصر و مواد', 'science', currentPage === 'elements'],
-        ],
-      }
-      : null;
+  const source = SECTION_NAV[group];
+  const sections = source ? { ...source, links: source.links.map(({ page, href, label, icon }) => [href, label, icon, currentPage === page]) } : null;
   if (!sections) return '';
   return `
       <nav class="mobile-section-nav" aria-label="صفحه‌های ${sections.label}">
@@ -238,13 +208,9 @@ const renderMobileSectionNav = currentPage => {
 };
 
 const renderMobileDock = currentPage => {
-  const currentGroup = pageGroup(currentPage);
   return `
     <nav class="mobile-bottom-dock" aria-label="دسترسی سریع موبایل">
-      ${pageLink('index.html', 'خانه', 'home', currentGroup === 'home', 'mobile-dock-item')}
-      ${pageLink('rules.html', 'ایمنی', 'health_and_safety', currentGroup === 'safety', 'mobile-dock-item')}
-      ${pageLink('equipment.html', 'کاتالوگ', 'inventory_2', currentPage === 'equipment' || currentPage === 'elements', 'mobile-dock-item')}
-      ${pageLink('gallery.html', 'گالری', 'gallery', currentPage === 'gallery', 'mobile-dock-item')}
+      ${DOCK_NAV.map(({ href, label, icon, isCurrent }) => pageLink(href, label, icon, isCurrent(currentPage), 'mobile-dock-item')).join('\n      ')}
     </nav>`;
 };
 
