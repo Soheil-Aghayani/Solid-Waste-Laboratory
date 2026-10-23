@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <title>پراش پرتو ایکس (XRD) | آزمایشگاه پسماند</title>
+  <meta name="description" content="موقعیت پیک‌های پراش پرتو ایکس را با مرجع‌های بلوری گزیدهٔ COD مقایسه کنید و شواهد پشت هر فاز کاندید را ببینید. پویش‌ها فقط در مرورگر پردازش می‌شوند.">
+  <meta name="author" content="سهیل آقایانی">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://soheil-aghayani.github.io/Solid-Waste-Laboratory/xrd.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:site_name" content="آزمایشگاه پسماند">
+  <meta property="og:title" content="پراش پرتو ایکس (XRD) | آزمایشگاه پسماند">
+  <meta property="og:description" content="موقعیت پیک‌های پراش پرتو ایکس را با مرجع‌های بلوری گزیدهٔ COD مقایسه کنید و شواهد پشت هر فاز کاندید را ببینید. پویش‌ها فقط در مرورگر پردازش می‌شوند.">
+  <meta property="og:url" content="https://soheil-aghayani.github.io/Solid-Waste-Laboratory/xrd.html">
+  <meta property="og:image" content="https://soheil-aghayani.github.io/Solid-Waste-Laboratory/Waste%20Lab.webp">
+  <meta property="og:image:alt" content="آزمایشگاه پسماند">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="پراش پرتو ایکس (XRD) | آزمایشگاه پسماند">
+  <meta name="twitter:description" content="موقعیت پیک‌های پراش پرتو ایکس را با مرجع‌های بلوری گزیدهٔ COD مقایسه کنید و شواهد پشت هر فاز کاندید را ببینید. پویش‌ها فقط در مرورگر پردازش می‌شوند.">
+  <link rel="icon" type="image/webp" href="Waste%20Lab.webp">
+  <link rel="preload" href="./asset/estedad-arabic-wght.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+  <link rel="stylesheet" href="./styles.min.css?v=6.9">
+  <link rel="stylesheet" href="./site-pages.min.css?v=2.8">
+  <link rel="stylesheet" href="./tools/xrd/tool.css?v=1">
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      const preferredTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', preferredTheme);
+    } catch (error) {}
+  </script>
+  <script defer src="./asset/icon-system.min.js?v=1.0"></script>
+  <script defer src="./site-navigation.min.js?v=1.1"></script>
+
+  <script defer src="./site-runtime.min.js?v=1.9"></script>
+
+  <script type="module" src="./tools/xrd/app.js?v=1"></script>
+</head>
+<body data-page="xrd">
+  <a class="skip-link" href="#main-content">پرش به محتوای اصلی</a>
+  <main class="container site-container" id="main-content">
+    <header class="site-header">
+      <div class="header-top">
+        <a class="brand brand-link" href="https://soheil-aghayani.github.io/Solid-Waste-Laboratory/index.html" aria-label="بازگشت به صفحهٔ خانه" title="بازگشت به صفحهٔ خانه">
+          <span class="material-symbols-outlined brand-icon">science</span>
+          <div class="brand-text">
+            <h1>آزمایشگاه پسماند</h1>
+            <p>سامانه جامع مقررات، ایمنی و کاربری تجهیزات</p>
+          </div>
+        </a>
+
+        <div class="controls">
+          <!-- Live Status -->
+          <div class="status-widget" aria-label="وضعیت و ساعات کاری آزمایشگاه">
+            <span class="status-dot" id="status-dot" aria-hidden="true"></span>
+            <span class="status-copy">
+              <span id="status-text" role="status" aria-live="polite">در حال بررسی وضعیت آزمایشگاه</span>
+              <span id="status-hours">ساعات کاری: ۸ تا ۱۶</span>
+            </span>
+          </div>
+
+          <!-- Spill Simulator Trigger Button -->
+          <button class="control-btn" id="drill-modal-btn" title="شبیه‌ساز تعاملی ریزش مواد" aria-label="باز کردن شبیه‌ساز ریزش و نشت مواد شیمیایی" aria-haspopup="dialog" aria-controls="drill-modal">
+            <svg class="spill-simulator-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+              <title>barrel-leak</title>
+              <path fill="currentColor" d="M151 28c-34.4 0-65.6 5.33-87.35 13.49c-10.88 4.08-19.36 8.9-24.62 13.56S32 63.62 32 67s1.77 7.29 7.03 11.95s13.74 9.48 24.62 13.56C85.4 100.7 116.6 106 151 106s65.6-5.3 87.3-13.49c10.9-4.08 19.4-8.9 24.7-13.56c5.2-4.66 7-8.57 7-11.95s-1.8-7.29-7-11.95c-5.3-4.66-13.8-9.48-24.7-13.56C216.6 33.33 185.4 28 151 28m65 28a24 8 0 0 1 24 8a24 8 0 0 1-24 8a24 8 0 0 1-24-8a24 8 0 0 1 24-8M32 96.35V179c0 2 1.23 4.6 6.87 8.2c5.63 3.6 14.88 7.2 26.31 10.1C88.04 203 119.6 206 151 206s63-3 85.8-8.7c11.4-2.9 20.7-6.5 26.3-10.1c5.7-3.6 6.9-6.2 6.9-8.2V96.35c-7 5.05-15.5 9.35-25.3 13.05c-24.6 9.2-57.4 14.6-93.7 14.6s-69.1-5.4-93.67-14.6c-9.84-3.7-18.37-8-25.33-13.05M288 107v244.1l39.8 9.1c-3.4-7.9-5.8-17.1-7.2-27.5c-3.5-26.1-1.5-59.3 6.6-94.7c8-35.4 20.5-66.1 35-88.1c5.8-8.8 11.9-16.1 18.3-21.8zm140.2 77.9c-56 7.6-114.1 108.3-74.4 180.8c.9.5 1.7.8 2.6 1c3.3.8 7.5-.1 13.1-4.2c5.8-4.1 12.4-11.3 18.8-21c12.8-19.4 24.9-48.6 32.5-82.2c6.2-27.3 8.5-53.3 7.4-74.4M32 204v84c0 2 1.23 4.6 6.87 8.2c5.63 3.6 14.88 7.2 26.31 10.1C88.04 312 119.6 315 151 315s63-3 85.8-8.7c11.4-2.9 20.7-6.5 26.3-10.1c5.7-3.6 6.9-6.2 6.9-8.2v-84c-7.9 4.6-17.6 7.9-28.8 10.7C216 221 183.6 224 151 224s-65.04-3-90.18-9.3C49.64 211.9 39.91 208.5 32 204m0 109v58c0 5 2.2 9.3 7.86 14.2c5.66 4.8 14.7 9.5 25.99 13.3C88.42 406 119.8 410 151 410s62.6-4 85.2-11.5c11.2-3.8 20.3-8.5 25.9-13.3c5.7-4.9 7.9-9.2 7.9-14.2v-58c-7.9 4.6-17.6 7.9-28.8 10.7C216 330 183.6 333 151 333s-65.04-3-90.18-9.3C49.64 320.9 39.91 317.5 32 313m378.5 54.9c-.7 0-1.5 0-2.2.1c-19.5 1.5-6.5 45.2-24.3 53.2c-15.3 7-31.5-16.6-48.2-14.5c-27.9 3.5-78.1 15.8-72.3 43.3c8 37.7 76.7 8.1 114.8 14c36 5.6 87.2 50.9 107.4 20.5c25.4-38.2-29.1-117.7-75.2-116.6m-181.9 91.3c-5.1 0-9.4 2.1-12 6.4c-4.7 7.7 6.2 19.1 14.3 23c9.4 4.5 35.6 5.8 31.1-3.6c-7.8-16.4-22.3-26-33.4-25.8" />
+            </svg>
+            <span>شبیه‌ساز ریزش</span>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button class="theme-btn" id="theme-btn" aria-label="تغییر پوسته">
+            <!-- Icon replaced by JS -->
+          </button>
+        </div>
+      </div>
+      <div class="search-container">
+        <label for="gallery-equipment-search" class="sr-only">جستجو در کاتالوگ تجهیزات</label>
+        <input type="text" id="gallery-equipment-search" class="search-input" autocomplete="off" enterkeyhint="search" placeholder="مثلاً بشر، فالکون، بوته یا شیشه‌آلات">
+        <button id="search-voice-btn" class="search-voice-btn" title="جستجوی صوتی" aria-label="جستجوی صوتی">
+          <span class="material-symbols-outlined">mic</span>
+        </button>
+        <span class="material-symbols-outlined search-icon">search</span>
+      </div>
+      <div id="search-status-banner" class="search-status-banner" role="status" aria-live="polite" style="display: none;"></div>
+      <div id="offline-status" class="offline-status" role="status" aria-live="polite" hidden>
+        <span class="material-symbols-outlined" aria-hidden="true">cloud_off</span>
+        <span>اتصال اینترنت قطع است. اطلاعات ذخیره‌شدهٔ پورتال، راهنماها و داده‌های MSDS در دسترس هستند؛ ویکی‌پدیا و سرویس‌های آنلاین ممکن است باز نشوند.</span>
+      </div>
+
+      <nav class="site-primary-nav" aria-label="منوی اصلی سایت">
+        <div class="site-primary-nav-links"><a class="site-nav-link site-primary-nav-link" href="https://soheil-aghayani.github.io/Solid-Waste-Laboratory/index.html"><span class="material-symbols-outlined" aria-hidden="true">home</span><span>خانه</span></a><a class="site-nav-link site-primary-nav-link" href="./rules.html"><span class="material-symbols-outlined" aria-hidden="true">health_and_safety</span><span>قوانین و ایمنی</span></a><a class="site-nav-link site-primary-nav-link" href="./quiz.html"><span class="material-symbols-outlined" aria-hidden="true">clipboard-check</span><span>آزمون ورود</span></a><a class="site-nav-link site-primary-nav-link" href="./gallery.html"><span class="material-symbols-outlined" aria-hidden="true">inventory_2</span><span>کاتالوگ تجهیزات</span></a><a class="site-nav-link site-primary-nav-link" href="./equipment.html"><span class="material-symbols-outlined" aria-hidden="true">test-tube</span><span>راهنمای تجهیزات</span></a><a class="site-nav-link site-primary-nav-link" href="./elements.html"><span class="material-symbols-outlined" aria-hidden="true">science</span><span>عناصر و مواد</span></a></div>
+        <details class="site-primary-nav-mobile">
+          <summary><span class="material-symbols-outlined" aria-hidden="true">menu</span><span>باز کردن منوی سایت</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="site-primary-nav-mobile-links"><a class="site-nav-link site-primary-nav-mobile-link" href="https://soheil-aghayani.github.io/Solid-Waste-Laboratory/index.html"><span class="material-symbols-outlined" aria-hidden="true">home</span><span>خانه</span></a><a class="site-nav-link site-primary-nav-mobile-link" href="./rules.html"><span class="material-symbols-outlined" aria-hidden="true">health_and_safety</span><span>قوانین و ایمنی</span></a><a class="site-nav-link site-primary-nav-mobile-link" href="./quiz.html"><span class="material-symbols-outlined" aria-hidden="true">clipboard-check</span><span>آزمون ورود</span></a><a class="site-nav-link site-primary-nav-mobile-link" href="./gallery.html"><span class="material-symbols-outlined" aria-hidden="true">inventory_2</span><span>کاتالوگ تجهیزات</span></a><a class="site-nav-link site-primary-nav-mobile-link" href="./equipment.html"><span class="material-symbols-outlined" aria-hidden="true">test-tube</span><span>راهنمای تجهیزات</span></a><a class="site-nav-link site-primary-nav-mobile-link" href="./elements.html"><span class="material-symbols-outlined" aria-hidden="true">science</span><span>عناصر و مواد</span></a></div>
+        </details>
+      </nav>
+    </header>
+
+    <section class="standalone-page tool-page xrd-page" aria-labelledby="xrd-page-title"><div class="tool tool-xrd">
+<div class="tool-main">
+<div class="intro">
+<div>
+<h1 id="xrd-page-title">الگوی خود را معنا کنید.</h1>
+<p>موقعیت پیک‌ها را با مرجع‌های بلوری مقایسه کنید. شواهد پشت هر کاندید را بررسی کنید.</p>
+<span class="local">پویش‌ها فقط در مرورگر شما می‌مانند</span>
+</div>
+</div>
+<section class="panel sources">
+<h2>کتابخانهٔ مرجع</h2>
+<p>ساختارهای گزیدهٔ COD با الگوی محاسبه‌شدهٔ کامل در بازهٔ ذخیره‌شدهٔ ۰ تا ۱۷۹ درجه برای <bdi dir="ltr">Cu Kα₁</bdi>. برای هر فاز یک ساختار؛ چندریختی‌ها (پلی‌مورف‌ها) مدخل جداگانه دارند.</p>
+<div class="pair">
+<div>
+<label for="library-query">نام، فرمول یا شناسهٔ COD</label>
+<input id="library-query" type="search" placeholder="مثلاً کلسیت، CaCO3، 9000095">
+</div>
+<div>
+<label for="library-elements">عنصرهای الزامی</label>
+<input id="library-elements" dir="ltr" placeholder="مثلاً Ca O" spellcheck="false">
+</div>
+</div>
+<p id="library-count" class="hint" role="status">
+</p>
+<details>
+<summary>مرور ساختارها و منابع</summary>
+<div id="provenance">
+</div>
+</details>
+<details>
+<summary>روش محاسبه و تطبیق</summary>
+<p>تطبیق: انتساب یک‌به‌یک حریصانه، با کوچک‌ترین خطای زاویه‌ای ابتدا. امتیاز = پوشش مرجع × (۱ − ۰٫۵ × میانگین خطای مطلق ÷ تلرانس) × ۱۰۰. فقط بازتاب‌های داخل بازهٔ پویش انتخابی ارزیابی می‌شوند. پیک‌های توضیح‌داده‌نشده برای هر کاندید جداگانه محاسبه می‌شوند.</p>
+<p>الگوها با <bdi dir="ltr">pymatgen</bdi> از فایل‌های CIF سنجاق‌شدهٔ COD با مجوز <bdi dir="ltr">CC0</bdi> محاسبه شده‌اند. هر مدخل چکیدهٔ (<bdi dir="ltr">hash</bdi>) فایل، بازنگری (در صورت وجود)، نسخهٔ ابزارهای محاسبه، منبع علمی و هشدارهای تجزیه را ثبت می‌کند. شدت‌های محاسبه‌شده استاندارد تجربی نیستند. این کتابخانهٔ گزیده کامل نیست؛ شرایط منبع ممکن است ثبت نشده باشد. بازتاب‌های کمتر از آستانهٔ عددی ابزار محاسبه حذف شده‌اند. هیچ پویش نمونه‌ای همراه برنامه نیست.</p>
+</details>
+</section>
+<div class="workspace">
+<section class="panel input">
+<div class="section-heading">
+<h2>۰۱ <span>الگوی شما</span>
+</h2>
+</div>
+<label for="mode">نوع ورودی</label>
+<select id="mode">
+<option value="peaks">فهرست پیک</option>
+<option value="scan">پویش شدت</option>
+</select>
+<div class="pair">
+<div>
+<label for="unit">واحد موقعیت</label>
+<select id="unit">
+<option value="angle">2θ · درجه</option>
+<option value="d">فاصلهٔ d · Å</option>
+</select>
+</div>
+<div>
+<label for="wavelength">طول موج · Å</label>
+<input id="wavelength" dir="ltr" inputmode="decimal" autocomplete="off" value="1.5406">
+</div>
+</div>
+<p class="hint"><bdi dir="ltr">1.5406 Å</bdi> نمونه‌ای از <bdi dir="ltr">Cu Kα₁</bdi> است. تابش دستگاه خود را تأیید کنید؛ این ابزار فقط یک طول موج را به کار می‌برد.</p>
+<label for="data">موقعیت پیک‌ها / داده‌های پویش</label>
+<textarea id="data" dir="ltr" placeholder="32.284&#10;37.450&#10;54.001" spellcheck="false"></textarea>
+<p class="hint" id="format">در هر سطر یک موقعیت. ستون دوم اختیاری: شدت.</p>
+<label class="file-button">وارد کردن XLSX، CSV، TXT یا ASC<input id="file" type="file" accept=".xlsx,.csv,.txt,.asc,.xy"></label>
+<span id="filename" class="hint">
+</span>
+<div id="workbook-import" hidden>
+<label for="worksheet">برگه</label>
+<select id="worksheet">
+</select>
+<div class="pair">
+<div>
+<label for="position-column">ستون موقعیت</label>
+<select id="position-column">
+</select>
+</div>
+<div>
+<label for="intensity-column">ستون شدت</label>
+<select id="intensity-column">
+</select>
+</div>
+</div>
+<label for="first-row">اولین سطر داده</label>
+<input id="first-row" dir="ltr" inputmode="numeric" autocomplete="off" value="2">
+<p class="hint">سلول‌های انتخاب‌شده را پیش‌نمایش کنید. واحد موقعیت و طول موج بالا را تأیید کنید.</p>
+<table>
+<tbody id="workbook-preview">
+</tbody>
+</table>
+<div class="import-actions">
+<button id="apply-workbook" class="secondary" type="button">استفاده از برگه</button>
+<button id="cancel-workbook" class="secondary" type="button">
+<img src="tools/xrd/assets/icons/close-circle-linear.svg" alt="" width="18" height="18">انصراف</button>
+</div>
+</div>
+<details>
+<summary>تنظیمات تطبیق و پیک</summary>
+<div class="pair">
+<div>
+<label for="tolerance">تلرانس · °2θ</label>
+<input id="tolerance" dir="ltr" inputmode="decimal" autocomplete="off" value="0.2">
+</div>
+<div>
+<label for="offset">جابه‌جایی مرجع · °</label>
+<input id="offset" dir="ltr" inputmode="decimal" autocomplete="off" value="0">
+</div>
+</div>
+<div class="pair">
+<div>
+<label for="min">آغاز پویش · °2θ</label>
+<input id="min" dir="ltr" inputmode="decimal" autocomplete="off" value="10">
+</div>
+<div>
+<label for="max">پایان پویش · °2θ</label>
+<input id="max" dir="ltr" inputmode="decimal" autocomplete="off" value="80">
+</div>
+</div>
+<label for="reference-threshold">حداقل شدت مرجع محاسبه‌شده · %</label>
+<input id="reference-threshold" dir="ltr" inputmode="decimal" autocomplete="off" value="5">
+<p class="hint">بازتاب‌های شبیه‌سازی‌شدهٔ ضعیف را برای تطبیق فیلتر می‌کند. برای احتساب همهٔ بازتاب‌های ذخیره‌شده، ۰ بگذارید. شدت‌ها در <bdi dir="ltr">1.5406 Å</bdi> محاسبه شده‌اند؛ موقعیت‌ها از طول موج شما استفاده می‌کنند.</p>
+<label for="threshold">آستانهٔ ارتفاع پیک پویش · % از بیشینه</label>
+<input id="threshold" dir="ltr" inputmode="decimal" autocomplete="off" value="10">
+<p class="hint">بیشینه‌های محلی ساده، با فاصلهٔ ≥ ۰٫۲°. بدون تصحیح پس‌زمینه. پیک‌های استخراج‌شده را پیش از تفسیر تطبیق‌ها بازبینی کنید. جابه‌جایی را کاربر تعیین می‌کند و کالیبراسیون نیست.</p>
+</details>
+<button id="search" class="primary">مقایسهٔ مرجع‌ها</button>
+<p id="error" role="alert">
+</p>
+</section>
+<div class="analysis">
+<section class="panel">
+<div class="section-heading">
+<h2>۰۲ <span>نمای الگو</span>
+</h2>
+<span id="point-count" class="hint">
+</span>
+</div>
+<div class="legend">
+<span class="observed">مشاهده‌شده / واردشده</span>
+<span class="reference">مرجع محاسبه‌شده</span>
+</div>
+<div id="chart" class="chart">
+<div class="empty">
+<strong>الگوی پراش شما، در بستر خودش.</strong>
+<p>پیک‌ها را وارد کنید یا یک پویش وارد کنید تا موقعیت‌ها مقایسه شوند.</p>
+</div>
+</div>
+<div id="plot-controls" class="plot-controls" hidden>
+<div>
+<button id="plot-in" class="secondary" type="button">بزرگ‌نمایی</button>
+<button id="plot-out" class="secondary" type="button">کوچک‌نمایی</button>
+<button id="plot-left" class="secondary" type="button" aria-label="جابه‌جایی به سمت زاویه‌های کمتر">جابه‌جایی به چپ</button>
+<button id="plot-right" class="secondary" type="button" aria-label="جابه‌جایی به سمت زاویه‌های بیشتر">جابه‌جایی به راست</button>
+<button id="plot-reset" class="secondary" type="button">بازنشانی نما</button>
+</div>
+<span id="view-range" class="hint">
+</span>
+</div>
+<p id="plot-readout" class="hint">برای دیدن موقعیت پیک‌ها، نشانگر را روی نمودار حرکت دهید.</p>
+<details id="peak-editor" hidden>
+<summary>بازبینی و ویرایش پیک‌ها</summary>
+<label for="reviewed-peaks">موقعیت پیک‌ها · درجهٔ 2θ</label>
+<textarea id="reviewed-peaks" dir="ltr" spellcheck="false"></textarea>
+<p class="hint">در هر سطر یک پیک، با شدت اختیاری. پیک‌های جاافتاده را اضافه کنید، موقعیت‌ها را اصلاح کنید یا نویز را حذف کنید. ویرایش‌ها بر تطبیق اثر می‌گذارند، نه بر پویش اصلی.</p>
+<div class="import-actions">
+<button id="apply-peaks" class="secondary" type="button">اعمال پیک‌های بازبینی‌شده</button>
+<button id="reset-peaks" class="secondary" type="button">بازگرداندن پیک‌های اصلی</button>
+</div>
+<p id="peak-review-status" class="hint">
+</p>
+<p id="peak-review-error" class="error" role="alert">
+</p>
+</details>
+<p id="chart-note" class="hint">ارتفاع خط‌های مرجع، شدت نسبی محاسبه‌شده در <bdi dir="ltr">1.5406 Å</bdi> است و مقیاس آن مستقل از داده‌های شما تعیین می‌شود.</p>
+</section>
+<section class="panel">
+<div class="section-heading">
+<h2>۰۳ <span>فازهای کاندید</span>
+</h2>
+</div>
+<p class="hint">ساختارهای انتخاب‌شده در کتابخانهٔ مرجع بالا را جست‌وجو می‌کند.</p>
+<p id="match-summary" class="hint">
+</p>
+<div id="results" aria-live="polite">
+<p class="empty-small">کاندیدها و شواهد تطبیق اینجا نمایش داده می‌شوند.</p>
+</div>
+</section>
+<aside class="notice">
+<strong>شواهد، نه شناسایی قطعی.</strong>
+<p>هم‌پوشانی پیک‌ها، مخلوط‌ها، جهت‌گیری ترجیحی و انحراف‌های دستگاهی می‌توانند تطبیق را تغییر دهند. امتیازها ابزار رتبه‌بندی‌اند، نه احتمال یا کسر فازی. نبودنِ تطبیق ثابت نمی‌کند که فازی وجود ندارد.</p>
+</aside>
+</div>
+</div>
+</div>
+<div class="tool-footer">
+<span><bdi dir="ltr">XRD Workbench</bdi> · نمونهٔ پژوهشی</span>
+<a href="https://www.figma.com/community/file/1166831539721848736" target="_blank" rel="noreferrer">آیکون‌های Solar از <bdi dir="ltr">480 Design</bdi> · <bdi dir="ltr">CC BY 4.0</bdi></a>
+<div class="export-actions">
+<button id="export-csv" class="secondary" disabled>خروجی CSV تطبیق‌ها</button>
+<button id="export" disabled class="secondary">خروجی JSON تحلیل</button>
+</div>
+</div>
+</div></section>
+      <footer class="site-footer" id="site-footer" role="contentinfo">
+        <div class="footer-main">
+          <div class="footer-info">
+            <span class="material-symbols-outlined footer-info-mark" aria-hidden="true">science</span>
+            <div class="footer-info-copy">
+              <strong>آزمایشگاه پسماند</strong>
+              <span>سامانهٔ ایمنی و کاربری تجهیزات</span>
+              <small dir="ltr">Solid Waste Laboratory | Safety &amp; Waste Management Portal</small>
+            </div>
+          </div>
+          <div class="footer-socials">
+            <span class="footer-socials-title">ارتباط و منابع</span>
+            <div class="social-icons">
+              <a href="https://github.com/Soheil-Aghayani" target="_blank" rel="noopener noreferrer" class="social-icon github" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.166 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.866-.014-1.7-2.782.604-3.369-1.342-3.369-1.342-.455-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.004.07 1.532 1.031 1.532 1.031.892 1.529 2.341 1.087 2.91.831.091-.646.35-1.087.636-1.337-2.221-.253-4.555-1.111-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.56 9.56 0 0 1 12 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.578.688.48A10.002 10.002 0 0 0 22 12c0-5.523-4.477-10-10-10Z"/></svg></a>
+              <a href="https://www.linkedin.com/in/agseyl/" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.25 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM3.5 9h3.5v11H3.5V9Zm5.75 0h3.35v1.5h.05c.47-.9 1.62-1.85 3.34-1.85 3.58 0 4.24 2.36 4.24 5.43V20h-3.5v-5.24c0-1.25-.02-2.85-1.74-2.85-1.74 0-2.01 1.36-2.01 2.76V20h-3.5V9Z"/></svg></a>
+              <a href="https://www.t.me/agseyl" target="_blank" rel="noopener noreferrer" class="social-icon telegram" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m21.6 4.3-3.1 15.1c-.23 1.06-.87 1.32-1.76.82l-4.85-3.58-2.34 2.25c-.26.26-.48.48-.98.48l.35-4.94 8.99-8.12c.39-.35-.09-.55-.61-.2L6.19 12.8l-4.78-1.5c-1.04-.33-1.06-1.05.22-1.56L20.3 3.03c.87-.32 1.63.2 1.3 1.27Z"/></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>دسترسی روشن‌تر برای کار ایمن‌تر در آزمایشگاه</span>
+          <span dir="ltr">© 2026 Solid Waste Laboratory</span>
+        </div>
+      </footer>
+  </main>
+  <!-- Chemical Suggestion Modal -->
+  <div id="chemical-suggestion-modal" class="emergency-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="chemical-suggestion-title" aria-describedby="chemical-suggestion-help" aria-hidden="true" inert="" hidden tabindex="-1">
+    <div class="emergency-modal chemical-suggestion-modal">
+      <div class="emergency-modal-header">
+        <div class="emergency-modal-title chemical-suggestion-title">
+          <svg class="chemical-suggestion-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <title>add-square-linear</title>
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" />
+              <path stroke-linecap="round" d="M15 12L12 12M12 12L9 12M12 12L12 9M12 12L12 15" />
+            </g>
+          </svg>
+          <h2 id="chemical-suggestion-title">پیشنهاد افزودن ماده به پایگاه داده</h2>
+        </div>
+        <button type="button" id="close-chemical-suggestion" class="close-modal-btn" aria-label="بستن فرم پیشنهاد ماده">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="emergency-modal-body chemical-suggestion-body">
+        <div>
+          <p id="chemical-suggestion-help" class="chemical-suggestion-help">اگر ماده‌ای در فهرست نیست، اطلاعات پایهٔ آن را ارسال کنید. قبل از افزودن، اطلاعات ایمنی از منبع معتبر بررسی می‌شود.</p>
+          <p class="chemical-suggestion-privacy">این فرم فقط یک پیشنهاد می‌سازد و چیزی را خودکار به دیتابیس اضافه نمی‌کند.</p>
+        </div>
+
+        <form id="chemical-suggestion-form" novalidate>
+          <div class="chemical-suggestion-grid">
+            <div class="form-group suggestion-field-full">
+              <label for="chemical-suggestion-name">نام ماده (فارسی) <span aria-hidden="true">*</span></label>
+              <input id="chemical-suggestion-name" name="nameFa" type="text" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+              <label for="chemical-suggestion-name-en">نام انگلیسی</label>
+              <input id="chemical-suggestion-name-en" name="nameEn" type="text" dir="ltr" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="chemical-suggestion-formula">فرمول شیمیایی</label>
+              <input id="chemical-suggestion-formula" name="formula" type="text" dir="ltr" autocomplete="off" placeholder="مثلاً NaCl">
+            </div>
+            <div class="form-group">
+              <label for="chemical-suggestion-cas">شماره CAS (اختیاری)</label>
+              <input id="chemical-suggestion-cas" name="cas" type="text" dir="ltr" inputmode="numeric" autocomplete="off" placeholder="مثلاً 7647-14-5">
+            </div>
+            <div class="form-group suggestion-field-full">
+              <label for="chemical-suggestion-notes">کاربرد یا توضیحات تکمیلی</label>
+              <textarea id="chemical-suggestion-notes" name="notes" rows="4" placeholder="اگر منبع یا نکته‌ای دربارهٔ این ماده دارید، اینجا بنویسید."></textarea>
+            </div>
+          </div>
+          <p id="chemical-suggestion-error" class="form-error" role="alert" hidden></p>
+          <p id="chemical-suggestion-feedback" class="chemical-suggestion-feedback" role="status" hidden></p>
+          <div class="chemical-suggestion-actions">
+            <button type="submit" class="btn-primary">آماده‌سازی پیشنهاد</button>
+            <button type="button" id="cancel-chemical-suggestion" class="chemical-suggestion-cancel">انصراف</button>
+          </div>
+          <a id="chemical-suggestion-issue-link" class="chemical-suggestion-issue-link" href="#" target="_blank" rel="noopener noreferrer" hidden>باز کردن فرم ارسال در GitHub</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Emergency Button -->
+  <button id="emergency-fab" class="emergency-fab" title="فوریت‌های اضطراری" aria-label="فوریت‌های اضطراری" aria-haspopup="dialog" aria-controls="emergency-modal">
+    <svg class="emergency-fab-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <title>فوریت‌های اضطراری</title>
+      <path fill="currentColor" d="M10.25 19.25v-4.2l-3.65 2.1q-.625.35-1.325.175t-1.05-.825q-.35-.625-.175-1.325t.8-1.05L8.5 12L4.85 9.9q-.625-.35-.8-1.062T4.225 7.5t1.05-.8t1.325.175l3.65 2.1V4.75q0-.725.513-1.237T12 3t1.238.513t.512 1.237v4.225l3.65-2.1q.625-.35 1.325-.175t1.05.8t.163 1.338t-.813 1.062L15.5 12l3.65 2.125q.625.35.8 1.05t-.175 1.35q-.35.625-1.05.8T17.4 17.15l-3.65-2.1v4.2q0 .725-.513 1.238T12 21t-1.237-.513t-.513-1.237" />
+    </svg>
+  </button>
+
+  <!-- Lightweight placeholder; the full chatbot UI loads only after interaction. -->
+  <button id="chatbot-loader-fab" class="chatbot-fab-loader" type="button" aria-label="دستیار هوشمند آزمایشگاه" aria-controls="chatbot-window" aria-expanded="false">
+    <svg class="chatbot-fab-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <title>دستیار هوشمند آزمایشگاه</title>
+      <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5">
+        <path d="M14.17 20.89c4.184-.277 7.516-3.657 7.79-7.9c.053-.83.053-1.69 0-2.52c-.274-4.242-3.606-7.62-7.79-7.899a33 33 0 0 0-4.34 0c-4.184.278-7.516 3.657-7.79 7.9a20 20 0 0 0 0 2.52c.1 1.545.783 2.976 1.588 4.184c.467.845.159 1.9-.328 2.823c-.35.665-.526.997-.385 1.237c.14.24.455.248 1.084.263c1.245.03 2.084-.322 2.75-.813c.377-.279.566-.418.696-.434s.387.09.899.3c.46.19.995.307 1.485.34c1.425.094 2.914.094 4.342 0Z" />
+        <path stroke-linecap="round" d="m7.5 15l1.842-5.526a.694.694 0 0 1 1.316 0L12.5 15m3-6v6m-7-2h3" />
+      </g>
+    </svg>
+  </button>
+
+  <!-- Emergency Modal -->
+  <div id="emergency-modal" class="emergency-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="emergency-modal-title" aria-hidden="true" inert="" hidden tabindex="-1">
+    <div class="emergency-modal">
+      <div class="emergency-modal-header">
+        <div class="emergency-modal-title">
+          <span class="material-symbols-outlined header-symbol">emergency</span>
+          <h2 id="emergency-modal-title">شماره‌های اضطراری و فوریت‌ها</h2>
+        </div>
+        <button id="close-emergency" class="close-modal-btn" aria-label="بستن شماره‌های اضطراری">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="emergency-modal-body">
+
+        <!-- Category 1: Medical -->
+        <div class="emergency-section-card medical">
+          <div class="emergency-section-title">
+            <span class="material-symbols-outlined">local_hospital</span>
+            <h3>فوریت‌های پزشکی</h3>
+          </div>
+          <div class="emergency-list-items">
+            <div class="emergency-contact-item main-alert">
+              <div class="contact-info">
+                <span class="contact-name">اورژانس تهران</span>
+                <span class="contact-number">۱۱۵</span>
+              </div>
+              <a href="tel:115" class="call-action-btn">
+                <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 0.25rem;">call</span>
+                <span>تماس</span>
+              </a>
+            </div>
+
+            <div class="emergency-contact-item main-alert">
+              <div class="contact-info">
+                <span class="contact-name">مرکز فوریت‌های دارویی</span>
+                <span class="contact-number">۱۴۹۰</span>
+              </div>
+              <a href="tel:1490" class="call-action-btn">
+                <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 0.25rem;">call</span>
+                <span>تماس</span>
+              </a>
+            </div>
+
+            <div class="emergency-contact-item">
+              <div class="contact-info">
+                <span class="contact-name">بیمارستان لقمان (مسمومیت‌های شیمیایی)</span>
+                <span class="contact-number">۰۲۱-۵۵۴۱۹۰۰۵</span>
+                <span class="contact-address">تهران، خ کارگر جنوبی، چهارراه لشگر، خ مخصوص</span>
+              </div>
+              <a href="tel:02155419005" class="call-action-btn">
+                <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 0.25rem;">call</span>
+                <span>تماس</span>
+              </a>
+            </div>
+
+            <div class="emergency-contact-item">
+              <div class="contact-info">
+                <span class="contact-name">بیمارستان فارابی (سوختگی‌های چشم)</span>
+                <span class="contact-number">۰۲۱-۵۵۴۰۰۰۰۳</span>
+                <span class="contact-address">تهران، خ کارگر جنوبی، میدان قزوین</span>
+              </div>
+              <a href="tel:02155400003" class="call-action-btn">
+                <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 0.25rem;">call</span>
+                <span>تماس</span>
+              </a>
+            </div>
+
+            <div class="emergency-contact-item">
+              <div class="contact-info">
+                <span class="contact-name">بیمارستان مطهری (سوختگی‌های پوست)</span>
+                <span class="contact-number">۰۲۱-۸۸۷۷۰۰۳۱</span>
+                <span class="contact-address">تهران، خ ولیعصر، بالاتر از میدان ونک، خ رشید یاسمی</span>
+              </div>
+              <a href="tel:02188770031" class="call-action-btn">
+                <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 0.25rem;">call</span>
+                <span>تماس</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Fire -->
+        <div class="emergency-section-card fire">
+          <div class="emergency-section-title">
+            <span class="material-symbols-outlined">local_fire_department</span>
+            <h3>فوریت‌های آتش‌سوزی</h3>
+          </div>
+          <div class="emergency-list-items">
+            <div class="emergency-contact-item main-alert">
+              <div class="contact-info">
+                <span class="contact-name">سازمان آتش‌نشانی</span>
+                <span class="contact-number">۱۲۵</span>
+              </div>
+              <a href="tel:125" class="call-action-btn">
+                <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 0.25rem;">call</span>
+                <span>تماس</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Hazardous Waste -->
+        <div class="emergency-section-card waste-management">
+          <div class="emergency-section-title">
+            <span class="material-symbols-outlined">eco</span>
+            <h3>مدیریت پسماندهای خطرناک</h3>
+          </div>
+          <div class="emergency-list-items">
+            <div class="emergency-contact-item">
+              <div class="contact-info">
+                <span class="contact-name">سامانه آزمایشگاه‌های پاک (کیمیا گستر شریف)</span>
+                <span class="contact-number">۰۲۱-۶۶۰۸۸۸۰۳</span>
+                <span class="contact-address">تهران، خ آزادی، ضلع غربی دانشگاه شریف، خ ولی‌الله صادقی، پ ۳۸</span>
+              </div>
+              <a href="tel:02166088803" class="call-action-btn">
+                <span class="material-symbols-outlined" style="font-size: 16px; margin-left: 0.25rem;">call</span>
+                <span>تماس</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Spill Simulator Modal -->
+  <div id="drill-modal" class="emergency-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="drill-modal-title" aria-hidden="true" inert="" hidden tabindex="-1">
+    <div class="emergency-modal" style="max-width: 850px;">
+      <div class="emergency-modal-header">
+        <div class="emergency-modal-title" style="color: var(--accent-red); gap: 0.5rem;">
+          <span class="material-symbols-outlined header-symbol" style="animation: none;">mop</span>
+          <h2 id="drill-modal-title">شبیه‌ساز ریزش مواد</h2>
+        </div>
+        <button id="close-drill-modal" class="close-modal-btn" aria-label="بستن شبیه‌ساز ریزش">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="emergency-modal-body" style="padding: 1.5rem;">
+        <p class="widget-subtitle" style="margin-bottom: 1.5rem; color: var(--text-muted); font-size: 0.9rem;">
+          یک سناریو بحرانی را انتخاب کنید و گام‌به‌گام مراحل واکنش اضطراری و پاک‌سازی ایمن را پیش ببرید تا سطح آمادگی خود را بسنجید:
+        </p>
+
+        <!-- Scenario Selection Screen -->
+        <div id="spill-scenarios-selection" class="spill-scenarios-grid">
+          <div class="drill-scenario-card" data-scenario="acid">
+            <div class="drill-card-header">
+              <span class="material-symbols-outlined drill-icon" style="color: var(--accent-red);">science</span>
+              <h3>نشت اسید سولفوریک غلیظ</h3>
+            </div>
+            <p>مقدار ۵۰۰ میلی‌لیتر اسید سولفوریک غلیظ (۹۸٪) روی زمین پایلوت سرازیر شده و گازهای بسیار محرک و خطرناکی منتشر می‌کند.</p>
+            <button class="btn-primary select-scenario-btn" style="background-color: var(--accent-red-strong); border: none; color: #fff;"><span class="material-symbols-outlined" aria-hidden="true">play_circle</span>شروع عملیات مهار</button>
+          </div>
+
+          <div class="drill-scenario-card" data-scenario="solvent">
+            <div class="drill-card-header">
+              <span class="material-symbols-outlined drill-icon" style="color: var(--accent-amber);">local_fire_department</span>
+              <h3>ریزش حلال آلی فرار (تولوئن)</h3>
+            </div>
+            <p>یک لیتر حلال بسیار فرار و قابل اشتعال تولوئن در نزدیکی کوره داغ سرازیر شده و خطر شدید شعله‌وری و آتش‌سوزی وجود دارد.</p>
+            <button class="btn-primary select-scenario-btn" style="background-color: var(--accent-amber); border: none; color: #000;"><span class="material-symbols-outlined" aria-hidden="true">play_circle</span>شروع عملیات مهار</button>
+          </div>
+
+          <div class="drill-scenario-card" data-scenario="mercury">
+            <div class="drill-card-header">
+              <span class="material-symbols-outlined drill-icon" style="color: var(--text-muted);">science</span>
+              <h3>شکستن دماسنج و نشت جیوه مایع</h3>
+            </div>
+            <p>دماسنج شیشه‌ای جیوه روی میز کار شکسته و قطرات جیوه متالیک روی درزها و شکاف‌های سطح میز پراکنده شده‌اند.</p>
+            <button class="btn-primary select-scenario-btn" style="background-color: #475569; border: none; color: #fff;"><span class="material-symbols-outlined" aria-hidden="true">play_circle</span>شروع عملیات مهار</button>
+          </div>
+        </div>
+
+        <!-- Active Drill Panel (Hidden by default) -->
+        <div id="drill-active-panel" class="drill-active-panel" style="display: none;">
+          <div class="drill-status-bar">
+            <span id="drill-scenario-title" class="drill-active-title">-</span>
+            <div class="drill-progress-bar-container">
+              <div id="drill-progress-bar" class="drill-progress-bar" style="width: 0%;"></div>
+            </div>
+            <span id="drill-step-indicator" class="drill-step-indicator">-</span>
+          </div>
+
+          <!-- Description and instructions -->
+          <div class="drill-step-box">
+            <h4 id="drill-step-question" class="drill-question-text">-</h4>
+            <div id="drill-choices-container" class="drill-choices-container">
+              <!-- Choices populated dynamically -->
+            </div>
+          </div>
+
+          <!-- Feedback Box -->
+          <div id="drill-feedback-box" class="drill-feedback-box" role="status" aria-live="polite" style="display: none;">
+            <div class="feedback-header">
+              <span id="drill-feedback-icon" class="material-symbols-outlined">info</span>
+              <span id="drill-feedback-title">-</span>
+            </div>
+            <p id="drill-feedback-desc">-</p>
+            <button id="drill-next-btn" class="btn-primary" style="margin-top: 1rem; display: none;"><span class="material-symbols-outlined" aria-hidden="true">round-transfer-horizontal</span>مرحله بعد</button>
+          </div>
+
+          <!-- Complete screen (Show when done) -->
+          <div id="drill-complete-box" class="drill-complete-box" style="display: none;">
+            <span class="material-symbols-outlined complete-icon">verified_user</span>
+            <h3>عملیات مهار و پاک‌سازی به پایان رسید</h3>
+            <p id="drill-score-report" role="status" aria-live="polite"></p>
+            <div class="drill-recap-notes" id="drill-recap-notes">
+              <!-- Safety takeaways -->
+            </div>
+            <button id="drill-reset-btn" class="btn-primary" style="margin-top: 1.5rem; background-color: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--text-primary);"><span class="material-symbols-outlined" aria-hidden="true">restart_alt</span>بازگشت به انتخاب سناریوها</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <nav class="mobile-bottom-dock" aria-label="دسترسی سریع موبایل">
+      <a class="site-nav-link mobile-dock-item" href="https://soheil-aghayani.github.io/Solid-Waste-Laboratory/index.html"><span class="material-symbols-outlined" aria-hidden="true">home</span><span>خانه</span></a>
+      <a class="site-nav-link mobile-dock-item" href="./rules.html"><span class="material-symbols-outlined" aria-hidden="true">health_and_safety</span><span>ایمنی</span></a>
+      <a class="site-nav-link mobile-dock-item" href="./equipment.html"><span class="material-symbols-outlined" aria-hidden="true">inventory_2</span><span>کاتالوگ</span></a>
+      <a class="site-nav-link mobile-dock-item" href="./gallery.html"><span class="material-symbols-outlined" aria-hidden="true">gallery</span><span>گالری</span></a>
+    </nav>
+</body>
+</html>

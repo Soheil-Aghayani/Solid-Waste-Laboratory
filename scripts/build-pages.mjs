@@ -53,6 +53,27 @@ const pageDefinitions = {
     canonical: 'elements.html',
     assets: [],
   },
+  // Analysis tools: markup in pages/content/<key>.html, code in tools/<key>/ (ES modules, scoped stylesheet).
+  ftir: {
+    filename: 'ftir.html',
+    title: 'طیف‌سنجی فروسرخ (FT-IR) | آزمایشگاه پسماند',
+    description: 'انتساب‌های احتمالی باندهای فروسرخ را بررسی کنید و شواهد پشت هر انتساب را ببینید. داده‌های شما فقط در مرورگر پردازش می‌شود.',
+    canonical: 'ftir.html',
+    assets: [],
+    tool: true,
+    styles: ['tools/ftir/tool.css?v=1'],
+    modules: ['tools/ftir/app.js?v=1'],
+  },
+  xrd: {
+    filename: 'xrd.html',
+    title: 'پراش پرتو ایکس (XRD) | آزمایشگاه پسماند',
+    description: 'موقعیت پیک‌های پراش پرتو ایکس را با مرجع‌های بلوری گزیدهٔ COD مقایسه کنید و شواهد پشت هر فاز کاندید را ببینید. پویش‌ها فقط در مرورگر پردازش می‌شوند.',
+    canonical: 'xrd.html',
+    assets: [],
+    tool: true,
+    styles: ['tools/xrd/tool.css?v=1'],
+    modules: ['tools/xrd/app.js?v=1'],
+  },
 };
 
 const getBetween = (text, startMarker, endMarker) => {
@@ -161,6 +182,8 @@ const runtimeMatch = runtimeStart >= 0
 const runtimePath = path.join(projectRoot, 'site-runtime.js');
 if (!fs.existsSync(runtimePath) && runtimeMatch) fs.writeFileSync(runtimePath, `${runtimeMatch[1].trim()}\n`, 'utf8');
 
+const readFragment = filename => fs.readFileSync(path.join(contentDirectory, filename), 'utf8').trim();
+
 const fragments = {
   elements: elementsTab,
   rules: rulesContent,
@@ -168,6 +191,8 @@ const fragments = {
   equipment: equipmentTab,
   gallery: galleryTab,
   quiz: quizTab,
+  ftir: readFragment('ftir.html'),
+  xrd: readFragment('xrd.html'),
 };
 
 const pageLink = (href, label, iconName, current, extraClass = '') => {
@@ -276,7 +301,7 @@ const renderHead = page => {
   <link rel="icon" type="image/webp" href="Waste%20Lab.webp">
   <link rel="preload" href="./asset/estedad-arabic-wght.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
   <link rel="stylesheet" href="./styles.min.css?v=6.9">
-  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=2.8">${pageStyles ? `\n  ${pageStyles}` : ''}
+  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=2.8">${pageStyles ? `\n  ${pageStyles}` : ''}${(page.styles ?? []).map(href => `\n  <link rel="stylesheet" href="./${href}">`).join('')}
   <script>
     try {
       const savedTheme = localStorage.getItem('theme');
@@ -286,9 +311,9 @@ const renderHead = page => {
   </script>
   <script defer src="./asset/icon-system.min.js?v=1.0"></script>
   <script defer src="./site-navigation.min.js?v=1.1"></script>
-  ${page.filename === 'gallery.html' ? '' : '<script async fetchpriority="low" src="./script.min.js?v=7.4"></script>'}
+  ${page.filename === 'gallery.html' || page.tool ? '' : '<script async fetchpriority="low" src="./script.min.js?v=7.4"></script>'}
   <script defer src="./site-runtime.min.js?v=1.9"></script>${page.filename === 'index.html' ? '\n  <script defer src="./welcome-carousel.min.js?v=2.2"></script>' : ''}
-  ${page.assets.map(asset => `<script defer src="./${asset}?v=${assetVersion(asset)}"></script>`).join('\n  ')}
+  ${page.assets.map(asset => `<script defer src="./${asset}?v=${assetVersion(asset)}"></script>`).join('\n  ')}${(page.modules ?? []).map(src => `\n  <script type="module" src="./${src}"></script>`).join('')}
 </head>`;
 };
 
@@ -306,6 +331,8 @@ const renderMain = (pageKey, page) => {
     pageContent = `<section class="standalone-page gallery-page" aria-labelledby="gallery-page-title"><div class="sr-only"><h1 id="gallery-page-title">گالری آزمایشگاه و کاتالوگ تجهیزات</h1></div>${fragments.gallery}</section>`;
   } else if (pageKey === 'elements') {
     pageContent = `<section class="standalone-page elements-page" aria-labelledby="elements-page-title"><div class="sr-only"><h1 id="elements-page-title">عناصر و مواد</h1></div><div class="elements-page-stack"><details class="elements-accordion elements-accordion-primary"><summary><span class="material-symbols-outlined" aria-hidden="true">science</span><span><strong>جدول تناوبی عناصر</strong><small>جستجو، فیلتر و معرفی عنصرها</small></span><span class="material-symbols-outlined elements-accordion-chevron" aria-hidden="true">expand_more</span></summary><div class="elements-accordion-body">${fragments.elements}</div></details><details class="elements-accordion elements-accordion-msds"><summary><span class="material-symbols-outlined" aria-hidden="true">health_and_safety</span><span><strong>برگهٔ اطلاعات ایمنی و دفع پسماند</strong><small>MSDS Quick Lookup و بررسی سازگاری مواد</small></span><span class="material-symbols-outlined elements-accordion-chevron" aria-hidden="true">expand_more</span></summary><div class="elements-accordion-body"><section class="elements-support-tools" aria-label="ابزارهای MSDS و سازگاری مواد">${fragments.safetyWidgets}</section></div></details></div></section>`;
+  } else if (page.tool) {
+    pageContent = `<section class="standalone-page tool-page ${pageKey}-page" aria-labelledby="${pageKey}-page-title">${fragments[pageKey]}</section>`;
   }
 
   return `
@@ -313,7 +340,7 @@ const renderMain = (pageKey, page) => {
   <a class="skip-link" href="#main-content">پرش به محتوای اصلی</a>
   <main class="container site-container" id="main-content">
     <header class="site-header">
-      ${pageKey === 'gallery' ? galleryHeaderTop : headerTop}
+      ${pageKey === 'gallery' || page.tool ? galleryHeaderTop : headerTop}
       ${renderPrimaryNav(pageKey)}
     </header>
     ${pageKey === 'home' ? `<div class="home-welcome-flow">${welcomePanel}</div>` : ''}
