@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>پیش‌نمایش هویت بصری</title>
+<link rel="stylesheet" href="../../asset/tokens.css">
+<style>
+@font-face{font-family:'Vazirmatn';font-style:normal;font-weight:300 800;font-display:swap;src:url('../../asset/vazirmatn-arabic.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+200C-200E,U+FB50-FDFF,U+FE70-FEFC}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-fa);line-height:1.9;font-size:var(--fs-body)}
+main{max-width:1000px;margin:0 auto;padding:var(--sp-10) var(--sp-5) var(--sp-16)}
+h1,h2,h3{letter-spacing:0;line-height:1.45;margin:0}
+h1{font-size:var(--fs-title1);font-weight:700}
+h2{font-size:var(--fs-title3);font-weight:700;margin:var(--sp-12) 0 var(--sp-4)}
+p{margin:var(--sp-2) 0}
+.muted{color:var(--text-2);font-size:var(--fs-subhead)}
+.note{background:var(--warn-glow);color:var(--warn);border-radius:var(--r-sm);padding:var(--sp-3) var(--sp-4);font-size:var(--fs-subhead);margin-top:var(--sp-4)}
+.grid{display:grid;gap:var(--sp-4)}
+.swatches{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.sw{border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;background:var(--surface)}
+.sw i{display:block;height:64px}
+.sw div{padding:var(--sp-2) var(--sp-3);font-size:var(--fs-footnote);line-height:1.6}
+.sw b{display:block;font-size:var(--fs-subhead)}
+code,.ltr{direction:ltr;unicode-bidi:isolate;font-family:var(--font-mono);font-size:var(--fs-footnote)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--sp-6);box-shadow:var(--shadow-sm)}
+.tiles{grid-template-columns:repeat(3,1fr)}
+@media(max-width:720px){.tiles{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.tiles{grid-template-columns:1fr}}
+.tile{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--sp-4);box-shadow:var(--shadow-sm);transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.tile:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.tile:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.ph{width:128px;height:128px;border-radius:var(--r-lg);background:linear-gradient(#E3F5EE,#BFE6D6);display:grid;place-items:center;color:#0B6B4F;font-size:var(--fs-caption);font-family:var(--font-sans);margin-bottom:var(--sp-3)}
+.tile strong{display:block;font-size:var(--fs-callout);font-weight:600}
+.tile span.d{display:block;color:var(--text-2);font-size:var(--fs-footnote);line-height:1.7;margin-top:var(--sp-1)}
+.lockup{display:flex;align-items:center;gap:var(--sp-3)}
+.lockup .mark{font-size:48px;color:var(--accent);line-height:1}
+.lockup b{display:block;font-size:1.75rem;font-weight:700;line-height:1.3}
+.lockup small{display:block;color:var(--text-2);font-weight:500;font-size:var(--fs-subhead)}
+.streams{display:flex;gap:var(--sp-2);flex-wrap:wrap}
+.badge{border-radius:var(--r-pill);padding:var(--sp-1) var(--sp-3);font-size:var(--fs-footnote);font-weight:600;color:#fff}
+.btn{background:var(--accent-fill);color:var(--on-accent);border:0;border-radius:var(--r-sm);padding:var(--sp-3) var(--sp-5);font:inherit;font-weight:600;cursor:pointer}
+.btn:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.row{display:flex;gap:var(--sp-4);align-items:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<main>
+  <p class="muted">پیش‌نویس برای تأیید · از توکن‌های واقعی پورتال استفاده می‌کند · حالت روشن/تیره از سیستم پیروی می‌کند</p>
+  <h1>هویت بصری آزمایشگاه پسماند</h1>
+  <p class="muted">این پیش‌نویس هویت خود پورتال است و هویت رسمی دانشگاه تهران نیست. هیچ نشان یا رنگ دانشگاه در آن به کار نرفته است.</p>
+
+  <h2>۱. نشان و نام</h2>
+  <div class="card lockup">
+    <span class="mark" aria-hidden="true">⚗</span>
+    <div><b>آزمایشگاه پسماند</b><small>دانشگاه تهران</small></div>
+  </div>
+  <p class="muted">نشان فعلی (شیشهٔ آزمایشگاهی) بدون قاب و با رنگ تأکید حفظ می‌شود. در اینجا یک نماد جایگزین نمایش داده شده است.</p>
+
+  <h2>۲. رنگ</h2>
+  <div class="grid swatches">
+    <div class="sw"><i style="background:var(--bg);border-bottom:1px solid var(--line)"></i><div><b>پس‌زمینه</b><code>--bg</code></div></div>
+    <div class="sw"><i style="background:var(--surface);border-bottom:1px solid var(--line)"></i><div><b>سطح</b><code>--surface</code></div></div>
+    <div class="sw"><i style="background:var(--text)"></i><div><b>متن</b><code>--text</code></div></div>
+    <div class="sw"><i style="background:var(--text-2)"></i><div><b>متن ثانویه</b><code>--text-2</code></div></div>
+    <div class="sw"><i style="background:var(--accent)"></i><div><b>تأکید</b><code>--accent</code></div></div>
+    <div class="sw"><i style="background:var(--accent-fill)"></i><div><b>دکمه</b><code>--accent-fill</code></div></div>
+    <div class="sw"><i style="background:var(--warn)"></i><div><b>هشدار</b><code>--warn</code></div></div>
+    <div class="sw"><i style="background:var(--danger)"></i><div><b>خطر</b><code>--danger</code></div></div>
+  </div>
+
+  <h2>رنگ‌های رزرو‌شده برای جریان پسماند</h2>
+  <p class="muted">فقط همین چهار رنگ، و فقط برای نشان‌دادن جریان پسماند؛ هرگز برای تزئین.</p>
+  <div class="streams">
+    <span class="badge" style="background:#15803d">A · آلی غیرهالوژنه</span>
+    <span class="badge" style="background:#a16207">B · آلی هالوژنه</span>
+    <span class="badge" style="background:#1d4ed8">C1 · اسیدی آبی</span>
+    <span class="badge" style="background:#b91c1c">C2 · بازی آبی</span>
+  </div>
+
+  <h2>پالت خمیر (فقط داخل آیکون‌های سه‌بعدی)</h2>
+  <div class="grid swatches">
+    <div class="sw"><i style="background:#F3EEE4"></i><div><b>عاجی</b><code>#F3EEE4</code></div></div>
+    <div class="sw"><i style="background:#18A078"></i><div><b>زمرد</b><code>#18A078</code></div></div>
+    <div class="sw"><i style="background:#0B6B4F"></i><div><b>زمرد تیره</b><code>#0B6B4F</code></div></div>
+    <div class="sw"><i style="background:#3B424A"></i><div><b>گرافیت</b><code>#3B424A</code></div></div>
+    <div class="sw"><i style="background:#F0B44C"></i><div><b>کهربایی (جزئی)</b><code>#F0B44C</code></div></div>
+    <div class="sw"><i style="background:linear-gradient(#E3F5EE,#BFE6D6)"></i><div><b>پس‌زمینهٔ کاشی</b><code>#E3F5EE → #BFE6D6</code></div></div>
+  </div>
+
+  <h2>۳. تایپوگرافی</h2>
+  <div class="card">
+    <h3 style="font-size:var(--fs-title2)">قوانین عمومی و ایمنی</h3>
+    <p>پیش از ورود به آزمایشگاه، روپوش و عینک ایمنی بپوشید و دستکش سالم به دست کنید. ورود بدون مجوز سرپرست <strong>ممنوع</strong> است.</p>
+    <p class="muted">ظرفیت ۲۵ میلی‌لیتر · طیف در <bdi dir="ltr">cm⁻¹</bdi> · زاویهٔ <bdi dir="ltr">2θ</bdi> · ماده: <bdi dir="ltr">H₂SO₄</bdi> · «بازبینی نشده»</p>
+    <p class="muted ltr">Latin and numbers: SF Pro / Inter · 1715 cm⁻¹ · 28.44° 2θ</p>
+  </div>
+
+  <h2>۴. کاشی‌های صفحهٔ اصلی (فاز الف)</h2>
+  <p class="muted">مربع‌های سبز جای آیکون‌های خمیری هستند و فقط اندازه و چیدمان را نشان می‌دهند.</p>
+  <div class="grid tiles">
+    <a class="tile" href="#"><div class="ph">tile-rules</div><strong>قوانین و ایمنی</strong><span class="d">پیش از ورود، ضوابط کار، پوشش و دفع پسماند را مرور کنید.</span></a>
+    <a class="tile" href="#"><div class="ph">tile-quiz</div><strong>آزمون و تعهدنامه ورود</strong><span class="d">آمادگی خود را بسنجید و ورود مسئولانه را ثبت کنید.</span></a>
+    <a class="tile" href="#"><div class="ph">tile-catalog</div><strong>کاتالوگ تجهیزات</strong><span class="d">تجهیزات را بر اساس تصویر، کاربرد و خانواده پیدا کنید.</span></a>
+    <a class="tile" href="#"><div class="ph">tile-elements</div><strong>عناصر و مواد</strong><span class="d">عنصر، خواص پایه و اطلاعات ایمنی ماده را بررسی کنید.</span></a>
+    <a class="tile" href="#"><div class="ph">tile-ftir</div><strong>طیف‌سنجی فروسرخ (FT-IR)</strong><span class="d">طیف را بارگذاری کنید و باندهای احتمالی را بررسی کنید.</span></a>
+    <a class="tile" href="#"><div class="ph">tile-xrd</div><strong>پراش پرتو ایکس (XRD)</strong><span class="d">الگوی پراش را با مراجع بلوری مقایسه کنید.</span></a>
+  </div>
+
+  <h2>۵. دکمه و تمرکز</h2>
+  <div class="row"><button class="btn">شروع آزمون</button><span class="muted">با کلید Tab روی دکمه یا کاشی بروید تا حلقهٔ تمرکز را ببینید.</span></div>
+  <p class="note">متن‌های توضیحی کاشی‌ها از کارت‌های فعلی خانه گرفته شده‌اند. دو کاشی FT-IR و XRD متن پیشنهادی من هستند.</p>
+</main>
+</body>
+</html>
