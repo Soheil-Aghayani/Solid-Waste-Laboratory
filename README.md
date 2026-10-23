@@ -43,4 +43,4 @@ Local maxima detection uses a height threshold and minimum 0.2 degree separation
 
 Matching and workbook processing stay in the browser. No sample scans, thesis files, analytics or measured intensities are bundled or sent to COD. Source links navigate externally only when clicked.
 
-Support uses a keyboard-accessible popup with network/currency selection and address copying. No QR code, wallet connection or transaction. Icons use Solar.
+Icons use Solar (CC BY 4.0, 480 Design); see assets/icons/ATTRIBUTION.md.
