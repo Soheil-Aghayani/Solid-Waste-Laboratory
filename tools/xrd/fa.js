@@ -13,6 +13,7 @@ const MESSAGES = new Map([
   ['Keep reviewed peak data below 5 MB.', `حجم داده‌های پیک بازبینی‌شده را زیر ${faNum(5)} مگابایت نگه دارید.`],
   ['This prototype supports at most 20,000 reviewed peaks.', `این نسخه حداکثر ${faCount(20000)} پیک بازبینی‌شده را پشتیبانی می‌کند.`],
   ['Reviewed peaks must stay within the measured analysis range.', 'پیک‌های بازبینی‌شده باید در بازهٔ تحلیل اندازه‌گیری‌شده بمانند.'],
+  ['Unable to load the spreadsheet reader. Check your connection and try again.', 'خواندن‌گر صفحه‌گسترده بارگذاری نشد. اتصال خود را بررسی کنید و دوباره تلاش کنید.'],
   ['This workbook has no worksheets.', 'این فایل اکسل هیچ برگه‌ای ندارد.'],
   ['Choose a worksheet with at most 20,000 rows and 256 columns.', `برگه‌ای با حداکثر ${faCount(20000)} سطر و ${faNum(256)} ستون انتخاب کنید.`],
   ['Choose a valid first data row.', 'یک سطر معتبر برای اولین داده انتخاب کنید.'],

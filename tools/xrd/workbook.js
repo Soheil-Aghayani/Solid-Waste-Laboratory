@@ -1,10 +1,11 @@
-import {read,utils} from './vendor/xlsx.mjs';
+import {loadSheetJS} from '../shared/sheetjs.js?v=1';
 import {msg,normalizeDigits} from './fa.js';
 const $=id=>document.getElementById(id);
-let workbook=null,apply=null,rows=[];
+let XLSX=null,workbook=null,apply=null,rows=[];
 export function closeWorkbook(){workbook=null;apply=null;rows=[];$('workbook-import').hidden=true;}
 export async function openWorkbook(file,onApply){
-  workbook=read(await file.arrayBuffer(),{type:'array',cellDates:false,sheetRows:20005});apply=onApply;
+  XLSX=await loadSheetJS();
+  workbook=XLSX.read(await file.arrayBuffer(),{type:'array',cellDates:false,sheetRows:20005});apply=onApply;
   if(!workbook.SheetNames.length)throw new Error('This workbook has no worksheets.');
   $('worksheet').replaceChildren(...workbook.SheetNames.map(name=>new Option(name,name)));
   $('workbook-import').hidden=false;changeSheet();
@@ -12,12 +13,12 @@ export async function openWorkbook(file,onApply){
 function changeSheet(){
   const sheet=workbook.Sheets[$('worksheet').value];
   if(!sheet['!ref']) {rows=[];} else {
-    const range=utils.decode_range(sheet['!fullref']??sheet['!ref']);
+    const range=XLSX.utils.decode_range(sheet['!fullref']??sheet['!ref']);
     if(range.e.c>255||range.e.r>20000)throw new Error('Choose a worksheet with at most 20,000 rows and 256 columns.');
-    rows=utils.sheet_to_json(sheet,{header:1,defval:'',blankrows:true,range:0});
+    rows=XLSX.utils.sheet_to_json(sheet,{header:1,defval:'',blankrows:true,range:0});
   }
   const width=Math.max(1,...rows.slice(0,25).map(row=>row.length));
-  const options=Array.from({length:width},(_,i)=>new Option(`ستون ${utils.encode_col(i)}`,String(i)));
+  const options=Array.from({length:width},(_,i)=>new Option(`ستون ${XLSX.utils.encode_col(i)}`,String(i)));
   $('position-column').replaceChildren(...options);
   $('intensity-column').replaceChildren(new Option('هیچ · فهرست پیک','none'),...options.map(o=>o.cloneNode(true)));
   $('intensity-column').value=width>1?'1':'none';

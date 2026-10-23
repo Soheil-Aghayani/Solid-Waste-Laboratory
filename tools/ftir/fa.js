@@ -24,6 +24,7 @@ const MESSAGES = new Map([
   ['Constant spectra cannot be compared.', 'طیف‌های ثابت قابل مقایسه نیستند.'],
   ['Shape correlation only, not identity or probability. Same intensity type required. Uneven sampling weights dense regions more heavily.',
     'فقط همبستگی شکل است، نه شناسایی یا احتمال. نوع شدت باید یکسان باشد. نمونه‌برداری ناهمگن به نواحی متراکم وزن بیشتری می‌دهد.'],
+  ['Unable to load the spreadsheet reader. Check your connection and try again.', 'خواندن‌گر صفحه‌گسترده بارگذاری نشد. اتصال خود را بررسی کنید و دوباره تلاش کنید.'],
   ['Choose different columns for wavenumber and intensity.', 'برای عدد موج و شدت دو ستون متفاوت انتخاب کنید.'],
   ['File exceeds 5 MB.', `حجم فایل از ${faNum(5)} مگابایت بیشتر است.`],
   ['Unable to read workbook. Use an unencrypted .xlsx file.', 'خواندن فایل اکسل ممکن نشد. یک فایل xlsx. بدون رمز استفاده کنید.'],
