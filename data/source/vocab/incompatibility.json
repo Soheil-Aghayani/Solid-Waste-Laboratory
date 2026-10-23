@@ -1,0 +1,206 @@
+{
+  "classes": [
+    {
+      "id": "strong-oxidizer",
+      "fa": "اکسیدکننده‌های قوی",
+      "en": "Strong oxidizers",
+      "kind": "hazard"
+    },
+    {
+      "id": "strong-acid",
+      "fa": "اسیدهای قوی یا غلیظ",
+      "en": "Strong / concentrated acids",
+      "kind": "hazard"
+    },
+    {
+      "id": "acid",
+      "fa": "اسیدها (هر اسیدی)",
+      "en": "Acids (any strength)",
+      "kind": "hazard"
+    },
+    {
+      "id": "strong-base",
+      "fa": "بازهای قوی",
+      "en": "Strong bases",
+      "kind": "hazard"
+    },
+    {
+      "id": "base",
+      "fa": "بازها (هر بازی)",
+      "en": "Bases (any strength)",
+      "kind": "hazard"
+    },
+    {
+      "id": "reducing-agent",
+      "fa": "عوامل احیاکننده",
+      "en": "Reducing agents",
+      "kind": "hazard"
+    },
+    {
+      "id": "reactive-metal",
+      "fa": "فلزات فعال و پودر فلزات",
+      "en": "Reactive metals and metal powders",
+      "kind": "hazard"
+    },
+    {
+      "id": "water-moisture",
+      "fa": "آب و رطوبت",
+      "en": "Water and moisture",
+      "kind": "hazard"
+    },
+    {
+      "id": "flammable-material",
+      "fa": "مواد آلی و قابل اشتعال",
+      "en": "Flammable / organic materials and solvents",
+      "kind": "hazard"
+    },
+    {
+      "id": "halogenated-solvent",
+      "fa": "حلال‌های هالوژنه",
+      "en": "Halogenated solvents",
+      "kind": "hazard"
+    },
+    {
+      "id": "halogen",
+      "fa": "هالوژن‌ها",
+      "en": "Halogens",
+      "kind": "hazard"
+    },
+    {
+      "id": "amine",
+      "fa": "آمین‌ها",
+      "en": "Amines",
+      "kind": "hazard"
+    },
+    {
+      "id": "alcohol",
+      "fa": "الکل‌ها",
+      "en": "Alcohols",
+      "kind": "hazard"
+    },
+    {
+      "id": "ammonia-ammonium",
+      "fa": "آمونیاک و ترکیبات آمونیوم",
+      "en": "Ammonia and ammonium compounds",
+      "kind": "hazard"
+    },
+    {
+      "id": "peroxide-initiator",
+      "fa": "پراکسیدها و آغازگرهای رادیکالی",
+      "en": "Peroxides and radical initiators",
+      "kind": "hazard"
+    },
+    {
+      "id": "acid-halide-anhydride",
+      "fa": "کلریدهای اسیدی و انیدریدها",
+      "en": "Acid halides and anhydrides",
+      "kind": "hazard"
+    },
+    {
+      "id": "copper-alloy",
+      "fa": "مس و آلیاژهای آن",
+      "en": "Copper and its alloys",
+      "kind": "hazard"
+    },
+    {
+      "id": "heavy-metal",
+      "fa": "فلزات سنگین و نمک‌های آن‌ها",
+      "en": "Heavy metals and their salts",
+      "kind": "hazard"
+    },
+    {
+      "id": "glass-silica",
+      "fa": "شیشه و سیلیکا",
+      "en": "Glass and silica",
+      "kind": "hazard"
+    },
+    {
+      "id": "carbonate",
+      "fa": "کربنات‌ها",
+      "en": "Carbonates",
+      "kind": "hazard"
+    },
+    {
+      "id": "carbon-dioxide",
+      "fa": "دی‌اکسید کربن",
+      "en": "Carbon dioxide",
+      "kind": "hazard"
+    },
+    {
+      "id": "nitrite",
+      "fa": "نیتریت‌ها",
+      "en": "Nitrites",
+      "kind": "hazard"
+    },
+    {
+      "id": "precipitating-salt",
+      "fa": "یون‌های رسوب‌دهنده",
+      "en": "Precipitating ions (a reaction note, not a hazard)",
+      "kind": "note"
+    },
+    {
+      "id": "other",
+      "fa": "سایر (نیازمند بررسی)",
+      "en": "Other (needs review)",
+      "kind": "note"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "heat-ignition",
+      "fa": "حرارت، جرقه و منابع اشتعال",
+      "en": "Heat, sparks and ignition sources",
+      "kind": "condition"
+    },
+    {
+      "id": "light",
+      "fa": "نور",
+      "en": "Light",
+      "kind": "condition"
+    },
+    {
+      "id": "air-oxygen",
+      "fa": "هوا و اکسیژن",
+      "en": "Air and oxygen",
+      "kind": "condition"
+    },
+    {
+      "id": "long-storage",
+      "fa": "نگهداری طولانی‌مدت",
+      "en": "Long storage",
+      "kind": "condition"
+    },
+    {
+      "id": "physical-shock",
+      "fa": "ضربه، فشار و آسیب فیزیکی",
+      "en": "Shock, pressure and physical damage",
+      "kind": "condition"
+    },
+    {
+      "id": "combustible-dust",
+      "fa": "گرد فلز معلق",
+      "en": "Airborne metal dust",
+      "kind": "condition"
+    }
+  ],
+  "restrictions": [
+    {
+      "id": "closed-space",
+      "fa": "فضای بسته بدون تهویه",
+      "en": "Closed space without ventilation",
+      "kind": "restriction"
+    },
+    {
+      "id": "unauthorized-handling",
+      "fa": "دستکاری بدون مجوز",
+      "en": "Handling without authorization",
+      "kind": "restriction"
+    },
+    {
+      "id": "environment-release",
+      "fa": "تخلیه در فاضلاب، محیط زیست یا مواد غذایی",
+      "en": "Release to drain, environment or food",
+      "kind": "restriction"
+    }
+  ]
+}

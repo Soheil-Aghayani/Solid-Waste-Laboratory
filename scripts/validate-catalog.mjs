@@ -21,6 +21,31 @@ async function main() {
   const equipment = await readJson('data/source/equipment.json');
   const variants = equipment.flatMap(family => family.variants || []);
 
+  const [sourceChemicals, wasteStreams, incompatibilityVocab] = await Promise.all([
+    readJson('data/source/chemicals.json'),
+    readJson('data/source/vocab/waste-streams.json'),
+    readJson('data/source/vocab/incompatibility.json')
+  ]);
+  const streamIds = new Set(wasteStreams.map(stream => stream.id));
+  const classIds = new Set(incompatibilityVocab.classes.map(item => item.id));
+  const conditionIds = new Set(incompatibilityVocab.conditions.map(item => item.id));
+  const restrictionIds = new Set(incompatibilityVocab.restrictions.map(item => item.id));
+  const vocabularyProblems = sourceChemicals.flatMap(record => {
+    const problems = [];
+    if (!streamIds.has(record.wasteStream)) problems.push(`${record.id}: unknown wasteStream "${record.wasteStream}"`);
+    for (const [field, key, ids] of [['incompatibleWith', 'class', classIds], ['avoidConditions', 'condition', conditionIds], ['handlingRestrictions', 'restriction', restrictionIds]]) {
+      if (!Array.isArray(record[field])) { problems.push(`${record.id}: ${field} missing`); continue; }
+      const seen = new Set();
+      for (const entry of record[field]) {
+        if (!ids.has(entry[key])) problems.push(`${record.id}: unknown ${key} "${entry[key]}"`);
+        if (seen.has(entry[key])) problems.push(`${record.id}: duplicate ${key} "${entry[key]}"`);
+        seen.add(entry[key]);
+      }
+    }
+    if (record.wasteStreamReview && !['low', 'medium'].includes(record.wasteStreamReview.confidence)) problems.push(`${record.id}: invalid wasteStreamReview.confidence`);
+    return problems;
+  });
+
   const atomicNumbers = elements.map(element => element.atomicNumber);
   const elementIds = elements.map(element => element.id);
   const elementCas = elements.map(element => element.cas).filter(cas => casPattern.test(String(cas)));
@@ -101,6 +126,12 @@ async function main() {
       missingSources: equipmentMissingSources,
       invalidSourceUrls: invalidEquipmentSourceUrls
     },
+    vocabulary: {
+      streams: wasteStreams.length,
+      recordsChecked: sourceChemicals.length,
+      needReview: sourceChemicals.filter(record => record.wasteStreamReview).length,
+      problems: vocabularyProblems
+    },
     catalog: {
       indexedRecords: catalogIndex.records?.length || 0,
       typeCounts: catalogIndex.counts || {},
@@ -126,7 +157,8 @@ async function main() {
     && chemicalMissingFields.length === 0
     && chemicalMissingSources.length === 0
     && invalidChemicalSourceUrls.length === 0
-    && report.equipment.missingImages.length === 0;
+    && report.equipment.missingImages.length === 0
+    && vocabularyProblems.length === 0;
 
   console.log(JSON.stringify(report, null, 2));
   if (!report.valid) process.exitCode = 1;

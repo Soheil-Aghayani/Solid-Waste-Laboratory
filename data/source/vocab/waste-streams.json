@@ -1,0 +1,100 @@
+[
+  {
+    "id": "A",
+    "fa": "پسماند آلی غیرهالوژنه",
+    "en": "Non-halogenated organic liquids",
+    "color": "green",
+    "basis": "faq"
+  },
+  {
+    "id": "B",
+    "fa": "پسماند آلی هالوژنه",
+    "en": "Halogenated organic liquids",
+    "color": "yellow",
+    "basis": "faq"
+  },
+  {
+    "id": "C1",
+    "fa": "پسماند اسیدی آبی",
+    "en": "Aqueous acids",
+    "color": "blue",
+    "basis": "faq-split"
+  },
+  {
+    "id": "C2",
+    "fa": "پسماند بازی آبی",
+    "en": "Aqueous bases",
+    "color": "red",
+    "basis": "faq-split"
+  },
+  {
+    "id": "C3",
+    "fa": "محلول نمکی آبی غیرخطرناک",
+    "en": "Aqueous salt solutions, non-hazardous",
+    "color": null,
+    "basis": "derived-from-data"
+  },
+  {
+    "id": "D",
+    "fa": "فلزات سنگین و مواد معدنی سمی",
+    "en": "Heavy metals and toxic inorganics",
+    "color": null,
+    "basis": "derived-from-data"
+  },
+  {
+    "id": "OX",
+    "fa": "اکسیدکننده‌های معدنی (جدا از آلی‌ها)",
+    "en": "Inorganic oxidizers (keep away from organics)",
+    "color": null,
+    "basis": "derived-from-data"
+  },
+  {
+    "id": "SOLID-ORG",
+    "fa": "پسماند آلی جامد",
+    "en": "Organic solids",
+    "color": null,
+    "basis": "derived-from-data"
+  },
+  {
+    "id": "DYE",
+    "fa": "رنگینه، شناساگر و معرف رنگی",
+    "en": "Dyes, stains and indicators",
+    "color": null,
+    "basis": "derived-from-data"
+  },
+  {
+    "id": "SP",
+    "fa": "پسماند ویژه (ظرف جداگانه)",
+    "en": "Special waste (separate container)",
+    "color": null,
+    "basis": "derived-from-data"
+  },
+  {
+    "id": "NH",
+    "fa": "جامد یا ماده غیرخطرناک",
+    "en": "Non-hazardous solids and materials",
+    "color": null,
+    "basis": "derived-from-data"
+  },
+  {
+    "id": "EL",
+    "fa": "ماده خام عنصری (نه پسماند روزمره)",
+    "en": "Elemental raw material (not routine waste)",
+    "color": null,
+    "basis": "derived-from-data"
+  },
+  {
+    "id": "GAS",
+    "fa": "گاز فشرده یا کپسول",
+    "en": "Compressed gas / cylinders",
+    "color": null,
+    "basis": "derived-from-data"
+  },
+  {
+    "id": "RAD",
+    "fa": "ماده پرتوزا (فقط با مجوز)",
+    "en": "Radioactive (licensed handling only)",
+    "color": null,
+    "basis": "derived-from-data"
+  }
+]
