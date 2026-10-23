@@ -1,8 +1,146 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><link rel="icon" href="favicon.svg" type="image/svg+xml"><meta name="theme-color" content="#047857"><title>FT-IR · Spectrum workspace</title><link rel="stylesheet" href="styles.css?v=11"></head>
-<body><a class="skip" href="#main">Skip to workspace</a>
-<header><a class="brand" href="./"><img src="favicon.svg" alt="" width="28" height="28">FT–IR<span>Research workspace</span></a><nav aria-label="Main"><a href="#workspace">Explore</a><a href="#method">Method & sources</a></nav><span class="privacy">Local processing</span></header>
-<main id="main"><section class="intro"><p class="eyebrow">INFRARED SPECTROSCOPY</p><h1>A clearer view of<br>your spectrum.</h1><p>Explore possible band assignments. Follow the evidence.<br>Keep your measurements on your device.</p></section>
-<section class="workspace" id="workspace" aria-label="Research workspace"><aside class="panel controls"><h2>Explore bands</h2><p class="muted">Start with a position or a range.</p><form id="search-form"><label for="query">Wavenumber <span>cm⁻¹</span></label><input id="query" value="1715" placeholder="1715 or 1650–1750" required><div class="field-row"><label for="tolerance">Tolerance <span>cm⁻¹</span></label><input id="tolerance" type="number" min="0" max="100" value="10" required></div><button class="primary" type="submit">Find possible assignments</button></form><div class="examples" aria-label="Example searches"><button data-query="3400">3400</button><button data-query="2210–2260">2210–2260</button><button data-query="1050">1050</button></div><hr><h2>Your spectrum</h2><p class="muted">CSV or Excel workbook (.xlsx).<br>Maximum file size: 5 MB.</p><div class="upload"><input id="csv" type="file" accept=".csv,.txt,.tsv,.xlsx"><span class="muted">Processed privately on your device</span></div><p id="file-name" class="muted">No file selected</p><button id="demo" class="secondary">Try a synthetic spectrum</button><div id="analysis-controls" hidden><label for="type">Intensity type</label><select id="type"><option value="transmittance">Transmittance (%)</option><option value="absorbance">Absorbance</option></select><label for="contrast">Minimum prominence (%)</label><input id="contrast" type="number" min="0.1" max="100" step="0.1" value="5"><label for="separation">Minimum peak separation (cm⁻¹)</label><input id="separation" type="number" min="1" max="500" value="20"><label class="check"><input id="smooth" type="checkbox"> Five-point moving average</label><button id="analyze" class="secondary">Detect candidate peaks</button></div></aside>
-<div class="content"><div id="status" role="status" aria-live="polite"></div><section class="panel spectrum"><div class="section-head"><div><p class="eyebrow">SPECTRUM VIEW</p><h2 id="plot-title">Reference band map</h2></div><span class="badge" id="plot-badge">Reference ranges</span></div><div id="plot"></div><p id="plot-note" class="muted">Shaded regions show overlapping reference ranges for your search.</p><div id="peaks" aria-label="Detected candidate peaks"></div></section><section class="panel results"><div class="section-head"><div><p class="eyebrow">POSSIBLE ASSIGNMENTS</p><h2 id="result-title">Matches near 1715 cm⁻¹</h2></div><span id="result-count" class="badge"></span></div><p class="notice">A range match is a starting point. It does not identify a compound or confirm a functional group.</p><div id="results"></div></section></div></section>
-<section id="method" class="method"><div><p class="eyebrow">BUILT FOR TRACEABILITY</p><h2>Evidence you can inspect.</h2><p>Results use a small, curated organic-chemistry reference set. Sample-specific material references and local reference comparison are included. Quantitative identification and a bundled mineral spectrum library are not included.</p></div><div><details open><summary>How results are ranked</summary><p>Direct range overlaps come first, followed by nearby bands within your tolerance. Equal-distance results use narrower reference ranges first. This ordering is not a confidence score. Band shape, intensity, sample environment, and supporting bands are not inferred.</p></details><details><summary>Peak detection & limitations</summary><p>Candidate peaks are local maxima in absorbance or minima in percent transmittance. Prominence is measured against the higher of the two surrounding contour bases, stopping at a higher peak or the spectrum boundary, and scaled to the full intensity span. This is a simple heuristic, not validated peak fitting. Endpoints are excluded; noise, broad bands, and sampling density can affect detection. Optional smoothing uses the selected sample window; the plot always preserves the raw trace. Zoom into a range, select a candidate to inspect it, or edit its position. Enable chart picking to add a measured position to the review.</p></details><details><summary>Source & reuse terms</summary><p>John McMurry, Organic Chemistry, OpenStax (2023), §12.7, Table 12.1. Numeric ranges transcribed into a reduced dataset; reviewed October 9, 2026. Additional ranges and nominal positions come from §12.8. Nominal positions use the selected tolerance without invented widths. Shimadzu manufacturer guidance adds atmospheric CO₂ screening with an explicitly labeled application window.</p><p>Reference dataset adaptation: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noreferrer">CC BY-NC-SA 4.0</a>. Noncommercial use only; attribution and share-alike required. Commercial reuse needs a separate review.</p><a href="https://openstax.org/books/organic-chemistry/pages/12-7-interpreting-infrared-spectra" target="_blank" rel="noreferrer">Access for free at OpenStax</a></details><details><summary>Privacy</summary><p>CSV files are read in this browser session. No upload, analytics, cloud processing, or persistent storage is used. External source links open only when you select them.</p></details></div></section></main><footer><span>FT–IR · Research, with context.</span><a href="https://openstax.org/books/organic-chemistry/pages/1-why-this-chapter" target="_blank" rel="noreferrer">Reference content: OpenStax · CC BY-NC-SA 4.0 · Access for free</a></footer><script src="vendor/xlsx-0.20.3.min.js"></script><script type="module" src="app.js?v=8"></script><script type="module" src="support.js?v=8"></script></body></html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#047857">
+<title>FT-IR · فضای کار طیف‌سنجی</title>
+<link rel="preload" href="assets/estedad-arabic-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css?v=13">
+</head>
+<body>
+<a class="skip" href="#main">رفتن به فضای کار</a>
+<header>
+<a class="brand" href="./">
+<img src="favicon.svg" alt="" width="28" height="28"><bdi dir="ltr">FT–IR</bdi><span>فضای کار پژوهشی</span>
+</a>
+<nav aria-label="منوی اصلی">
+<a href="#workspace">کاوش</a>
+<a href="#method">روش و منابع</a>
+</nav>
+<span class="privacy">پردازش محلی</span>
+</header>
+<main id="main">
+<section class="intro">
+<p class="eyebrow">طیف‌سنجی فروسرخ</p>
+<h1>دید روشن‌تر<br>به طیف شما.</h1>
+<p>انتساب‌های احتمالی باندها را بررسی کنید و شواهد را دنبال کنید.<br>اندازه‌گیری‌های شما روی دستگاه خودتان می‌ماند.</p>
+</section>
+<section class="workspace" id="workspace" aria-label="فضای کار پژوهشی">
+<aside class="panel controls">
+<h2>کاوش باندها</h2>
+<p class="muted">با یک موقعیت یا یک بازه شروع کنید.</p>
+<form id="search-form">
+<label for="query">عدد موج <span><bdi dir="ltr">cm⁻¹</bdi></span>
+</label>
+<input id="query" dir="ltr" inputmode="decimal" autocomplete="off" value="1715" placeholder="1715 / 1650–1750" required>
+<div class="field-row">
+<label for="tolerance">تلرانس <span><bdi dir="ltr">cm⁻¹</bdi></span>
+</label>
+<input id="tolerance" dir="ltr" inputmode="decimal" autocomplete="off" value="10" required>
+</div>
+<button class="primary" type="submit">یافتن انتساب‌های احتمالی</button>
+</form>
+<div class="examples" aria-label="جستجوهای نمونه">
+<button data-query="3400">۳۴۰۰</button>
+<button data-query="2210–2260">۲۲۱۰–۲۲۶۰</button>
+<button data-query="1050">۱۰۵۰</button>
+</div>
+<hr>
+<h2>طیف شما</h2>
+<p class="muted">فایل CSV یا اکسل (<bdi dir="ltr">.xlsx</bdi>).<br>حداکثر حجم فایل: ۵ مگابایت.</p>
+<div class="upload">
+<input id="csv" type="file" accept=".csv,.txt,.tsv,.xlsx">
+<span class="muted">پردازش خصوصی روی دستگاه شما</span>
+</div>
+<p id="file-name" class="muted">فایلی انتخاب نشده</p>
+<button id="demo" class="secondary">امتحان با یک طیف مصنوعی</button>
+<div id="analysis-controls" hidden>
+<label for="type">نوع شدت</label>
+<select id="type">
+<option value="transmittance">عبور (%)</option>
+<option value="absorbance">جذب (Absorbance)</option>
+</select>
+<label for="contrast">حداقل برجستگی (%)</label>
+<input id="contrast" dir="ltr" inputmode="decimal" autocomplete="off" value="5">
+<label for="separation">حداقل فاصلهٔ پیک‌ها (<bdi dir="ltr">cm⁻¹</bdi>)</label>
+<input id="separation" dir="ltr" inputmode="decimal" autocomplete="off" value="20">
+<label class="check">
+<input id="smooth" type="checkbox"> میانگین متحرک پنج‌نقطه‌ای</label>
+<button id="analyze" class="secondary">تشخیص پیک‌های کاندید</button>
+</div>
+</aside>
+<div class="content">
+<div id="status" role="status" aria-live="polite">
+</div>
+<section class="panel spectrum">
+<div class="section-head">
+<div>
+<p class="eyebrow">نمای طیف</p>
+<h2 id="plot-title">نقشهٔ باندهای مرجع</h2>
+</div>
+<span class="badge" id="plot-badge">بازه‌های مرجع</span>
+</div>
+<div id="plot">
+</div>
+<p id="plot-note" class="muted">نواحی سایه‌دار، بازه‌های مرجعِ هم‌پوشان با جستجوی شما را نشان می‌دهند.</p>
+<div id="peaks" aria-label="پیک‌های کاندید تشخیص‌داده‌شده">
+</div>
+</section>
+<section class="panel results">
+<div class="section-head">
+<div>
+<p class="eyebrow">انتساب‌های احتمالی</p>
+<h2 id="result-title">تطبیق‌ها نزدیک ۱۷۱۵ <bdi dir="ltr">cm⁻¹</bdi></h2>
+</div>
+<span id="result-count" class="badge">
+</span>
+</div>
+<p class="notice">تطبیق بازه فقط نقطهٔ شروع است. ترکیب را شناسایی نمی‌کند و وجود یک گروه عاملی را تأیید نمی‌کند.</p>
+<div id="results">
+</div>
+</section>
+</div>
+</section>
+<section id="method" class="method">
+<div>
+<p class="eyebrow">ساخته‌شده برای ردیابی‌پذیری</p>
+<h2>شواهدی که می‌توانید بررسی کنید.</h2>
+<p>نتایج از یک مجموعهٔ مرجع کوچک و گزیدهٔ شیمی آلی استفاده می‌کنند. مرجع‌های ویژهٔ نمونه و مقایسه با مرجع محلی نیز وجود دارد. شناسایی کمّی و کتابخانهٔ طیف کانی‌ها همراه برنامه نیست.</p>
+</div>
+<div>
+<details open>
+<summary>نتایج چگونه رتبه‌بندی می‌شوند</summary>
+<p>هم‌پوشانی مستقیم بازه‌ها اول می‌آید، سپس باندهای نزدیک در محدودهٔ تلرانس شما. نتایج با فاصلهٔ برابر، ابتدا بازه‌های مرجع باریک‌تر را می‌گیرند. این ترتیب امتیاز اطمینان نیست. شکل باند، شدت، محیط نمونه و باندهای پشتیبان استنباط نمی‌شوند.</p>
+</details>
+<details>
+<summary>تشخیص پیک و محدودیت‌ها</summary>
+<p>پیک‌های کاندید، بیشینه‌های محلی در جذب یا کمینه‌های محلی در درصد عبور هستند. برجستگی نسبت به بالاتر از دو پایهٔ کانتور اطراف پیک اندازه‌گیری می‌شود، تا رسیدن به پیک بلندتر یا مرز طیف، و بر کل بازهٔ شدت مقیاس می‌شود. این یک روش تجربی ساده است، نه برازش معتبر پیک. نقاط انتهایی کنار گذاشته می‌شوند؛ نویز، باندهای پهن و چگالی نمونه‌برداری می‌توانند تشخیص را تحت‌تأثیر قرار دهند. هموارسازی اختیاری از پنجرهٔ نمونهٔ انتخابی استفاده می‌کند؛ نمودار همیشه ردّ خام را حفظ می‌کند. روی یک بازه زوم کنید، یک کاندید را برای بررسی انتخاب کنید یا موقعیتش را ویرایش کنید. انتخاب از نمودار را فعال کنید تا موقعیت اندازه‌گیری‌شده به بازبینی اضافه شود.</p>
+</details>
+<details>
+<summary>منبع و شرایط استفادهٔ مجدد</summary>
+<p><bdi dir="ltr">John McMurry, Organic Chemistry, OpenStax (2023), §12.7, Table 12.1</bdi>. بازه‌های عددی در یک مجموعه‌دادهٔ کاهش‌یافته رونویسی شده‌اند؛ بازبینی ۱۷ مهر ۱۴۰۵. بازه‌ها و موقعیت‌های اسمی بیشتر از <bdi dir="ltr">§12.8</bdi> آمده‌اند. موقعیت‌های اسمی از تلرانس انتخاب‌شده استفاده می‌کنند، بدون پهنای ساختگی. راهنمای سازندهٔ Shimadzu غربالگری <bdi dir="ltr">CO₂</bdi> جو را با یک پنجرهٔ کاربردیِ صریحاً برچسب‌خورده اضافه می‌کند.</p>
+<p>اقتباس از مجموعه‌دادهٔ مرجع: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noreferrer"><bdi dir="ltr">CC BY-NC-SA 4.0</bdi></a>. فقط استفادهٔ غیرتجاری؛ ذکر منبع و انتشار با همان مجوز الزامی است. استفادهٔ تجاری به بررسی جداگانه نیاز دارد. ترجمهٔ فارسی و اقتباس برای این ابزار انجام شده است.</p>
+<a href="https://openstax.org/books/organic-chemistry/pages/12-7-interpreting-infrared-spectra" target="_blank" rel="noreferrer">دسترسی رایگان در OpenStax</a>
+</details>
+<details>
+<summary>حریم خصوصی</summary>
+<p>فایل‌های CSV در همین نشست مرورگر خوانده می‌شوند. هیچ بارگذاری، تحلیل رفتار، پردازش ابری یا ذخیرهٔ ماندگاری انجام نمی‌شود. پیوندهای منبع بیرونی فقط وقتی باز می‌شوند که آن‌ها را انتخاب کنید.</p>
+</details>
+</div>
+</section>
+</main>
+<footer>
+<span><bdi dir="ltr">FT–IR</bdi> · پژوهش، همراه با زمینه.</span>
+<a href="https://openstax.org/books/organic-chemistry/pages/1-why-this-chapter" target="_blank" rel="noreferrer">محتوای مرجع: OpenStax · <bdi dir="ltr">CC BY-NC-SA 4.0</bdi> · دسترسی رایگان</a>
+</footer>
+<script src="vendor/xlsx-0.20.3.min.js">
+</script>
+<script type="module" src="app.js?v=9">
+</script>
+<script type="module" src="support.js?v=9">
+</script>
+</body>
+</html>

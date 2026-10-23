@@ -2,7 +2,7 @@ import http from 'node:http';
 import {readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 const root = new URL('./', import.meta.url);
-const files = new Set(['index.html','styles.css','app.js','science.js','references.js','report.js','processing.js','favicon.svg','assets/tokens.css','assets/inter-latin-wght.woff2','support.js','import.js','vendor/xlsx-0.20.3.min.js',...['upload-linear','close-circle-linear','copy-linear','check-circle-linear','heart-linear','btc','eth','usdt','sol'].map(n=>'assets/icons/'+n+'.svg')]);
+const files = new Set(['index.html','styles.css','app.js','science.js','references.js','report.js','processing.js','favicon.svg','assets/tokens.css','assets/inter-latin-wght.woff2','assets/estedad-arabic-wght.woff2','fa.js','report-fa.js','support.js','import.js','vendor/xlsx-0.20.3.min.js',...['upload-linear','close-circle-linear','copy-linear','check-circle-linear','heart-linear','btc','eth','usdt','sol'].map(n=>'assets/icons/'+n+'.svg')]);
 http.createServer(async (req,res)=>{
   const name = new URL(req.url,'http://localhost').pathname.slice(1) || 'index.html';
   if(!files.has(name)){res.writeHead(404);res.end('Not found');return;}
