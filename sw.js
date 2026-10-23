@@ -13,7 +13,7 @@ const APP_SHELL = [
   './manifest.webmanifest',
   './styles.min.css?v=6.9',
   './elements.min.css?v=2.0',
-  './site-pages.min.css?v=3.1',
+  './site-pages.min.css?v=3.4',
   './asset/icon-system.min.js?v=1.0',
   './asset/icons.svg',
   './script.min.js?v=7.4',

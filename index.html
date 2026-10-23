@@ -24,7 +24,7 @@
   <link rel="icon" type="image/webp" href="Waste%20Lab.webp">
   <link rel="preload" href="./asset/estedad-arabic-wght.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
   <link rel="stylesheet" href="./styles.min.css?v=6.9">
-  <link rel="stylesheet" href="./site-pages.min.css?v=3.1">
+  <link rel="stylesheet" href="./site-pages.min.css?v=3.4">
   <script>
     try {
       const savedTheme = localStorage.getItem('theme');
@@ -135,72 +135,52 @@
         </div>
       </section></div>
 
-    <section class="home-shortcuts" aria-labelledby="home-shortcuts-title">
-      <div class="section-heading-row">
-        <div><span class="page-kicker">شروع سریع</span><h2 id="home-shortcuts-title">یک کار را انتخاب کنید</h2><p>برای رفتن به بخش درست، یکی از مسیرهای زیر را انتخاب کنید.</p></div>
-      </div>
-      <div class="home-shortcut-grid">
-        <a href="./rules.html" class="home-shortcut home-route home-tile">
-          <img class="home-tile-art" src="./asset/tiles/tile-rules-256.webp" srcset="./asset/tiles/tile-rules-256.webp 1x, ./asset/tiles/tile-rules-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
-          <span class="home-shortcut-heading"><strong>قوانین و ایمنی</strong></span>
-          <span class="home-route-copy">پیش از ورود، ضوابط کار، پوشش و دفع پسماند را مرور کنید.</span><span class="home-route-action">مشاهدهٔ قوانین <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+    <section class="home-tiles" aria-labelledby="home-tiles-title">
+      <h2 id="home-tiles-title">یک کار را انتخاب کنید</h2>
+      <div class="tile-grid">
+        <a href="./rules.html" class="tile" title="ضوابط کار، پوشش و دفع پسماند">
+          <img src="./asset/tiles/tile-rules-256.webp" srcset="./asset/tiles/tile-rules-256.webp 1x, ./asset/tiles/tile-rules-512.webp 2x" width="128" height="128" alt="" loading="lazy" decoding="async">
+          <span>قوانین و ایمنی</span>
         </a>
-        <a href="./quiz.html" class="home-shortcut home-route home-tile">
-          <img class="home-tile-art" src="./asset/tiles/tile-quiz-256.webp" srcset="./asset/tiles/tile-quiz-256.webp 1x, ./asset/tiles/tile-quiz-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
-          <span class="home-shortcut-heading"><strong>آزمون و تعهدنامه ورود</strong></span>
-          <span class="home-route-copy">آمادگی خود را بسنجید و ورود مسئولانه را ثبت کنید.</span><span class="home-route-action">شروع آزمون <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+        <a href="./quiz.html" class="tile" title="آزمون و تعهدنامه ورود به آزمایشگاه">
+          <img src="./asset/tiles/tile-quiz-256.webp" srcset="./asset/tiles/tile-quiz-256.webp 1x, ./asset/tiles/tile-quiz-512.webp 2x" width="128" height="128" alt="" loading="lazy" decoding="async">
+          <span>آزمون ورود</span>
         </a>
-        <a href="./gallery.html" class="home-shortcut home-route home-tile">
-          <img class="home-tile-art" src="./asset/tiles/tile-catalog-256.webp" srcset="./asset/tiles/tile-catalog-256.webp 1x, ./asset/tiles/tile-catalog-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
-          <span class="home-shortcut-heading"><strong>کاتالوگ تجهیزات</strong></span>
-          <span class="home-route-copy">تجهیزات را بر اساس تصویر، کاربرد و خانواده پیدا کنید.</span><span class="home-route-action">ورود به کاتالوگ <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+        <a href="./gallery.html" class="tile" title="تجهیزات بر اساس تصویر و کاربرد">
+          <img src="./asset/tiles/tile-catalog-256.webp" srcset="./asset/tiles/tile-catalog-256.webp 1x, ./asset/tiles/tile-catalog-512.webp 2x" width="128" height="128" alt="" loading="lazy" decoding="async">
+          <span>کاتالوگ تجهیزات</span>
         </a>
-        <a href="./elements.html" class="home-shortcut home-route home-tile">
-          <img class="home-tile-art" src="./asset/tiles/tile-elements-256.webp" srcset="./asset/tiles/tile-elements-256.webp 1x, ./asset/tiles/tile-elements-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
-          <span class="home-shortcut-heading"><strong>عناصر و مواد</strong></span>
-          <span class="home-route-copy">عنصر، خواص پایه و اطلاعات ایمنی ماده را بررسی کنید.</span><span class="home-route-action">مشاهدهٔ عناصر <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+        <a href="./equipment.html" class="tile" title="روش کار و نکات ایمنی هر وسیله">
+          <img src="./asset/tiles/tile-guides-256.webp" srcset="./asset/tiles/tile-guides-256.webp 1x, ./asset/tiles/tile-guides-512.webp 2x" width="128" height="128" alt="" loading="lazy" decoding="async">
+          <span>راهنمای تجهیزات</span>
         </a>
-        <a href="./ftir.html" class="home-shortcut home-route home-tile">
-          <img class="home-tile-art" src="./asset/tiles/tile-ftir-256.webp" srcset="./asset/tiles/tile-ftir-256.webp 1x, ./asset/tiles/tile-ftir-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
-          <span class="home-shortcut-heading"><strong>طیف‌سنجی فروسرخ (FT-IR)</strong></span>
-          <span class="home-route-copy">باندهای طیف خود را به گروه‌های عاملی احتمالی نسبت دهید.</span><span class="home-route-action">باز کردن ابزار <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+        <a href="./elements.html" class="tile" title="عنصر، خواص پایه و اطلاعات ایمنی">
+          <img src="./asset/tiles/tile-elements-256.webp" srcset="./asset/tiles/tile-elements-256.webp 1x, ./asset/tiles/tile-elements-512.webp 2x" width="128" height="128" alt="" loading="lazy" decoding="async">
+          <span>عناصر و مواد</span>
         </a>
-        <a href="./xrd.html" class="home-shortcut home-route home-tile">
-          <img class="home-tile-art" src="./asset/tiles/tile-xrd-256.webp" srcset="./asset/tiles/tile-xrd-256.webp 1x, ./asset/tiles/tile-xrd-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
-          <span class="home-shortcut-heading"><strong>پراش پرتو ایکس (XRD)</strong></span>
-          <span class="home-route-copy">پیک‌های الگوی پراش را با مرجع‌های بلوری مقایسه کنید.</span><span class="home-route-action">باز کردن ابزار <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+        <a href="./elements.html#msds-details-card" class="tile" title="خطرات و مواد ناسازگار یک ماده">
+          <img src="./asset/tiles/tile-msds-256.webp" srcset="./asset/tiles/tile-msds-256.webp 1x, ./asset/tiles/tile-msds-512.webp 2x" width="128" height="128" alt="" loading="lazy" decoding="async">
+          <span>برگهٔ ایمنی مواد</span>
         </a>
-      </div>
-    </section>
-    <section class="home-shortcuts" aria-labelledby="home-tools-title">
-      <div class="section-heading-row">
-        <div><span class="page-kicker">ابزارهای کمکی</span><h2 id="home-tools-title">وقتی سریع به پاسخ نیاز دارید</h2><p>راهنما، برگهٔ ایمنی، سازگاری مواد و کمک فوری در یک قدم.</p></div>
-      </div>
-      <div class="home-shortcut-grid">
-        <a href="./equipment.html" class="home-shortcut home-route home-tile">
-          <img class="home-tile-art" src="./asset/tiles/tile-guides-256.webp" srcset="./asset/tiles/tile-guides-256.webp 1x, ./asset/tiles/tile-guides-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
-          <span class="home-shortcut-heading"><strong>راهنمای تجهیزات</strong></span>
-          <span class="home-route-copy">روش کار و نکات ایمنی هر وسیله را مرحله‌به‌مرحله بخوانید.</span><span class="home-route-action">مشاهدهٔ راهنماها <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+        <a href="./elements.html#compatibility-widget-card" class="tile" title="بررسی سازگاری پیش از مخلوط کردن">
+          <img src="./asset/tiles/tile-compat-256.webp" srcset="./asset/tiles/tile-compat-256.webp 1x, ./asset/tiles/tile-compat-512.webp 2x" width="128" height="128" alt="" loading="lazy" decoding="async">
+          <span>سازگاری مواد</span>
         </a>
-        <a href="./elements.html#msds-details-card" class="home-shortcut home-route home-tile">
-          <img class="home-tile-art" src="./asset/tiles/tile-msds-256.webp" srcset="./asset/tiles/tile-msds-256.webp 1x, ./asset/tiles/tile-msds-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
-          <span class="home-shortcut-heading"><strong>برگهٔ ایمنی مواد</strong></span>
-          <span class="home-route-copy">خطرات، نوع مواجهه و مواد ناسازگار یک ماده را ببینید.</span><span class="home-route-action">جست‌وجوی ماده <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+        <a href="./ftir.html" class="tile" title="انتساب باندهای طیف فروسرخ">
+          <img src="./asset/tiles/tile-ftir-256.webp" srcset="./asset/tiles/tile-ftir-256.webp 1x, ./asset/tiles/tile-ftir-512.webp 2x" width="128" height="128" alt="" loading="lazy" decoding="async">
+          <span>طیف‌سنجی FT-IR</span>
         </a>
-        <a href="./elements.html#compatibility-widget-card" class="home-shortcut home-route home-tile">
-          <img class="home-tile-art" src="./asset/tiles/tile-compat-256.webp" srcset="./asset/tiles/tile-compat-256.webp 1x, ./asset/tiles/tile-compat-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
-          <span class="home-shortcut-heading"><strong>سازگاری مواد</strong></span>
-          <span class="home-route-copy">پیش از مخلوط کردن، سازگاری چند ماده را بررسی کنید.</span><span class="home-route-action">بررسی سازگاری <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+        <a href="./xrd.html" class="tile" title="مقایسهٔ پیک‌ها با مرجع‌های بلوری">
+          <img src="./asset/tiles/tile-xrd-256.webp" srcset="./asset/tiles/tile-xrd-256.webp 1x, ./asset/tiles/tile-xrd-512.webp 2x" width="128" height="128" alt="" loading="lazy" decoding="async">
+          <span>پراش پرتو ایکس</span>
         </a>
-        <button type="button" data-open="emergency-fab" class="home-shortcut home-route home-tile">
-          <img class="home-tile-art" src="./asset/tiles/tile-emergency-256.webp" srcset="./asset/tiles/tile-emergency-256.webp 1x, ./asset/tiles/tile-emergency-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
-          <span class="home-shortcut-heading"><strong>شماره‌های اضطراری</strong></span>
-          <span class="home-route-copy">در حادثه، شماره‌ها و اقدام‌های فوری را سریع پیدا کنید.</span><span class="home-route-action">باز کردن <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+        <button type="button" data-open="emergency-fab" class="tile" title="شماره‌ها و اقدام‌های فوری">
+          <img src="./asset/tiles/tile-emergency-256.webp" srcset="./asset/tiles/tile-emergency-256.webp 1x, ./asset/tiles/tile-emergency-512.webp 2x" width="128" height="128" alt="" loading="lazy" decoding="async">
+          <span>شماره‌های اضطراری</span>
         </button>
-        <button type="button" data-open="chatbot-loader-fab" class="home-shortcut home-route home-tile">
-          <img class="home-tile-art" src="./asset/tiles/tile-assistant-256.webp" srcset="./asset/tiles/tile-assistant-256.webp 1x, ./asset/tiles/tile-assistant-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
-          <span class="home-shortcut-heading"><strong>دستیار هوشمند</strong></span>
-          <span class="home-route-copy">پرسش دربارهٔ تجهیزات، مواد و ایمنی را از دستیار بپرسید.</span><span class="home-route-action">شروع گفت‌وگو <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+        <button type="button" data-open="chatbot-loader-fab" class="tile" title="پرسش دربارهٔ تجهیزات، مواد و ایمنی">
+          <img src="./asset/tiles/tile-assistant-256.webp" srcset="./asset/tiles/tile-assistant-256.webp 1x, ./asset/tiles/tile-assistant-512.webp 2x" width="128" height="128" alt="" loading="lazy" decoding="async">
+          <span>دستیار هوشمند</span>
         </button>
       </div>
     </section>

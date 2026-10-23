@@ -241,42 +241,34 @@ const renderMobileDock = currentPage => {
 
 const renderDesktopDock = () => '';
 
+// Home tiles: the Clay image already carries the mint backdrop, so a tile is the image plus a label.
+// `href` makes a link; `open` clicks an existing floating control (see welcome-carousel.js).
 const HOME_TILES = [
-  { href: 'rules.html', tile: 'rules', title: 'قوانین و ایمنی', copy: 'پیش از ورود، ضوابط کار، پوشش و دفع پسماند را مرور کنید.', action: 'مشاهدهٔ قوانین' },
-  { href: 'quiz.html', tile: 'quiz', title: 'آزمون و تعهدنامه ورود', copy: 'آمادگی خود را بسنجید و ورود مسئولانه را ثبت کنید.', action: 'شروع آزمون' },
-  { href: 'gallery.html', tile: 'catalog', title: 'کاتالوگ تجهیزات', copy: 'تجهیزات را بر اساس تصویر، کاربرد و خانواده پیدا کنید.', action: 'ورود به کاتالوگ' },
-  { href: 'elements.html', tile: 'elements', title: 'عناصر و مواد', copy: 'عنصر، خواص پایه و اطلاعات ایمنی ماده را بررسی کنید.', action: 'مشاهدهٔ عناصر' },
-  { href: 'ftir.html', tile: 'ftir', title: 'طیف‌سنجی فروسرخ (FT-IR)', copy: 'باندهای طیف خود را به گروه‌های عاملی احتمالی نسبت دهید.', action: 'باز کردن ابزار' },
-  { href: 'xrd.html', tile: 'xrd', title: 'پراش پرتو ایکس (XRD)', copy: 'پیک‌های الگوی پراش را با مرجع‌های بلوری مقایسه کنید.', action: 'باز کردن ابزار' },
+  { href: 'rules.html', tile: 'rules', title: 'قوانین و ایمنی', hint: 'ضوابط کار، پوشش و دفع پسماند' },
+  { href: 'quiz.html', tile: 'quiz', title: 'آزمون ورود', hint: 'آزمون و تعهدنامه ورود به آزمایشگاه' },
+  { href: 'gallery.html', tile: 'catalog', title: 'کاتالوگ تجهیزات', hint: 'تجهیزات بر اساس تصویر و کاربرد' },
+  { href: 'equipment.html', tile: 'guides', title: 'راهنمای تجهیزات', hint: 'روش کار و نکات ایمنی هر وسیله' },
+  { href: 'elements.html', tile: 'elements', title: 'عناصر و مواد', hint: 'عنصر، خواص پایه و اطلاعات ایمنی' },
+  { href: 'elements.html#msds-details-card', tile: 'msds', title: 'برگهٔ ایمنی مواد', hint: 'خطرات و مواد ناسازگار یک ماده' },
+  { href: 'elements.html#compatibility-widget-card', tile: 'compat', title: 'سازگاری مواد', hint: 'بررسی سازگاری پیش از مخلوط کردن' },
+  { href: 'ftir.html', tile: 'ftir', title: 'طیف‌سنجی FT-IR', hint: 'انتساب باندهای طیف فروسرخ' },
+  { href: 'xrd.html', tile: 'xrd', title: 'پراش پرتو ایکس', hint: 'مقایسهٔ پیک‌ها با مرجع‌های بلوری' },
+  { open: 'emergency-fab', tile: 'emergency', title: 'شماره‌های اضطراری', hint: 'شماره‌ها و اقدام‌های فوری' },
+  { open: 'chatbot-loader-fab', tile: 'assistant', title: 'دستیار هوشمند', hint: 'پرسش دربارهٔ تجهیزات، مواد و ایمنی' },
 ];
 
-const HOME_TOOLS = [
-  { href: 'equipment.html', tile: 'guides', title: 'راهنمای تجهیزات', copy: 'روش کار و نکات ایمنی هر وسیله را مرحله‌به‌مرحله بخوانید.', action: 'مشاهدهٔ راهنماها' },
-  { href: 'elements.html#msds-details-card', tile: 'msds', title: 'برگهٔ ایمنی مواد', copy: 'خطرات، نوع مواجهه و مواد ناسازگار یک ماده را ببینید.', action: 'جست‌وجوی ماده' },
-  { href: 'elements.html#compatibility-widget-card', tile: 'compat', title: 'سازگاری مواد', copy: 'پیش از مخلوط کردن، سازگاری چند ماده را بررسی کنید.', action: 'بررسی سازگاری' },
-  { open: 'emergency-fab', tile: 'emergency', title: 'شماره‌های اضطراری', copy: 'در حادثه، شماره‌ها و اقدام‌های فوری را سریع پیدا کنید.', action: 'باز کردن' },
-  { open: 'chatbot-loader-fab', tile: 'assistant', title: 'دستیار هوشمند', copy: 'پرسش دربارهٔ تجهیزات، مواد و ایمنی را از دستیار بپرسید.', action: 'شروع گفت‌وگو' },
-];
-
-const renderHomeTile = ({ href, open, tile, title, copy, action }) => `
-        <${open ? `button type="button" data-open="${open}"` : `a href="./${href}"`} class="home-shortcut home-route home-tile">
-          <img class="home-tile-art" src="./asset/tiles/tile-${tile}-256.webp" srcset="./asset/tiles/tile-${tile}-256.webp 1x, ./asset/tiles/tile-${tile}-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
-          <span class="home-shortcut-heading"><strong>${title}</strong></span>
-          <span class="home-route-copy">${copy}</span><span class="home-route-action">${action} <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
+const renderHomeTile = ({ href, open, tile, title, hint }) => `
+        <${open ? `button type="button" data-open="${open}"` : `a href="./${href}"`} class="tile" title="${hint}">
+          <img src="./asset/tiles/tile-${tile}-256.webp" srcset="./asset/tiles/tile-${tile}-256.webp 1x, ./asset/tiles/tile-${tile}-512.webp 2x" width="128" height="128" alt="" loading="lazy" decoding="async">
+          <span>${title}</span>
         </${open ? 'button' : 'a'}>`;
 
-const renderHomeGroup = (id, kicker, heading, intro, tiles) => `
-    <section class="home-shortcuts" aria-labelledby="${id}">
-      <div class="section-heading-row">
-        <div><span class="page-kicker">${kicker}</span><h2 id="${id}">${heading}</h2><p>${intro}</p></div>
-      </div>
-      <div class="home-shortcut-grid">${tiles.map(renderHomeTile).join('')}
+const renderHomeShortcuts = () => `
+    <section class="home-tiles" aria-labelledby="home-tiles-title">
+      <h2 id="home-tiles-title">یک کار را انتخاب کنید</h2>
+      <div class="tile-grid">${HOME_TILES.map(renderHomeTile).join('')}
       </div>
     </section>`;
-
-const renderHomeShortcuts = () =>
-  renderHomeGroup('home-shortcuts-title', 'شروع سریع', 'یک کار را انتخاب کنید', 'برای رفتن به بخش درست، یکی از مسیرهای زیر را انتخاب کنید.', HOME_TILES)
-  + renderHomeGroup('home-tools-title', 'ابزارهای کمکی', 'وقتی سریع به پاسخ نیاز دارید', 'راهنما، برگهٔ ایمنی، سازگاری مواد و کمک فوری در یک قدم.', HOME_TOOLS);
 
 const renderHead = page => {
   const canonical = `https://soheil-aghayani.github.io/Solid-Waste-Laboratory/${page.canonical}`;
@@ -313,7 +305,7 @@ const renderHead = page => {
   <link rel="icon" type="image/webp" href="Waste%20Lab.webp">
   <link rel="preload" href="./asset/estedad-arabic-wght.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
   <link rel="stylesheet" href="./styles.min.css?v=6.9">
-  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=3.1">${pageStyles ? `\n  ${pageStyles}` : ''}${(page.styles ?? []).map(href => `\n  <link rel="stylesheet" href="./${href}">`).join('')}
+  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=3.4">${pageStyles ? `\n  ${pageStyles}` : ''}${(page.styles ?? []).map(href => `\n  <link rel="stylesheet" href="./${href}">`).join('')}
   <script>
     try {
       const savedTheme = localStorage.getItem('theme');
