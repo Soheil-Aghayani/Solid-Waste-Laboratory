@@ -308,8 +308,8 @@ const renderHead = page => {
   <meta name="twitter:title" content="${page.title}">
   <meta name="twitter:description" content="${page.description}">
   <link rel="icon" type="image/webp" href="Waste%20Lab.webp">
-  <link rel="preload" href="./asset/vazirmatn-arabic.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
-  <link rel="stylesheet" href="./styles.min.css?v=6.7">
+  <link rel="preload" href="./asset/estedad-arabic-wght.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+  <link rel="stylesheet" href="./styles.min.css?v=6.8">
   ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=2.8">${pageStyles ? `\n  ${pageStyles}` : ''}
   <script>
     try {

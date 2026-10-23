@@ -10,7 +10,7 @@ See [`preview.html`](preview.html) for the palette, type and tile layout rendere
 ## 1. Principles
 
 1. **Calm, precise, safe.** A lab tool: clear hierarchy, generous space, nothing decorative that could be mistaken for a warning.
-2. **Apple-professional.** SF Pro on Apple devices, Inter elsewhere, Vazirmatn for Persian; soft surfaces, thin borders, one accent.
+2. **Apple-professional.** SF Pro on Apple devices, Inter elsewhere, Estedad for Persian; soft surfaces, thin borders, one accent.
 3. **Persian first.** Every page, including FT-IR and XRD, is RTL Persian. English appears only for terms, formulas and units.
 4. **Color means something.** Red, yellow, blue and green are reserved for hazard and waste-stream meaning (section 3). Decoration never uses them.
 
@@ -18,8 +18,8 @@ See [`preview.html`](preview.html) for the palette, type and tile layout rendere
 
 | Element | Spec |
 |---|---|
-| Persian name | **آزمایشگاه پسماند**, Vazirmatn 700 (the header uses 800 today; 700 reads cleaner at this size) |
-| Secondary line | **دانشگاه تهران**, Vazirmatn 500, `--text-2`. Plain text only. |
+| Persian name | **آزمایشگاه پسماند**, Estedad 700 (the header uses 800 today; 700 reads cleaner at this size) |
+| Secondary line | **دانشگاه تهران**, Estedad 500, `--text-2`. Plain text only. |
 | English name | Solid Waste Laboratory, system sans 600, used only in metadata and the footer |
 | Mark | The existing flask glyph (Material `science`), 38 to 48 px, colored `--accent`, with no container. Kept as is. |
 | Clear space | At least the height of the mark on every side |
@@ -53,7 +53,7 @@ They appear only on waste-stream badges and gallon illustrations.
 | Clay Deep Emerald | `#0B6B4F` | shaded parts, small accents |
 | Clay Graphite | `#3B424A` | handles, bases, small parts |
 | Clay Amber | `#F0B44C` | one tiny accent per icon at most |
-| Tile backdrop | gradient `#E3F5EE` (top) to `#BFE6D6` (bottom) | identical on every tile |
+| Tile backdrop | gradient `#E3FAF4` (top) to `#B1E9D5` (bottom), measured from the approved anchor `tile-elements` | identical on every tile |
 
 The backdrop is a mid-light mint, so the same image works on the light and the dark page. Apple app icons do the same thing. This avoids transparent cut-outs entirely.
 
@@ -61,7 +61,7 @@ The backdrop is a mid-light mint, so the same image works on the light and the d
 
 | | Rule |
 |---|---|
-| Persian | **Vazirmatn** (variable, 300 to 800). Use 400 body, 500 labels, 600 to 700 headings. |
+| Persian | **Estedad** (variable, 100 to 900; OFL license). Use 400 body, 500 labels, 600 to 700 headings. |
 | Latin and numbers in code or data | System stack (`-apple-system`, SF Pro, Inter fallback), already `--font-sans`. |
 | Persian body | 17 px (`--fs-body`), line-height **1.9** |
 | Persian headings | line-height **1.4** to 1.5, weight 700 |

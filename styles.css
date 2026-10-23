@@ -1,11 +1,11 @@
 /* CSS Design System for Laboratory Rules & Equipment Portal */
 @import './asset/tokens.css';
 @font-face {
-  font-family: 'Vazirmatn';
+  font-family: 'Estedad';
   font-style: normal;
-  font-weight: 300 800;
+  font-weight: 100 900;
   font-display: swap;
-  src: url('asset/vazirmatn-arabic.woff2') format('woff2');
+  src: url('asset/estedad-arabic-wght.woff2') format('woff2');
   unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC;
 }
 

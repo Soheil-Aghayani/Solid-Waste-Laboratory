@@ -19,7 +19,7 @@ Style (identical for every icon in this set):
 - Colors: use ONLY these clay colors: ivory #F3EEE4, emerald #18A078, deep emerald #0B6B4F, graphite #3B424A, and at most one tiny amber #F0B44C accent. No other hues.
 - Lighting: soft studio light from the top-left, gentle fill, soft ambient occlusion, a short soft contact shadow directly under the object. No hard highlights.
 - Camera: three-quarter front view, slightly from above (about 20 degrees), object centered, filling about 60% of the image width, with even margins on all sides.
-- Background: full-bleed smooth vertical gradient from #E3F5EE at the top to #BFE6D6 at the bottom. No floor line, no horizon, no pattern, no extra props.
+- Background: full-bleed smooth vertical gradient from #E3FAF4 at the top to #B1E9D5 at the bottom. No floor line, no horizon, no pattern, no extra props.
 - Absolutely no text, letters, numbers, logos, people, hands, hazard pictograms or safety signs.
 ```
 
