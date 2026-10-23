@@ -1,4 +1,5 @@
 import {read,utils} from './vendor/xlsx.mjs';
+import {msg,normalizeDigits} from './fa.js';
 const $=id=>document.getElementById(id);
 let workbook=null,apply=null,rows=[];
 export function closeWorkbook(){workbook=null;apply=null;rows=[];$('workbook-import').hidden=true;}
@@ -16,15 +17,15 @@ function changeSheet(){
     rows=utils.sheet_to_json(sheet,{header:1,defval:'',blankrows:true,range:0});
   }
   const width=Math.max(1,...rows.slice(0,25).map(row=>row.length));
-  const options=Array.from({length:width},(_,i)=>new Option(`Column ${utils.encode_col(i)}`,String(i)));
+  const options=Array.from({length:width},(_,i)=>new Option(`ستون ${utils.encode_col(i)}`,String(i)));
   $('position-column').replaceChildren(...options);
-  $('intensity-column').replaceChildren(new Option('None · peak list','none'),...options.map(o=>o.cloneNode(true)));
+  $('intensity-column').replaceChildren(new Option('هیچ · فهرست پیک','none'),...options.map(o=>o.cloneNode(true)));
   $('intensity-column').value=width>1?'1':'none';
   const first=rows.findIndex(row=>typeof row[0]==='number');$('first-row').value=first>=0?String(first+1):'1';
   preview();
 }
 function preview(){
-  const start=Number($('first-row').value)-1,p=Number($('position-column').value),v=$('intensity-column').value;
+  const start=Number(normalizeDigits($('first-row').value))-1,p=Number($('position-column').value),v=$('intensity-column').value;
   const table=$('workbook-preview');table.replaceChildren();
   for(const row of rows.slice(Math.max(0,start),Math.max(0,start)+5)) {
     const tr=document.createElement('tr');
@@ -32,12 +33,12 @@ function preview(){
     table.append(tr);
   }
 }
-$('worksheet').addEventListener('change',()=>{try{changeSheet();$('error').textContent='';}catch(e){$('error').textContent=e.message;rows=[];}});
+$('worksheet').addEventListener('change',()=>{try{changeSheet();$('error').textContent='';}catch(e){$('error').textContent=msg(e.message);rows=[];}});
 for(const id of ['first-row','position-column','intensity-column'])$(id).addEventListener('input',preview);
 $('cancel-workbook').addEventListener('click',closeWorkbook);
 $('apply-workbook').addEventListener('click',()=>{
   try{
-    const start=Number($('first-row').value)-1,p=Number($('position-column').value),v=$('intensity-column').value;
+    const start=Number(normalizeDigits($('first-row').value))-1,p=Number($('position-column').value),v=$('intensity-column').value;
     if(!Number.isInteger(start)||start<0||start>=rows.length)throw new Error('Choose a valid first data row.');
     if(v!=='none'&&Number(v)===p)throw new Error('Position and intensity must use different columns.');
     const selected=[];
@@ -49,5 +50,5 @@ $('apply-workbook').addEventListener('click',()=>{
     }
     if(!selected.length)throw new Error('No numeric data found in the selected columns.');
     apply({text:selected.join('\n'),scan:v!=='none'});closeWorkbook();
-  }catch(e){$('error').textContent=e.message;}
+  }catch(e){$('error').textContent=msg(e.message);}
 });

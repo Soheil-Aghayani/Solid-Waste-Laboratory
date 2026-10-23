@@ -1,6 +1,6 @@
 # XRD Workbench
 
-English diffraction workbench with local XLSX/text import, peak review, reference plotting, positional matching and JSON/CSV exports.
+Persian (right-to-left) diffraction workbench with local XLSX/text import, peak review, reference plotting, positional matching and JSON/CSV exports.
 
 ## Run
 
