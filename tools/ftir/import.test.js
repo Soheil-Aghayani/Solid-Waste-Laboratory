@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {worksheetSpectrum} from './import.js';
+test('worksheet column mapping handles headers and extra columns',()=>{const rows=[['sample','Intensity','Wave'],...[400,402,404,406,408].map((x,i)=>['A',i,x])];const result=worksheetSpectrum(rows,2,1);assert.equal(result.points[0].x,400);assert.equal(result.points[4].y,4);assert.equal(result.warnings.length,1);assert.throws(()=>worksheetSpectrum(rows,1,1));});

@@ -1,0 +1,94 @@
+/* Shared design tokens for the Laboratory portal, FT-IR and XRD.
+   Source of truth: portal/asset/tokens.css. Copies live in FT-IR/assets and XRD/assets.
+   Theme: follows the system; html[data-theme="light" | "dark"] overrides it. */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('inter-latin-wght.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Estedad';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('estedad-arabic-wght.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC;
+}
+
+:root {
+  color-scheme: light dark;
+
+  /* Type: SF on Apple devices, bundled Inter elsewhere, Estedad for Persian */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro', 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-fa: 'Estedad', var(--font-sans);
+  --font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
+
+  --fs-caption: 0.6875rem;
+  --fs-footnote: 0.75rem;
+  --fs-subhead: 0.8125rem;
+  --fs-callout: 0.9375rem;
+  --fs-body: 1.0625rem;
+  --fs-title3: 1.25rem;
+  --fs-title2: 1.625rem;
+  --fs-title1: 2.125rem;
+  --fs-display: clamp(2.5rem, 5vw, 4rem);
+  --ls-tight: -0.02em;
+  --lh-body: 1.6;
+
+  /* Spacing, 4pt grid */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-8: 2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-pill: 999px;
+
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 0.15s;
+  --dur: 0.3s;
+
+  /* Surfaces */
+  --bg: light-dark(#f5f5f7, #0f172a);
+  --surface: light-dark(#ffffff, #1e293b);
+  --surface-2: light-dark(#f2f2f5, #334155);
+  --line: light-dark(#e3e3e8, #334155);
+  --line-strong: light-dark(#c9cbd2, #475569);
+  --text: light-dark(#1d1d1f, #f8fafc);
+  --text-2: light-dark(#5f6068, #b6c2d1);
+
+  /* Accent: --accent is for text and lines, --accent-fill for solid buttons */
+  --accent: light-dark(#047857, #10b981);
+  --accent-strong: light-dark(#065f46, #047857);
+  --accent-light: light-dark(#10b981, #34d399);
+  --accent-fill: #047857;
+  --on-accent: #ffffff;
+  --accent-glow: light-dark(rgba(5, 150, 105, 0.1), rgba(16, 185, 129, 0.15));
+  --focus: light-dark(#007aff, #5ac8fa);
+
+  --warn: light-dark(#b45309, #f59e0b);
+  --warn-glow: light-dark(rgba(217, 119, 6, 0.1), rgba(245, 158, 11, 0.15));
+  --danger: light-dark(#b91c1c, #ef4444);
+  --danger-strong: light-dark(#991b1b, #b91c1c);
+  --danger-glow: light-dark(rgba(220, 38, 38, 0.1), rgba(239, 68, 68, 0.2));
+
+  --shadow-sm: light-dark(0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(0, 0, 0, 0.5));
+  --shadow-md: light-dark(0 10px 25px -10px rgba(15, 23, 42, 0.08), 0 10px 30px -10px rgba(0, 0, 0, 0.7));
+  --shadow-lg: light-dark(0 18px 40px -18px rgba(15, 23, 42, 0.18), 0 18px 45px -18px rgba(0, 0, 0, 0.65));
+}
+
+:root[data-theme='light'] { color-scheme: light; }
+:root[data-theme='dark'] { color-scheme: dark; }

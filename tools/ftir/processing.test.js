@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {preprocess,compareSpectra} from './processing.js';
+test('endpoint correction removes a linear background without mutating raw input',()=>{const p=Array.from({length:9},(_,i)=>({x:400+i*10,y:2+i}));const result=preprocess(p,'absorbance',{baseline:true});assert(result.every(p=>Math.abs(p.y)<1e-10));assert.equal(p[0].y,2);assert.throws(()=>preprocess(p,'transmittance',{baseline:true}));});
+test('comparison interpolates shifted grids and rejects flat or nonoverlapping data',()=>{const p=Array.from({length:10},(_,i)=>({x:400+i*10,y:i}));assert(Math.abs(compareSpectra(p,p.map(p=>({...p,y:2*p.y+4}))).correlation-1)<1e-10);assert.throws(()=>compareSpectra(p,p.map(p=>({...p,y:1}))));});
