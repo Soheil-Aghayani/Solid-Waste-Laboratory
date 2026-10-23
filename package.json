@@ -10,9 +10,12 @@
     "test:sw": "node scripts/test-sw.mjs",
     "data:runtime": "node scripts/build-runtime.mjs",
     "data:runtime:check": "node scripts/build-runtime.mjs --check",
-    "build": "npm run data:runtime && npm run build:min"
+    "build": "npm run data:runtime && npm run build:min",
+    "tiles:build": "node scripts/build-tiles.mjs",
+    "tiles:check": "node scripts/build-tiles.mjs --check"
   },
   "devDependencies": {
-    "esbuild": "^0.28.2"
+    "esbuild": "^0.28.2",
+    "sharp": "^0.35.5"
   }
 }
