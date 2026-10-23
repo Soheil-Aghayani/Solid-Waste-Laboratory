@@ -111,3 +111,7 @@ Deleting a GitHub repository cannot be undone from my side, and I will not do it
 - **Scoping bugs** in converted CSS (mitigated by the parity comparison).
 - **Margin reset:** the portal's `*` reset removes spacing the tools took from browser defaults; I restore it inside the tool wrapper and check it in the parity test.
 - **A shared version token** means a forgotten bump leaves old tool code cached (the same trap as the rest of the portal; the worker test and the stale-version check I added earlier cover pages but not these new files yet, so I will extend the check).
+
+## 10. Status (2026-10-23)
+
+Steps 1–6 are built and committed locally (nothing pushed). Verified in the browser: no failed requests, light and dark, phone width without overflow, XRD finds CaO first of 31 structures, FT-IR demo gives 4 peaks and 5 candidate assignments, widget sizes match the standalone XRD except the results column (the portal page is about 87 px wider). Navigation shows on all 35 generated pages with the right active state; eight links fit one row at 1280 px (the nav grid no longer assumes six columns). `test:tools` (51), `test:sw` and `data:validate` pass. Not yet done: push and deploy, check the live site, then the deletion criteria in 6b.

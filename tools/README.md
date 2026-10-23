@@ -3,10 +3,10 @@
 `ftir/` (FT-IR band assignment) and `xrd/` (X-ray diffraction phase matching) are the two analysis tools of the portal. Both are client-side ES modules; nothing is uploaded.
 
 ```sh
-npm run test:tools      # 45 tests: science, Persian layer, reports (run from the portal root)
+npm run test:tools      # 51 tests: science, Persian layer, reports, shared helpers (run from the portal root)
 ```
 
-`package.json` here only marks the folder as ES modules. The READMEs inside each tool describe the science and the data, and were written when the tools were standalone; their "run" instructions no longer apply (the portal serves them). See `docs/integration/PROPOSAL.md` for the integration plan and status.
+`package.json` here only marks the folder as ES modules. The READMEs inside each tool describe the science and the data, and were written when the tools were standalone; their "run" instructions no longer apply (the portal serves them: `ftir.html` and `xrd.html`, built by `scripts/build-pages.mjs` from `pages/content/`). When a tool file changes, bump its `?v=` in the importing file, in `scripts/build-pages.mjs` and in `sw.js`. See `docs/integration/PROPOSAL.md` for the integration plan and status.
 
 ## History
 
