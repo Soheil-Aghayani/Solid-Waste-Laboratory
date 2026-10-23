@@ -77,4 +77,10 @@
   }
 
   document.addEventListener('DOMContentLoaded', initWelcomeCarousel);
+
+  // Home tiles that open an existing floating control (emergency numbers, assistant) instead of a page.
+  document.addEventListener('click', event => {
+    const tile = event.target.closest('[data-open]');
+    if (tile) document.getElementById(tile.dataset.open)?.click();
+  });
 })();

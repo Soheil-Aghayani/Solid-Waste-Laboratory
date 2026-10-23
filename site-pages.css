@@ -883,6 +883,12 @@ body {
   gap: .75rem;
 }
 
+.home-shortcut.home-tile {
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
 .home-tile-art {
   display: block;
   width: 96px;

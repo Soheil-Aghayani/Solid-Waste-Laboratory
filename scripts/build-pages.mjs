@@ -250,21 +250,33 @@ const HOME_TILES = [
   { href: 'xrd.html', tile: 'xrd', title: 'پراش پرتو ایکس (XRD)', copy: 'پیک‌های الگوی پراش را با مرجع‌های بلوری مقایسه کنید.', action: 'باز کردن ابزار' },
 ];
 
-const renderHomeTile = ({ href, tile, title, copy, action }) => `
-        <a class="home-shortcut home-route home-tile" href="./${href}">
+const HOME_TOOLS = [
+  { href: 'equipment.html', tile: 'guides', title: 'راهنمای تجهیزات', copy: 'روش کار و نکات ایمنی هر وسیله را مرحله‌به‌مرحله بخوانید.', action: 'مشاهدهٔ راهنماها' },
+  { href: 'elements.html#msds-details-card', tile: 'msds', title: 'برگهٔ ایمنی مواد', copy: 'خطرات، نوع مواجهه و مواد ناسازگار یک ماده را ببینید.', action: 'جست‌وجوی ماده' },
+  { href: 'elements.html#compatibility-widget-card', tile: 'compat', title: 'سازگاری مواد', copy: 'پیش از مخلوط کردن، سازگاری چند ماده را بررسی کنید.', action: 'بررسی سازگاری' },
+  { open: 'emergency-fab', tile: 'emergency', title: 'شماره‌های اضطراری', copy: 'در حادثه، شماره‌ها و اقدام‌های فوری را سریع پیدا کنید.', action: 'باز کردن' },
+  { open: 'chatbot-loader-fab', tile: 'assistant', title: 'دستیار هوشمند', copy: 'پرسش دربارهٔ تجهیزات، مواد و ایمنی را از دستیار بپرسید.', action: 'شروع گفت‌وگو' },
+];
+
+const renderHomeTile = ({ href, open, tile, title, copy, action }) => `
+        <${open ? `button type="button" data-open="${open}"` : `a href="./${href}"`} class="home-shortcut home-route home-tile">
           <img class="home-tile-art" src="./asset/tiles/tile-${tile}-256.webp" srcset="./asset/tiles/tile-${tile}-256.webp 1x, ./asset/tiles/tile-${tile}-512.webp 2x" width="96" height="96" alt="" loading="lazy" decoding="async">
           <span class="home-shortcut-heading"><strong>${title}</strong></span>
           <span class="home-route-copy">${copy}</span><span class="home-route-action">${action} <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></span>
-        </a>`;
+        </${open ? 'button' : 'a'}>`;
 
-const renderHomeShortcuts = () => `
-    <section class="home-shortcuts" aria-labelledby="home-shortcuts-title">
+const renderHomeGroup = (id, kicker, heading, intro, tiles) => `
+    <section class="home-shortcuts" aria-labelledby="${id}">
       <div class="section-heading-row">
-        <div><span class="page-kicker">شروع سریع</span><h2 id="home-shortcuts-title">یک کار را انتخاب کنید</h2><p>برای رفتن به بخش درست، یکی از مسیرهای زیر را انتخاب کنید.</p></div>
+        <div><span class="page-kicker">${kicker}</span><h2 id="${id}">${heading}</h2><p>${intro}</p></div>
       </div>
-      <div class="home-shortcut-grid">${HOME_TILES.map(renderHomeTile).join('')}
+      <div class="home-shortcut-grid">${tiles.map(renderHomeTile).join('')}
       </div>
     </section>`;
+
+const renderHomeShortcuts = () =>
+  renderHomeGroup('home-shortcuts-title', 'شروع سریع', 'یک کار را انتخاب کنید', 'برای رفتن به بخش درست، یکی از مسیرهای زیر را انتخاب کنید.', HOME_TILES)
+  + renderHomeGroup('home-tools-title', 'ابزارهای کمکی', 'وقتی سریع به پاسخ نیاز دارید', 'راهنما، برگهٔ ایمنی، سازگاری مواد و کمک فوری در یک قدم.', HOME_TOOLS);
 
 const renderHead = page => {
   const canonical = `https://soheil-aghayani.github.io/Solid-Waste-Laboratory/${page.canonical}`;
@@ -301,7 +313,7 @@ const renderHead = page => {
   <link rel="icon" type="image/webp" href="Waste%20Lab.webp">
   <link rel="preload" href="./asset/estedad-arabic-wght.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
   <link rel="stylesheet" href="./styles.min.css?v=6.9">
-  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=3.0">${pageStyles ? `\n  ${pageStyles}` : ''}${(page.styles ?? []).map(href => `\n  <link rel="stylesheet" href="./${href}">`).join('')}
+  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=3.1">${pageStyles ? `\n  ${pageStyles}` : ''}${(page.styles ?? []).map(href => `\n  <link rel="stylesheet" href="./${href}">`).join('')}
   <script>
     try {
       const savedTheme = localStorage.getItem('theme');
@@ -312,7 +324,7 @@ const renderHead = page => {
   <script defer src="./asset/icon-system.min.js?v=1.0"></script>
   <script defer src="./site-navigation.min.js?v=1.1"></script>
   ${page.filename === 'gallery.html' || page.tool ? '' : '<script async fetchpriority="low" src="./script.min.js?v=7.4"></script>'}
-  <script defer src="./site-runtime.min.js?v=1.9"></script>${page.filename === 'index.html' ? '\n  <script defer src="./welcome-carousel.min.js?v=2.2"></script>' : ''}
+  <script defer src="./site-runtime.min.js?v=1.9"></script>${page.filename === 'index.html' ? '\n  <script defer src="./welcome-carousel.min.js?v=2.3"></script>' : ''}
   ${page.assets.map(asset => `<script defer src="./${asset}?v=${assetVersion(asset)}"></script>`).join('\n  ')}${(page.modules ?? []).map(src => `\n  <script type="module" src="./${src}"></script>`).join('')}
 </head>`;
 };
