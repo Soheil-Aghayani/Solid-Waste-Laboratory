@@ -1,6 +1,6 @@
 # Brand book: آزمایشگاه پسماند (Solid Waste Laboratory)
 
-**Status: draft for approval.** This is the identity of the *portal*. It is **not** an official University of Tehran
+**Status: approved on 2026-10-23** (Phase A tiles, clay palette and mint backdrop, lockup, reserved waste-stream colors). This is the identity of the *portal*. It is **not** an official University of Tehran
 identity, and nothing here claims to be. No university logo, emblem or colors are used or invented. If you
 later get official guidelines, they win over this document.
 
