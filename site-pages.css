@@ -227,7 +227,7 @@ body {
   color: var(--accent-emerald);
   font-size: .72rem;
   font-weight: 850;
-  letter-spacing: .02em;
+  letter-spacing: 0;
 }
 
 .standalone-page {

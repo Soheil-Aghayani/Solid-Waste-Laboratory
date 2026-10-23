@@ -174,7 +174,7 @@ header {
 .brand-text h1 {
   font-size: 1.75rem;
   font-weight: 800;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
   background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-emerald));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1641,7 +1641,7 @@ header {
   font-size: 1.75rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .cert-body {
@@ -1784,7 +1784,7 @@ header {
 
 .gallery-section-heading h3 {
   font-size: clamp(1.35rem, 2vw, 1.65rem);
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .gallery-source-link {
@@ -2124,7 +2124,7 @@ header {
 
 .gallery-section-heading h3 {
   font-size: clamp(1.35rem, 2vw, 1.65rem);
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .gallery-source-link {
@@ -3489,7 +3489,7 @@ footer {
   color: var(--text-primary);
   font-size: clamp(1.7rem, 3vw, 2.4rem);
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .gallery-intro-copy p,
@@ -4012,7 +4012,7 @@ footer {
   color: var(--text-primary);
   font-size: clamp(1.55rem, 3vw, 2.2rem);
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   line-height: 1.35;
 }
 
@@ -4772,7 +4772,7 @@ footer {
 
 .gallery-section-heading h3 {
   font-size: clamp(1.35rem, 2vw, 1.65rem);
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .gallery-source-link {

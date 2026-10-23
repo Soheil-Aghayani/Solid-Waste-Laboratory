@@ -107,7 +107,7 @@ body[data-page="gallery"] #search-status-banner {
   color: var(--text-primary);
   font-size: clamp(1.35rem, 2.5vw, 1.9rem);
   font-weight: 900;
-  letter-spacing: -0.035em;
+  letter-spacing: 0;
 }
 
 .catalog-catalog-hero p {

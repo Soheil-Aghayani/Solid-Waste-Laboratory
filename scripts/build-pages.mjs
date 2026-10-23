@@ -259,7 +259,7 @@ const HOME_TILES = [
 
 const renderHomeTile = ({ href, open, tile, title, hint }) => `
         <${open ? `button type="button" data-open="${open}"` : `a href="./${href}"`} class="tile" title="${hint}">
-          <img src="./asset/tiles/tile-${tile}-256.webp" srcset="./asset/tiles/tile-${tile}-256.webp 1x, ./asset/tiles/tile-${tile}-512.webp 2x" width="128" height="128" alt="" loading="lazy" decoding="async">
+          <img src="./asset/tiles/tile-${tile}-256.webp" srcset="./asset/tiles/tile-${tile}-256.webp 1x, ./asset/tiles/tile-${tile}-512.webp 2x" width="128" height="128" alt="" decoding="async">
           <span>${title}</span>
         </${open ? 'button' : 'a'}>`;
 
@@ -273,10 +273,10 @@ const renderHomeShortcuts = () => `
 const renderHead = page => {
   const canonical = `https://soheil-aghayani.github.io/Solid-Waste-Laboratory/${page.canonical}`;
   const pageStyles = page.filename === 'gallery.html'
-    ? '<link rel="stylesheet" href="./catalog-redesign.min.css?v=2.2">'
+    ? '<link rel="stylesheet" href="./catalog-redesign.min.css?v=2.3">'
     : '';
   const elementStyles = page.filename === 'elements.html'
-    ? '<link rel="stylesheet" href="./elements.min.css?v=2.0">'
+    ? '<link rel="stylesheet" href="./elements.min.css?v=2.1">'
     : '';
   const assetVersion = asset => asset === 'gallery.min.js' ? '3.5' : '2.2';
   return `<!DOCTYPE html>
@@ -304,8 +304,8 @@ const renderHead = page => {
   <meta name="twitter:description" content="${page.description}">
   <link rel="icon" type="image/webp" href="Waste%20Lab.webp">
   <link rel="preload" href="./asset/estedad-arabic-wght.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
-  <link rel="stylesheet" href="./styles.min.css?v=6.9">
-  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=3.4">${pageStyles ? `\n  ${pageStyles}` : ''}${(page.styles ?? []).map(href => `\n  <link rel="stylesheet" href="./${href}">`).join('')}
+  <link rel="stylesheet" href="./styles.min.css?v=7.0">
+  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=3.5">${pageStyles ? `\n  ${pageStyles}` : ''}${(page.styles ?? []).map(href => `\n  <link rel="stylesheet" href="./${href}">`).join('')}
   <script>
     try {
       const savedTheme = localStorage.getItem('theme');

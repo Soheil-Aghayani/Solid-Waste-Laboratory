@@ -10,13 +10,7 @@ English-only, browser-local wavenumber search and CSV exploration. Apple Human I
 
 ## Run
 
-Requires Node.js 20 or later. No package installation is needed.
-
-```sh
-npm start
-```
-
-Open http://127.0.0.1:5173. Run focused science checks with `npm test`.
+This tool is a page of the portal (`../../README.md`): serve the portal root with any static server and open the tool page. Run its tests from the portal root with `npm run test:tools`. Edit the page markup in `pages/content/` and rebuild with `npm run pages:build`.
 
 ## Scope
 

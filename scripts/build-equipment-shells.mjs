@@ -116,9 +116,9 @@ files.forEach(file => {
   <link rel="preload" href="../asset/estedad-arabic-wght.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
 ${defaultImageHref ? `  <link rel="preload" href="${defaultImageHref}" imagesrcset="${defaultImageSrcset}" imagesizes="(max-width: 700px) calc(100vw - 80px), 560px" as="image" fetchpriority="high">` : ''}
   <script>try{const t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-  <link rel="stylesheet" href="../styles.min.css?v=6.9">
-  <link rel="stylesheet" href="../site-pages.min.css?v=3.4">
-  <link rel="stylesheet" href="../equipment-detail.min.css?v=2.0">
+  <link rel="stylesheet" href="../styles.min.css?v=7.0">
+  <link rel="stylesheet" href="../site-pages.min.css?v=3.5">
+  <link rel="stylesheet" href="../equipment-detail.min.css?v=2.1">
   <link rel="stylesheet" href="../catalog-detail-chrome.min.css?v=1.6">
   <script defer src="../asset/icon-system.min.js?v=1.0"></script>
   <script defer src="../site-navigation.min.js?v=1.1"></script>

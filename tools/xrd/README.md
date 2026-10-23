@@ -4,16 +4,7 @@ Persian (right-to-left) diffraction workbench with local XLSX/text import, peak 
 
 ## Run
 
-Node.js 22 or newer. The XLSX reader is vendored; no package installation is needed.
-
-```sh
-npm run dev
-npm test
-npm run check
-npm run build
-```
-
-Open http://127.0.0.1:5188. GitHub Pages deploys dist/ on pushes to main.
+This tool is a page of the portal (`../../README.md`): serve the portal root with any static server and open the tool page. Run its tests from the portal root with `npm run test:tools`. Edit the page markup in `pages/content/` and rebuild with `npm run pages:build`.
 
 ## Reference library
 

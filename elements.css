@@ -148,7 +148,7 @@
   color: var(--accent-emerald);
   font-size: .78rem;
   font-weight: 800;
-  letter-spacing: .02em;
+  letter-spacing: 0;
 }
 
 .elements-title {

@@ -92,7 +92,7 @@
   font-size: clamp(1.45rem, 3.3vw, 2.35rem);
   font-weight: 800;
   line-height: 1.35;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .equipment-detail-title-en {
@@ -976,7 +976,7 @@ body.equipment-detail-loading .catalog-detail-site-footer {
   color: var(--accent-emerald-strong);
   font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .crucible-guide-hero-copy h2,
@@ -986,7 +986,7 @@ body.equipment-detail-loading .catalog-detail-site-footer {
   color: var(--text-primary);
   font-size: clamp(1.3rem, 2.7vw, 2rem);
   font-weight: 850;
-  letter-spacing: -0.035em;
+  letter-spacing: 0;
   line-height: 1.4;
 }
 
