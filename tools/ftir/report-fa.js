@@ -1,6 +1,6 @@
 // Persian exports built on top of buildReport() from report.js. The JSON export stays English (data interchange);
 // the HTML and CSV exports are for people, so they are Persian.
-import {bandFa, patternName, originFa, intensityTypeFa, licenseFa, faNum, faDateTime, L, unit} from './fa.js';
+import {bandFa, patternName, originFa, intensityTypeFa, licenseFa, faNum, faDateTime, L, unit} from './fa.js?v=9';
 
 export const limitationFa = 'فقط انتساب‌های کاندید است؛ شناسایی ترکیب نیست. پیک‌های بی‌تطبیق نشان‌دهندهٔ پوشش محدود مرجع هستند. شمار باندهای پشتیبان فقط پوشش موقعیتی را نشان می‌دهد، نه اطمینان.';
 const strip = text => String(text ?? '').replace(/[⁦⁩]/g, '');

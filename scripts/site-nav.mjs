@@ -8,11 +8,14 @@ export const PRIMARY_NAV = [
   { page: 'gallery', href: 'gallery.html', label: 'کاتالوگ تجهیزات', icon: 'inventory_2' },
   { page: 'equipment', href: 'equipment.html', label: 'راهنمای تجهیزات', icon: 'test-tube' },
   { page: 'elements', href: 'elements.html', label: 'عناصر و مواد', icon: 'science' },
+  { page: 'ftir', href: 'ftir.html', label: 'FT-IR', icon: 'science' },
+  { page: 'xrd', href: 'xrd.html', label: 'XRD', icon: 'science' },
 ];
 
 const GROUPS = {
   safety: ['rules', 'quiz'],
   catalog: ['equipment', 'elements', 'gallery'],
+  analysis: ['ftir', 'xrd'],
 };
 
 /** The group a page belongs to; ungrouped pages are their own group. */
@@ -31,6 +34,7 @@ export const SECTION_NAV = {
     { rules: 'قوانین عمومی و ایمنی', quiz: 'آزمون و تعهدنامه ورود' }, { rules: 'book-bookmark' }),
   catalog: section('کاتالوگ آزمایشگاه', 'inventory_2', ['gallery', 'equipment', 'elements'],
     { gallery: 'گالری تجهیزات' }, { gallery: 'gallery' }),
+  analysis: section('ابزارهای تحلیل', 'science', ['ftir', 'xrd'], { ftir: 'طیف‌سنجی فروسرخ (FT-IR)', xrd: 'پراش پرتو ایکس (XRD)' }),
 };
 
 /** The mobile bottom dock. `isCurrent(page)` decides which item is highlighted for a page. */
@@ -39,4 +43,5 @@ export const DOCK_NAV = [
   { href: 'rules.html', label: 'ایمنی', icon: 'health_and_safety', isCurrent: page => pageGroup(page) === 'safety' },
   { href: 'equipment.html', label: 'کاتالوگ', icon: 'inventory_2', isCurrent: page => page === 'equipment' || page === 'elements' },
   { href: 'gallery.html', label: 'گالری', icon: 'gallery', isCurrent: page => page === 'gallery' },
+  { href: 'ftir.html', label: 'تحلیل', icon: 'science', isCurrent: page => pageGroup(page) === 'analysis' },
 ];

@@ -301,7 +301,7 @@ const renderHead = page => {
   <link rel="icon" type="image/webp" href="Waste%20Lab.webp">
   <link rel="preload" href="./asset/estedad-arabic-wght.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
   <link rel="stylesheet" href="./styles.min.css?v=6.9">
-  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=2.8">${pageStyles ? `\n  ${pageStyles}` : ''}${(page.styles ?? []).map(href => `\n  <link rel="stylesheet" href="./${href}">`).join('')}
+  ${elementStyles ? `${elementStyles}\n  ` : ''}<link rel="stylesheet" href="./site-pages.min.css?v=2.9">${pageStyles ? `\n  ${pageStyles}` : ''}${(page.styles ?? []).map(href => `\n  <link rel="stylesheet" href="./${href}">`).join('')}
   <script>
     try {
       const savedTheme = localStorage.getItem('theme');

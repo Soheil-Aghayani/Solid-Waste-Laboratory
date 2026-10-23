@@ -30,9 +30,23 @@ async function req(url, mode = 'no-cors') {
 
 // install precache
 let inst; handlers.install({ waitUntil: (p) => (inst = p) }); await inst;
-assert.ok(added.length > 50 && added.length < 100, `precache size ${added.length}`);
+assert.ok(added.length > 50 && added.length < 110, `precache size ${added.length}`);
 assert.equal(added.filter((u) => u.includes('/data/')).length, 0, 'no json precached');
 assert.equal(added.filter((u) => /asset\/equipment\/.*\.webp/.test(u)).length, 0, 'no equipment webp precached');
+
+// analysis tools work offline: both pages, their stylesheet and entry module, and the static modules they import
+const precached = new Set(added.map((u) => u.replace(BASE, './')));
+for (const page of ['./ftir.html', './xrd.html']) assert.ok(precached.has(page), `${page} precached`);
+for (const tool of ['ftir', 'xrd']) {
+  const html = fs.readFileSync(new URL(`../${tool}.html`, import.meta.url), 'utf8');
+  for (const [, href] of html.matchAll(/(?:href|src)="\.\/(tools\/[^"]+)"/g)) assert.ok(precached.has('./' + href), `${href} precached`);
+  const entry = fs.readFileSync(new URL(`../tools/${tool}/app.js`, import.meta.url), 'utf8');
+  for (const [, spec] of entry.matchAll(/from\s*'(\.{1,2}\/[^']+)'/g)) {
+    const resolved = './' + new URL(spec, new URL(`./tools/${tool}/`, BASE)).href.replace(BASE, '');
+    assert.ok(precached.has(resolved), `${resolved} (imported by ${tool}/app.js) precached`);
+  }
+}
+assert.ok(!added.some((u) => u.includes('vendor/xlsx')), 'SheetJS loads on demand, not precached');
 
 // immutable: /asset/ image fetched once
 fetched = [];
