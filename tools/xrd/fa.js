@@ -1,33 +1,8 @@
 // Persian presentation layer. science.js keeps its English messages and data (its tests assert them);
 // everything the user reads is translated here, at the boundary. Unknown text falls back to the original.
-
-const FA_DIGITS = '۰۱۲۳۴۵۶۷۸۹';
-const AR_DIGITS = '٠١٢٣٤٥٦٧٨٩';
-
-/** Left-to-right isolate: keeps chemical formulas, units and Latin names intact inside Persian text. */
-export const L = text => `⁦${text}⁩`;
-const strip = text => String(text ?? '').replace(/[⁦⁩]/g, '');
-
-export const toFaDigits = value => String(value).replace(/[0-9]/g, digit => FA_DIGITS[digit]);
-
-/** Accepts Persian/Arabic digits and separators typed on a Persian keyboard; returns plain ASCII for the science code. */
-export const normalizeDigits = value => String(value)
-  .replace(/[۰-۹]/g, char => FA_DIGITS.indexOf(char))
-  .replace(/[٠-٩]/g, char => AR_DIGITS.indexOf(char))
-  .replace(/٫/g, '.')
-  .replace(/٬/g, '')
-  .replace(/−/g, '-');
-
-const byDigits = new Map();
-const formatter = (max, group) => {
-  const key = `${max}:${group}`;
-  if (!byDigits.has(key)) byDigits.set(key, new Intl.NumberFormat('fa-IR', { maximumFractionDigits: max, useGrouping: group }));
-  return byDigits.get(key);
-};
-/** Persian digits, no thousands separator; up to two decimals unless told otherwise. */
-export const faNum = (value, maxDigits = 2) => formatter(maxDigits, false).format(value);
-/** Counts use the Persian thousands separator. */
-export const faCount = value => formatter(0, true).format(value);
+// Digits, number formats, LTR isolates and the translator come from tools/shared/fa.js.
+import { L, strip, toFaDigits, normalizeDigits, faNum, faCount, createTranslator } from '../shared/fa.js?v=1';
+export { L, toFaDigits, normalizeDigits, faNum, faCount };
 
 // ---- messages from science.js, workbook.js and app.js -----------------------------------------
 const MESSAGES = new Map([
@@ -51,12 +26,7 @@ const PATTERNS = [
   [/^Worksheet row (\d+): selected columns must contain numeric data\. Adjust the first row or columns\.$/, (_, n) => `سطر ${faNum(Number(n))} برگه: ستون‌های انتخاب‌شده باید داده‌ٔ عددی داشته باشند. اولین سطر یا ستون‌ها را اصلاح کنید.`],
 ];
 /** Translates a message from the science or workbook code; unknown text is returned unchanged. */
-export function msg(text) {
-  const key = String(text ?? '');
-  if (MESSAGES.has(key)) return MESSAGES.get(key);
-  for (const [re, make] of PATTERNS) { const m = key.match(re); if (m) return make(...m); }
-  return key;
-}
+export const msg = createTranslator(MESSAGES, PATTERNS);
 
 // ---- describeEvidence() output ------------------------------------------------------------------
 // science.js builds this English summary and its tests assert it. Each known sentence is translated in place,

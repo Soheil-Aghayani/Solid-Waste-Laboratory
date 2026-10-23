@@ -1,38 +1,11 @@
 // Persian presentation layer. The science modules (science.js, processing.js, references.js, report.js)
 // keep their English data and messages; everything the user reads is translated here, at the boundary.
 // Unknown values fall back to the original text, so a missing entry degrades to English, never to a crash.
+// Digits, number and date formats, LTR isolates and the translator come from tools/shared/fa.js.
+import { L, toFaDigits, normalizeDigits, faNum, faCount, faDate, faDateTime, createTranslator } from '../shared/fa.js?v=1';
+export { L, toFaDigits, normalizeDigits, faNum, faCount, faDate, faDateTime };
 
-const FA_DIGITS = '۰۱۲۳۴۵۶۷۸۹';
-const AR_DIGITS = '٠١٢٣٤٥٦٧٨٩';
-
-/** Left-to-right isolate: keeps chemical notation and units intact inside Persian text. */
-export const L = text => `⁦${text}⁩`;
 export const unit = L('cm⁻¹');
-
-export const toFaDigits = value => String(value).replace(/[0-9]/g, digit => FA_DIGITS[digit]);
-
-/** Accepts Persian/Arabic digits and separators typed on a Persian keyboard; returns plain ASCII for the science code. */
-export const normalizeDigits = value => String(value)
-  .replace(/[۰-۹]/g, char => FA_DIGITS.indexOf(char))
-  .replace(/[٠-٩]/g, char => AR_DIGITS.indexOf(char))
-  .replace(/٫/g, '.')
-  .replace(/٬/g, '')
-  .replace(/[‒–—―−]/g, '–');
-
-const plainByDigits = new Map();
-const plain = max => { if (!plainByDigits.has(max)) plainByDigits.set(max, new Intl.NumberFormat('fa-IR', { maximumFractionDigits: max, useGrouping: false })); return plainByDigits.get(max); };
-const grouped = new Intl.NumberFormat('fa-IR', { maximumFractionDigits: 2 });
-/** Persian digits, no thousands separator (wavenumbers are never grouped); up to two decimals unless told otherwise. */
-export const faNum = (value, maxDigits = 2) => plain(maxDigits).format(value);
-/** Counts such as sample totals use the Persian thousands separator. */
-export const faCount = value => grouped.format(value);
-
-const dateOnly = new Intl.DateTimeFormat('fa-IR-u-ca-persian', { dateStyle: 'long', timeZone: 'UTC' });
-const dateTime = new Intl.DateTimeFormat('fa-IR-u-ca-persian', { dateStyle: 'long', timeStyle: 'short' });
-/** Solar Hijri (Jalali) date for 'YYYY-MM-DD' strings. */
-export const faDate = iso => (/^\d{4}-\d{2}-\d{2}$/.test(iso) ? dateOnly.format(new Date(`${iso}T00:00:00Z`)) : String(iso));
-/** Solar Hijri date and local time for full timestamps. */
-export const faDateTime = iso => { const date = new Date(iso); return Number.isNaN(date.getTime()) ? String(iso) : dateTime.format(date); };
 
 // ---- messages thrown or returned by the science modules ---------------------------------------
 const MESSAGES = new Map([
@@ -62,12 +35,7 @@ const PATTERNS = [
   [/^(\d+) header or invalid row\(s\) skipped\.$/, (_, n) => `${faNum(Number(n))} سطر عنوان یا نامعتبر نادیده گرفته شد.`],
 ];
 /** Translates a message from the science or import code; unknown text is returned unchanged. */
-export function msg(text) {
-  const key = String(text ?? '');
-  if (MESSAGES.has(key)) return MESSAGES.get(key);
-  for (const [re, make] of PATTERNS) { const m = key.match(re); if (m) return make(...m); }
-  return key;
-}
+export const msg = createTranslator(MESSAGES, PATTERNS);
 
 // ---- reference band data (keyed by the English value used in references.js) -------------------
 const GROUP = {
